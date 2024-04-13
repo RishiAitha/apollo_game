@@ -12,7 +12,12 @@ public class PlayerController : MonoBehaviour
     public float coyoteTime;
     private float coyoteTimeCounter;
 
+    public bool doubleJump;
+
     public Animator playerAnimator;
+    public SpriteRenderer mySR;
+
+    public Material[] playerMaterials;
 
     public float playerSpeed;
     public float jumpSpeed;
@@ -23,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 wallJumpSpeed;
     public float wallJumpDirection;
+    public float wallJumpTime;
 
     public float wallJumpCoyoteTime;
     private float wallJumpCoyoteTimeCounter;
@@ -42,6 +48,7 @@ public class PlayerController : MonoBehaviour
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
+            doubleJump = false;
         }
         else
         {
@@ -85,10 +92,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0f)
+        if (Input.GetButtonDown("Jump") && (coyoteTimeCounter > 0f || doubleJump))
         {
             myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
             coyoteTimeCounter = 0f;
+            doubleJump = false;
         }
 
         if (Input.GetButtonDown("Jump") && wallJumpCoyoteTimeCounter > 0f)
@@ -102,11 +110,20 @@ public class PlayerController : MonoBehaviour
                 Turn();
             }
 
-            Invoke("StopWallJumping", 0.2f);
+            Invoke("StopWallJumping", wallJumpTime);
         }
 
         playerAnimator.SetBool("OnGround", coyoteTimeCounter > 0f);
         playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
+
+        if (doubleJump)
+        {
+            mySR.material = playerMaterials[1];
+        }
+        else
+        {
+            mySR.material = playerMaterials[0];
+        }
     }
 
     public bool IsGrounded()
@@ -128,5 +145,15 @@ public class PlayerController : MonoBehaviour
     private void StopWallJumping()
     {
         wallJumping = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Boost")
+        {
+            doubleJump = true;
+
+            other.GetComponent<BoostController>().Cooldown();
+        }
     }
 }
