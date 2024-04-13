@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public float playerSpeed;
     public float jumpSpeed;
+    public float dashSpeed;
 
     private bool facingRight;
 
@@ -37,10 +39,20 @@ public class PlayerController : MonoBehaviour
 
     public BoxCollider2D wallCheckBox;
 
+    private bool dashing;
+    public float dashTime;
+    public float dashDelay;
+
+    public float origGravityScale;
+
+    public bool pulling;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
         facingRight = true;
+        mySR.material = playerMaterials[0];
+        origGravityScale = myRB.gravityScale;
     }
 
     void Update()
@@ -55,62 +67,65 @@ public class PlayerController : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
+        if (!dashing && !pulling)
         {
-            // we are wall sliding
-            myRB.velocity = new Vector3(myRB.velocity.x, -wallSlideSpeed, 0f);
-            wallJumpDirection = -transform.localScale.x;
-            wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
-            CancelInvoke("StopWallJumping");
-        }
-        else
-        {
-            wallJumpCoyoteTimeCounter -= Time.deltaTime;
-        }
-
-        if (!wallJumping)
-        {
-            if (Input.GetAxisRaw("Horizontal") > 0f)
+            if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
             {
-                myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
-                if (!facingRight)
-                {
-                    Turn();
-                }
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0f)
-            {
-                myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
-                if (facingRight)
-                {
-                    Turn();
-                }
+                // we are wall sliding
+                myRB.velocity = new Vector3(myRB.velocity.x, -wallSlideSpeed, 0f);
+                wallJumpDirection = -transform.localScale.x;
+                wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
+                CancelInvoke("StopWallJumping");
             }
             else
             {
-                myRB.velocity = new Vector3(0f, myRB.velocity.y, 0f);
+                wallJumpCoyoteTimeCounter -= Time.deltaTime;
             }
-        }
 
-        if (Input.GetButtonDown("Jump") && (coyoteTimeCounter > 0f || doubleJump))
-        {
-            myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
-            coyoteTimeCounter = 0f;
-            doubleJump = false;
-        }
-
-        if (Input.GetButtonDown("Jump") && wallJumpCoyoteTimeCounter > 0f)
-        {
-            wallJumping = true;
-            myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
-            wallJumpCoyoteTimeCounter = 0f;
-
-            if (transform.localScale.x != wallJumpDirection)
+            if (!wallJumping)
             {
-                Turn();
+                if (Input.GetAxisRaw("Horizontal") > 0f)
+                {
+                    myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
+                    if (!facingRight)
+                    {
+                        Turn();
+                    }
+                }
+                else if (Input.GetAxisRaw("Horizontal") < 0f)
+                {
+                    myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
+                    if (facingRight)
+                    {
+                        Turn();
+                    }
+                }
+                else
+                {
+                    myRB.velocity = new Vector3(0f, myRB.velocity.y, 0f);
+                }
             }
 
-            Invoke("StopWallJumping", wallJumpTime);
+            if (Input.GetButtonDown("Jump") && (coyoteTimeCounter > 0f || doubleJump))
+            {
+                myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
+                coyoteTimeCounter = 0f;
+                doubleJump = false;
+            }
+
+            if (Input.GetButtonDown("Jump") && wallJumpCoyoteTimeCounter > 0f)
+            {
+                wallJumping = true;
+                myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
+                wallJumpCoyoteTimeCounter = 0f;
+
+                if (transform.localScale.x != wallJumpDirection)
+                {
+                    Turn();
+                }
+
+                Invoke("StopWallJumping", wallJumpTime);
+            }
         }
 
         playerAnimator.SetBool("OnGround", coyoteTimeCounter > 0f);
@@ -119,6 +134,10 @@ public class PlayerController : MonoBehaviour
         if (doubleJump)
         {
             mySR.material = playerMaterials[1];
+        }
+        else if (dashing)
+        {
+            mySR.material = playerMaterials[2];
         }
         else
         {
@@ -155,5 +174,33 @@ public class PlayerController : MonoBehaviour
 
             other.GetComponent<BoostController>().Cooldown();
         }
+
+        if (other.gameObject.tag == "Dash")
+        {
+            other.GetComponent<DashController>().Cooldown();
+            StartCoroutine("Dash", other);
+        }
+
+        if (other.gameObject.tag == "Pull Start")
+        {
+            other.GetComponentInParent<PullController>().Pull();
+        }
+    }
+
+    public IEnumerator Dash(Collider2D other)
+    {
+        yield return new WaitForSeconds(dashDelay);
+
+        dashing = true;
+
+        myRB.velocity = dashSpeed * Vector3.Normalize(other.transform.up);
+        myRB.gravityScale = 0f;
+
+        yield return new WaitForSeconds(dashTime);
+
+        myRB.velocity = new Vector3(myRB.velocity.x, myRB.velocity.y / 2, 0f);
+
+        myRB.gravityScale = origGravityScale;
+        dashing = false;
     }
 }
