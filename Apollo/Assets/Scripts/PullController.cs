@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,20 +12,22 @@ public class PullController : MonoBehaviour
     public Transform start;
     public Transform end;
     public float alignSpeed = 10f;
-    public float pullSpeed = 5f;
+    public float pullSpeed = 7.5f;
 
-    void Start ()
+    void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        Vector3 playerPos = new Vector3(player.GetComponent<Rigidbody2D>().position.x, player.GetComponent<Rigidbody2D>().position.y, 0f);
         player.GetComponent<PlayerController>().pulling = pulling;
         if (aligning)
         {
-            player.transform.position = Vector3.MoveTowards(player.transform.position, start.position, alignSpeed * Time.deltaTime);
-            if (Vector3.Distance(player.transform.position, start.position) < 0.05f)
+            Vector3 newPos = Vector3.MoveTowards(playerPos, start.position, alignSpeed * Time.deltaTime);
+            player.GetComponent<Rigidbody2D>().MovePosition(newPos);
+            if (Vector3.Distance(playerPos, start.position) < 0.05f)
             {
                 pulling = true;
                 aligning = false;
@@ -32,11 +35,24 @@ public class PullController : MonoBehaviour
         }
         if (pulling)
         {
-            player.transform.position = Vector3.MoveTowards(player.transform.position, end.transform.position, pullSpeed * Time.deltaTime);
-            if (Vector3.Distance(player.transform.position, end.position) < 0.05f)
+            Vector3 newPos = Vector3.MoveTowards(playerPos, end.position, pullSpeed * Time.deltaTime);
+            player.GetComponent<Rigidbody2D>().MovePosition(newPos);
+
+            if (end.position.x > start.position.x)
+            {
+                player.transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+            else
+            {
+                player.transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+
+            if (Vector3.Distance(playerPos, end.position) < 0.05f)
             {
                 pulling = false;
                 player.GetComponent<Rigidbody2D>().gravityScale = player.GetComponent<PlayerController>().origGravityScale;
+                Vector3 playerVel = player.GetComponent<Rigidbody2D>().velocity;
+                player.GetComponent<Rigidbody2D>().velocity = new Vector3(playerVel.x, 2f, 0f);
             }
         }
     }

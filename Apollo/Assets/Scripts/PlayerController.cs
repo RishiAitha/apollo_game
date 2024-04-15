@@ -87,18 +87,12 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetAxisRaw("Horizontal") > 0f)
                 {
                     myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
-                    if (!facingRight)
-                    {
-                        Turn();
-                    }
+                    transform.localScale = new Vector3(1f, 1f, 1f);
                 }
                 else if (Input.GetAxisRaw("Horizontal") < 0f)
                 {
                     myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
-                    if (facingRight)
-                    {
-                        Turn();
-                    }
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
                 }
                 else
                 {
@@ -121,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
                 if (transform.localScale.x != wallJumpDirection)
                 {
-                    Turn();
+                    transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
                 }
 
                 Invoke("StopWallJumping", wallJumpTime);
@@ -139,6 +133,10 @@ public class PlayerController : MonoBehaviour
         {
             mySR.material = playerMaterials[2];
         }
+        else if (pulling)
+        {
+            mySR.material = playerMaterials[3];
+        }
         else
         {
             mySR.material = playerMaterials[0];
@@ -153,12 +151,6 @@ public class PlayerController : MonoBehaviour
     public bool OnWall()
     {
         return Physics2D.OverlapBox(wallCheckBox.transform.position, wallCheckBox.size, 0f, groundLayer);
-    }
-
-    private void Turn()
-    {
-        facingRight = !facingRight;
-        transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
     }
 
     private void StopWallJumping()
@@ -184,6 +176,11 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Pull Start")
         {
             other.GetComponentInParent<PullController>().Pull();
+        }
+
+        if (other.gameObject.tag == "Portal Start")
+        {
+            other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
         }
     }
 
