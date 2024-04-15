@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
     public bool onWall;
 
+    public bool dialogueActive;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -62,104 +64,111 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        onWall = OnWall();
-        if (IsGrounded())
+        if (!dialogueActive)
         {
-            coyoteTimeCounter = coyoteTime;
-            doubleJump = false;
-        }
-        else
-        {
-            coyoteTimeCounter -= Time.deltaTime;
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            jumpBufferCounter = jumpBufferTime;
-        }
-        else
-        {
-            jumpBufferCounter -= Time.deltaTime;
-        }
-
-        if (!dashing && !pulling)
-        {
-            if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
+            onWall = OnWall();
+            if (IsGrounded())
             {
-                // we are wall sliding
-                myRB.velocity = new Vector3(myRB.velocity.x, -wallSlideSpeed, 0f);
-                wallJumpDirection = -transform.localScale.x;
-                wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
-                CancelInvoke("StopWallJumping");
+                coyoteTimeCounter = coyoteTime;
+                doubleJump = false;
             }
             else
             {
-                wallJumpCoyoteTimeCounter -= Time.deltaTime;
+                coyoteTimeCounter -= Time.deltaTime;
             }
 
-            if (!wallJumping)
+            if (Input.GetButtonDown("Jump"))
             {
-                if (Input.GetAxisRaw("Horizontal") > 0f)
+                jumpBufferCounter = jumpBufferTime;
+            }
+            else
+            {
+                jumpBufferCounter -= Time.deltaTime;
+            }
+
+            if (!dashing && !pulling)
+            {
+                if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
                 {
-                    myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
-                    transform.localScale = new Vector3(1f, 1f, 1f);
-                }
-                else if (Input.GetAxisRaw("Horizontal") < 0f)
-                {
-                    myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                    // we are wall sliding
+                    myRB.velocity = new Vector3(myRB.velocity.x, -wallSlideSpeed, 0f);
+                    wallJumpDirection = -transform.localScale.x;
+                    wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
+                    CancelInvoke("StopWallJumping");
                 }
                 else
                 {
-                    myRB.velocity = new Vector3(0f, myRB.velocity.y, 0f);
+                    wallJumpCoyoteTimeCounter -= Time.deltaTime;
                 }
-            }
 
-            if (jumpBufferCounter > 0f && wallJumpCoyoteTimeCounter > 0f)
-            {
-                jumpBufferCounter = 0f;
-                wallJumping = true;
-                myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
-                wallJumpCoyoteTimeCounter = 0f;
-
-                if (transform.localScale.x != wallJumpDirection)
+                if (!wallJumping)
                 {
-                    transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
+                    if (Input.GetAxisRaw("Horizontal") > 0f)
+                    {
+                        myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
+                        transform.localScale = new Vector3(1f, 1f, 1f);
+                    }
+                    else if (Input.GetAxisRaw("Horizontal") < 0f)
+                    {
+                        myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
+                        transform.localScale = new Vector3(-1f, 1f, 1f);
+                    }
+                    else
+                    {
+                        myRB.velocity = new Vector3(0f, myRB.velocity.y, 0f);
+                    }
                 }
 
-                Invoke("StopWallJumping", wallJumpTime);
+                if (jumpBufferCounter > 0f && wallJumpCoyoteTimeCounter > 0f)
+                {
+                    jumpBufferCounter = 0f;
+                    wallJumping = true;
+                    myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
+                    wallJumpCoyoteTimeCounter = 0f;
+
+                    if (transform.localScale.x != wallJumpDirection)
+                    {
+                        transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
+                    }
+
+                    Invoke("StopWallJumping", wallJumpTime);
+                }
             }
-        }
-        
-        if (!dashing)
-        {
-            if (jumpBufferCounter > 0f && (coyoteTimeCounter > 0f || doubleJump))
+
+            if (!dashing)
             {
-                jumpBufferCounter = 0f;
-                myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
-                coyoteTimeCounter = 0f;
-                doubleJump = false;
+                if (jumpBufferCounter > 0f && (coyoteTimeCounter > 0f || doubleJump))
+                {
+                    jumpBufferCounter = 0f;
+                    myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
+                    coyoteTimeCounter = 0f;
+                    doubleJump = false;
+                }
             }
-        }
 
-        playerAnimator.SetBool("OnGround", coyoteTimeCounter > 0f);
-        playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
+            playerAnimator.SetBool("OnGround", coyoteTimeCounter > 0f);
+            playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
 
-        if (pulling)
-        {
-            mySR.material = playerMaterials[3];
-        }
-        else if (doubleJump)
-        {
-            mySR.material = playerMaterials[1];
-        }
-        else if (dashing)
-        {
-            mySR.material = playerMaterials[2];
+            if (pulling)
+            {
+                mySR.material = playerMaterials[3];
+            }
+            else if (doubleJump)
+            {
+                mySR.material = playerMaterials[1];
+            }
+            else if (dashing)
+            {
+                mySR.material = playerMaterials[2];
+            }
+            else
+            {
+                mySR.material = playerMaterials[0];
+            }
         }
         else
         {
-            mySR.material = playerMaterials[0];
+            myRB.velocity = new Vector3(0f, 0f, 0f);
         }
     }
 
