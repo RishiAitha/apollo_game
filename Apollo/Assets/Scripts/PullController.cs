@@ -22,7 +22,7 @@ public class PullController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 playerPos = new Vector3(player.GetComponent<Rigidbody2D>().position.x, player.GetComponent<Rigidbody2D>().position.y, 0f);
-        player.GetComponent<PlayerController>().pulling = pulling;
+        player.GetComponent<PlayerController>().pulling = aligning || pulling;
         if (aligning)
         {
             Vector3 newPos = Vector3.MoveTowards(playerPos, start.position, alignSpeed * Time.deltaTime);
@@ -31,6 +31,8 @@ public class PullController : MonoBehaviour
             {
                 pulling = true;
                 aligning = false;
+
+                player.GetComponent<PlayerController>().doubleJump = true;
             }
         }
         if (pulling)
@@ -47,12 +49,16 @@ public class PullController : MonoBehaviour
                 player.transform.localScale = new Vector3(-1f, 1f, 1f);
             }
 
-            if (Vector3.Distance(playerPos, end.position) < 0.05f)
+            if (Vector3.Distance(playerPos, end.position) < 0.05f || player.GetComponent<PlayerController>().doubleJump == false)
             {
                 pulling = false;
                 player.GetComponent<Rigidbody2D>().gravityScale = player.GetComponent<PlayerController>().origGravityScale;
                 Vector3 playerVel = player.GetComponent<Rigidbody2D>().velocity;
-                player.GetComponent<Rigidbody2D>().velocity = new Vector3(playerVel.x, 2f, 0f);
+                if (player.GetComponent<PlayerController>().doubleJump != false)
+                {
+                    player.GetComponent<Rigidbody2D>().velocity = new Vector3(playerVel.x, 2f, 0f);
+                }
+                player.GetComponent<PlayerController>().doubleJump = false;
             }
         }
     }

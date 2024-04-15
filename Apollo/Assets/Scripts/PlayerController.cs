@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public float coyoteTime;
     private float coyoteTimeCounter;
 
+    public float jumpBufferTime;
+    private float jumpBufferCounter;
+
     public bool doubleJump;
 
     public Animator playerAnimator;
@@ -47,6 +50,8 @@ public class PlayerController : MonoBehaviour
 
     public bool pulling;
 
+    public bool onWall;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -57,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        onWall = OnWall();
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
@@ -65,6 +71,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
         }
 
         if (!dashing && !pulling)
@@ -100,15 +115,9 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (Input.GetButtonDown("Jump") && (coyoteTimeCounter > 0f || doubleJump))
+            if (jumpBufferCounter > 0f && wallJumpCoyoteTimeCounter > 0f)
             {
-                myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
-                coyoteTimeCounter = 0f;
-                doubleJump = false;
-            }
-
-            if (Input.GetButtonDown("Jump") && wallJumpCoyoteTimeCounter > 0f)
-            {
+                jumpBufferCounter = 0f;
                 wallJumping = true;
                 myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
                 wallJumpCoyoteTimeCounter = 0f;
@@ -121,21 +130,32 @@ public class PlayerController : MonoBehaviour
                 Invoke("StopWallJumping", wallJumpTime);
             }
         }
+        
+        if (!dashing)
+        {
+            if (jumpBufferCounter > 0f && (coyoteTimeCounter > 0f || doubleJump))
+            {
+                jumpBufferCounter = 0f;
+                myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
+                coyoteTimeCounter = 0f;
+                doubleJump = false;
+            }
+        }
 
         playerAnimator.SetBool("OnGround", coyoteTimeCounter > 0f);
         playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
 
-        if (doubleJump)
+        if (pulling)
+        {
+            mySR.material = playerMaterials[3];
+        }
+        else if (doubleJump)
         {
             mySR.material = playerMaterials[1];
         }
         else if (dashing)
         {
             mySR.material = playerMaterials[2];
-        }
-        else if (pulling)
-        {
-            mySR.material = playerMaterials[3];
         }
         else
         {
