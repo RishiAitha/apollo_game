@@ -54,8 +54,11 @@ public class PlayerController : MonoBehaviour
 
     public bool dialogueActive;
 
+    public bool gameRunning;
+
     void Start()
     {
+        gameRunning = true;
         myRB = GetComponent<Rigidbody2D>();
         facingRight = true;
         mySR.material = playerMaterials[0];
@@ -64,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!dialogueActive)
+        if (gameRunning && !dialogueActive)
         {
             onWall = OnWall();
             if (IsGrounded())
