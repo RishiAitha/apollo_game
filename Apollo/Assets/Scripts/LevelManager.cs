@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
         if (movingCamera && foundPosition)
         {
             camera.gameObject.transform.position = Vector3.Lerp(camera.gameObject.transform.position, cameraPos, cameraSpeed * Time.deltaTime);
-
+            
             camera.orthographicSize = cameraSize;
 
             if (transitionDirection == "Right")
@@ -69,6 +69,10 @@ public class LevelManager : MonoBehaviour
             else if (transitionDirection == "Left")
             {
                 player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(-1f, player.gameObject.GetComponent<Rigidbody2D>().velocity.y, 0f);
+            }
+            else if (transitionDirection == "Up")
+            {
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(3f * player.gameObject.transform.localScale.x, 4f, 0f);
             }
 
             if (Vector3.Distance(camera.gameObject.transform.position, cameraPos) < 0.01f)

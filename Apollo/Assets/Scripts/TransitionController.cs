@@ -33,6 +33,19 @@ public class TransitionController : MonoBehaviour
                     level.currentRoomID = roomID0;
                 }
             }
+            else
+            {
+                if (level.currentRoomID == roomID0)
+                {
+                    level.UpdateRoom("Up");
+                    level.currentRoomID = roomID1;
+                }
+                else
+                {
+                    level.UpdateRoom("Down");
+                    level.currentRoomID = roomID0;
+                }
+            }
         }
     }
 }

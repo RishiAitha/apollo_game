@@ -27,8 +27,6 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed;
     public float dashSpeed;
 
-    private bool facingRight;
-
     public float wallSlideSpeed;
 
     public Vector3 wallJumpSpeed;
@@ -62,7 +60,6 @@ public class PlayerController : MonoBehaviour
     {
         gameRunning = true;
         myRB = GetComponent<Rigidbody2D>();
-        facingRight = true;
         mySR.material = playerMaterials[0];
         origGravityScale = myRB.gravityScale;
     }
@@ -151,9 +148,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            playerAnimator.SetBool("OnGround", coyoteTimeCounter > 0f);
-            playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
-
             if (pulling)
             {
                 mySR.material = playerMaterials[3];
@@ -178,6 +172,9 @@ public class PlayerController : MonoBehaviour
                 myRB.velocity = new Vector3(0f, 0f, 0f);
             }
         }
+
+        playerAnimator.SetBool("OnGround", IsGrounded());
+        playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
     }
 
     public bool IsGrounded()
