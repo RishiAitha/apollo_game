@@ -52,13 +52,10 @@ public class PlayerController : MonoBehaviour
 
     public bool dialogueActive;
 
-    public bool gameRunning;
-
     public bool changingRooms;
 
     void Start()
     {
-        gameRunning = true;
         myRB = GetComponent<Rigidbody2D>();
         mySR.material = playerMaterials[0];
         origGravityScale = myRB.gravityScale;
@@ -66,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (gameRunning && !dialogueActive)
+        if (!dialogueActive)
         {
             onWall = OnWall();
             if (IsGrounded())
@@ -103,7 +100,7 @@ public class PlayerController : MonoBehaviour
                     wallJumpCoyoteTimeCounter -= Time.deltaTime;
                 }
 
-                if (!wallJumping)
+                if (!changingRooms && !wallJumping)
                 {
                     if (Input.GetAxisRaw("Horizontal") > 0f)
                     {
@@ -167,10 +164,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (!changingRooms)
-            {
-                myRB.velocity = new Vector3(0f, 0f, 0f);
-            }
+            myRB.velocity = new Vector3(0f, 0f, 0f);
         }
 
         playerAnimator.SetBool("OnGround", IsGrounded());
