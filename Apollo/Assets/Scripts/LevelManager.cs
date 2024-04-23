@@ -21,22 +21,26 @@ public class LevelManager : MonoBehaviour
     private float cameraSize;
     private Vector3 cameraPos;
 
+    private string transitionDirection;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
         camera = FindObjectOfType<Camera>();
 
+        transitionDirection = "Right";
+
         movingCamera = false;
         foundPosition = false;
 
         currentRoomID = 0;
-        UpdateRoom();
     }
 
     void Update()
     {
         if (movingCamera && !foundPosition)
         {
+            player.changingRooms = true;
             player.gameRunning = false;
             BoxCollider2D roomDimensions = rooms[currentRoomID].GetComponent<BoxCollider2D>();
 
@@ -48,11 +52,7 @@ public class LevelManager : MonoBehaviour
                 cameraSize = Mathf.Max(vertical, horizontal) * 0.5f;
 
                 cameraPos = new Vector3(roomDimensions.gameObject.transform.position.x, roomDimensions.gameObject.transform.position.y, -10f);
-            }
-            else
-            {
-                Debug.LogError("Room " + currentRoomID + " does not exist.");
-                movingCamera = false;
+                foundPosition = true;
             }
         }
 
@@ -62,17 +62,28 @@ public class LevelManager : MonoBehaviour
 
             camera.orthographicSize = cameraSize;
 
+            if (transitionDirection == "Right")
+            {
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(1f, player.gameObject.GetComponent<Rigidbody2D>().velocity.y, 0f);
+            }
+            else if (transitionDirection == "Left")
+            {
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(-1f, player.gameObject.GetComponent<Rigidbody2D>().velocity.y, 0f);
+            }
+
             if (Vector3.Distance(camera.gameObject.transform.position, cameraPos) < 0.01f)
             {
                 movingCamera = false;
                 foundPosition = false;
                 player.gameRunning = true;
+                player.changingRooms = false;
             }
         }
     }
 
-    public void UpdateRoom()
+    public void UpdateRoom(string direction)
     {
+        transitionDirection = direction;
         movingCamera = true;
     }
 }

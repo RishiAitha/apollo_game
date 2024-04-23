@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
 
     public bool gameRunning;
 
+    public bool changingRooms;
+
     void Start()
     {
         gameRunning = true;
@@ -171,7 +173,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            myRB.velocity = new Vector3(0f, 0f, 0f);
+            if (!changingRooms)
+            {
+                myRB.velocity = new Vector3(0f, 0f, 0f);
+            }
         }
     }
 

@@ -417,7 +417,7 @@ MonoBehaviour:
   rooms:
   - {fileID: 559906979}
   - {fileID: 694431433}
-  cameraSpeed: 5
+  cameraSpeed: 7.5
 --- !u!1 &413134806
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,6 +983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomID0: 0
   roomID1: 1
+  vertical: 0
 --- !u!61 &650538038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2227,6 +2228,7 @@ MonoBehaviour:
   onWall: 0
   dialogueActive: 0
   gameRunning: 0
+  changingRooms: 0
 --- !u!4 &1757358750
 Transform:
   m_ObjectHideFlags: 0

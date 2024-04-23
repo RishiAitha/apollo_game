@@ -9,6 +9,8 @@ public class TransitionController : MonoBehaviour
     public int roomID0;
     public int roomID1;
 
+    public bool vertical;
+
     void Start()
     {
         level = FindObjectOfType<LevelManager>();
@@ -18,15 +20,19 @@ public class TransitionController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (level.currentRoomID == roomID0)
+            if (!vertical)
             {
-                level.currentRoomID = roomID1;
+                if (level.currentRoomID == roomID0)
+                {
+                    level.UpdateRoom("Right");
+                    level.currentRoomID = roomID1;
+                }
+                else
+                {
+                    level.UpdateRoom("Left");
+                    level.currentRoomID = roomID0;
+                }
             }
-            else
-            {
-                level.currentRoomID = roomID0;
-            }
-            level.UpdateRoom();
         }
     }
 }
