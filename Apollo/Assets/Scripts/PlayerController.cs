@@ -223,7 +223,12 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Hazard")
         {
-            StartCoroutine("KillPlayer");
+            StartCoroutine("KillPlayer", true);
+        }
+
+        if (other.gameObject.tag == "Kill Plane")
+        {
+            StartCoroutine("KillPlayer", false);
         }
     }
 
@@ -244,7 +249,7 @@ public class PlayerController : MonoBehaviour
         dashing = false;
     }
 
-    public IEnumerator KillPlayer()
+    public IEnumerator KillPlayer(bool hazard)
     {
         if (!respawning)
         {
@@ -252,7 +257,14 @@ public class PlayerController : MonoBehaviour
 
             playerAnimator.SetBool("Hurt", true);
 
-            myRB.velocity = new Vector3(-3f * transform.localScale.x, 5f, 0f);
+            if (hazard)
+            {
+                myRB.velocity = new Vector3(-3f * transform.localScale.x, 5f, 0f);
+            }
+            else
+            {
+                myRB.velocity = Vector3.zero;
+            }
 
             yield return new WaitForSeconds(deathTime);
 

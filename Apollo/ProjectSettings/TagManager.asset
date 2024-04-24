@@ -9,6 +9,7 @@ TagManager:
   - Pull Start
   - Portal Start
   - Hazard
+  - Kill Plane
   layers:
   - Default
   - TransparentFX
