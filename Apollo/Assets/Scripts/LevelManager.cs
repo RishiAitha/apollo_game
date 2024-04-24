@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
     public int currentRoomID;
     public GameObject[] rooms;
 
-    private Camera camera;
+    private Camera mainCamera;
 
     private bool movingCamera;
     private bool foundPosition;
@@ -27,10 +27,17 @@ public class LevelManager : MonoBehaviour
 
     private Vector3 playerVelocity;
 
+    private bool boostedPlayer;
+
+    public float vertTransitionHorizontalBoost;
+    public float vertTransitionVerticalBoost;
+
+    private GameObject currentTransitionObj;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        camera = FindObjectOfType<Camera>();
+        mainCamera = FindObjectOfType<Camera>();
 
         transitionDirection = "Right";
 
@@ -50,26 +57,25 @@ public class LevelManager : MonoBehaviour
             }
             BoxCollider2D roomDimensions = rooms[currentRoomID].GetComponent<BoxCollider2D>();
 
-            if (roomDimensions != null)
-            {
-                vertical = roomDimensions.size.y;
-                horizontal = roomDimensions.size.x * camera.pixelHeight / camera.pixelWidth;
+            vertical = roomDimensions.size.y;
+            horizontal = roomDimensions.size.x * mainCamera.pixelHeight / mainCamera.pixelWidth;
 
-                cameraSize = Mathf.Max(vertical, horizontal) * 0.5f;
+            cameraSize = Mathf.Max(vertical, horizontal) * 0.5f;
 
-                cameraPos = new Vector3(roomDimensions.gameObject.transform.position.x, roomDimensions.gameObject.transform.position.y, -10f);
+            cameraPos = new Vector3(roomDimensions.gameObject.transform.position.x, roomDimensions.gameObject.transform.position.y, -10f);
 
-                playerVelocity = player.gameObject.GetComponent<Rigidbody2D>().velocity;
+            playerVelocity = player.gameObject.GetComponent<Rigidbody2D>().velocity;
 
-                foundPosition = true;
-            }
+            foundPosition = true;
+
+            boostedPlayer = transitionDirection != "Up";
         }
 
         if (movingCamera && foundPosition)
         {
-            camera.gameObject.transform.position = Vector3.Lerp(camera.gameObject.transform.position, cameraPos, cameraSpeed * Time.deltaTime);
+            mainCamera.gameObject.transform.position = Vector3.Lerp(mainCamera.gameObject.transform.position, cameraPos, cameraSpeed * Time.deltaTime);
             
-            camera.orthographicSize = cameraSize;
+            mainCamera.orthographicSize = cameraSize;
 
             if (transitionDirection == "Right" || transitionDirection == "Left")
             {
@@ -78,12 +84,24 @@ public class LevelManager : MonoBehaviour
             }
             else if (transitionDirection == "Up")
             {
-                //player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(3f * player.gameObject.transform.localScale.x, 4f, 0f);
+                if (!boostedPlayer)
+                {
+                    if (Vector3.Distance(player.gameObject.transform.position, currentTransitionObj.transform.position) > 0.5f)
+                    {
+                        // it seems like the lerping is instant, but it works so i'll keep it for now
+                        player.gameObject.transform.position = Vector3.Lerp(player.gameObject.transform.position, currentTransitionObj.transform.position, 1f);
+                    }
+                    else
+                    {
+                        player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(vertTransitionHorizontalBoost * player.gameObject.transform.localScale.x, vertTransitionVerticalBoost, 0f);
+                        boostedPlayer = true;
+                    }
+                }
             }
 
-            if (Vector3.Distance(camera.gameObject.transform.position, cameraPos) < 0.01f)
+            if (Vector3.Distance(mainCamera.gameObject.transform.position, cameraPos) < 0.01f)
             {
-                if (player.IsGrounded())
+                if (player.IsGrounded() && boostedPlayer)
                 {
                     movingCamera = false;
                     foundPosition = false;
@@ -94,9 +112,10 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void UpdateRoom(string direction)
+    public void UpdateRoom(string direction, GameObject transitionObj)
     {
         transitionDirection = direction;
+        currentTransitionObj = transitionObj;
         movingCamera = true;
     }
 }

@@ -24,12 +24,12 @@ public class TransitionController : MonoBehaviour
             {
                 if (level.currentRoomID == roomID0)
                 {
-                    level.UpdateRoom("Right");
+                    level.UpdateRoom("Right", gameObject);
                     level.currentRoomID = roomID1;
                 }
                 else
                 {
-                    level.UpdateRoom("Left");
+                    level.UpdateRoom("Left", gameObject);
                     level.currentRoomID = roomID0;
                 }
             }
@@ -37,12 +37,12 @@ public class TransitionController : MonoBehaviour
             {
                 if (level.currentRoomID == roomID0)
                 {
-                    level.UpdateRoom("Up");
+                    level.UpdateRoom("Up", gameObject);
                     level.currentRoomID = roomID1;
                 }
                 else
                 {
-                    level.UpdateRoom("Down");
+                    level.UpdateRoom("Down", gameObject);
                     level.currentRoomID = roomID0;
                 }
             }

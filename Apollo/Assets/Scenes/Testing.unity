@@ -507,7 +507,7 @@ Transform:
   m_GameObject: {fileID: 167008198}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.07, y: 3.14, z: 0}
+  m_LocalPosition: {x: 22, y: 3.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -564,6 +564,8 @@ MonoBehaviour:
   - {fileID: 1225881064}
   cameraSpeed: 10
   playerAnimator: {fileID: 1426644751}
+  vertTransitionHorizontalBoost: 5
+  vertTransitionVerticalBoost: 10
 --- !u!1 &413134806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,7 +2774,6 @@ MonoBehaviour:
   pulling: 0
   onWall: 0
   dialogueActive: 0
-  gameRunning: 0
   changingRooms: 0
 --- !u!4 &1757358750
 Transform:
