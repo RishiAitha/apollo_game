@@ -564,7 +564,7 @@ MonoBehaviour:
   - {fileID: 1225881064}
   cameraSpeed: 10
   playerAnimator: {fileID: 1426644751}
-  vertTransitionHorizontalBoost: 5
+  vertTransitionHorizontalBoost: 4
   vertTransitionVerticalBoost: 10
 --- !u!1 &413134806
 GameObject:
