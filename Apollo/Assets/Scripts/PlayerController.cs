@@ -54,16 +54,26 @@ public class PlayerController : MonoBehaviour
 
     public bool changingRooms;
 
+    private Vector3 respawnPosition;
+
+    public float deathTime;
+
+    private LevelManager level;
+
+    private bool respawning;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
+        level = FindObjectOfType<LevelManager>();
         mySR.material = playerMaterials[0];
         origGravityScale = myRB.gravityScale;
+        respawnPosition = transform.position;
     }
 
     void Update()
     {
-        if (!dialogueActive)
+        if (!dialogueActive && !respawning)
         {
             onWall = OnWall();
             if (IsGrounded())
@@ -162,7 +172,7 @@ public class PlayerController : MonoBehaviour
                 mySR.material = playerMaterials[0];
             }
         }
-        else
+        else if (!respawning)
         {
             myRB.velocity = new Vector3(0f, 0f, 0f);
         }
@@ -210,6 +220,11 @@ public class PlayerController : MonoBehaviour
         {
             other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
         }
+
+        if (other.gameObject.tag == "Hazard")
+        {
+            StartCoroutine("KillPlayer");
+        }
     }
 
     public IEnumerator Dash(Collider2D other)
@@ -227,5 +242,43 @@ public class PlayerController : MonoBehaviour
 
         myRB.gravityScale = origGravityScale;
         dashing = false;
+    }
+
+    public IEnumerator KillPlayer()
+    {
+        if (!respawning)
+        {
+            respawning = true;
+
+            playerAnimator.SetBool("Hurt", true);
+
+            myRB.velocity = new Vector3(-3f * transform.localScale.x, 5f, 0f);
+
+            yield return new WaitForSeconds(deathTime);
+
+            level.ResetCamera();
+            ResetVars();
+
+            myRB.velocity = Vector3.zero;
+            transform.position = respawnPosition;
+            playerAnimator.SetBool("Hurt", false);
+
+            respawning = false;
+        }
+    }
+
+    public void ResetVars()
+    {
+        myRB.gravityScale = origGravityScale;
+        coyoteTimeCounter = 0f;
+        jumpBufferCounter = 0f;
+        doubleJump = false;
+        mySR.material = playerMaterials[0];
+        wallJumpCoyoteTimeCounter = 0f;
+        wallJumping = false;
+        dashing = false;
+        pulling = false;
+        onWall = false;
+        playerAnimator.speed = 1f;
     }
 }

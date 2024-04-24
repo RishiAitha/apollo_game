@@ -118,4 +118,13 @@ public class LevelManager : MonoBehaviour
         currentTransitionObj = transitionObj;
         movingCamera = true;
     }
+
+    public void ResetCamera()
+    {
+        transitionDirection = "Reset";
+        currentTransitionObj = null;
+        currentRoomID = 0;
+        movingCamera = true;
+        foundPosition = false;
+    }
 }

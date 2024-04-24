@@ -8,6 +8,7 @@ TagManager:
   - Dash
   - Pull Start
   - Portal Start
+  - Hazard
   layers:
   - Default
   - TransparentFX
