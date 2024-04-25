@@ -2487,7 +2487,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20, y: 1}
+  m_Size: {x: 60, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1553910899
 GameObject:
@@ -2855,7 +2855,6 @@ MonoBehaviour:
   changingRooms: 0
   deathTime: 0.5
   transitionImmunityTime: 0.5
-  transitionImmunityTimeCounter: 0
 --- !u!4 &1757358750
 Transform:
   m_ObjectHideFlags: 0
