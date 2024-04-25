@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
 
     private bool respawning;
 
+    public float transitionImmunityTime;
+    private float transitionImmunityTimeCounter;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -73,6 +76,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        transitionImmunityTimeCounter -= Time.deltaTime;
         if (!dialogueActive && !respawning)
         {
             onWall = OnWall();
@@ -221,6 +225,11 @@ public class PlayerController : MonoBehaviour
             other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
         }
 
+        if (other.gameObject.tag == "Transition")
+        {
+            transitionImmunityTimeCounter = transitionImmunityTime;
+        }
+
         if (other.gameObject.tag == "Hazard")
         {
             StartCoroutine("KillPlayer", true);
@@ -251,7 +260,7 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator KillPlayer(bool hazard)
     {
-        if (!respawning)
+        if (!respawning && transitionImmunityTimeCounter <= 0f)
         {
             respawning = true;
 

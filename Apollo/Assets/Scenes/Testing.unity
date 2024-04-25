@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 650538037}
   m_Layer: 3
   m_Name: TransitionTrigger
-  m_TagString: Untagged
+  m_TagString: Transition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2003,7 +2003,7 @@ GameObject:
   - component: {fileID: 1301202692}
   m_Layer: 3
   m_Name: TransitionTrigger (1)
-  m_TagString: Untagged
+  m_TagString: Transition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2854,6 +2854,8 @@ MonoBehaviour:
   dialogueActive: 0
   changingRooms: 0
   deathTime: 0.5
+  transitionImmunityTime: 0.5
+  transitionImmunityTimeCounter: 0
 --- !u!4 &1757358750
 Transform:
   m_ObjectHideFlags: 0

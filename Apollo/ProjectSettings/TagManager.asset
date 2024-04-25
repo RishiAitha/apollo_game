@@ -10,6 +10,7 @@ TagManager:
   - Portal Start
   - Hazard
   - Kill Plane
+  - Transition
   layers:
   - Default
   - TransparentFX
