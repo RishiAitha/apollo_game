@@ -11,6 +11,7 @@ TagManager:
   - Hazard
   - Kill Plane
   - Transition
+  - Level End
   layers:
   - Default
   - TransparentFX

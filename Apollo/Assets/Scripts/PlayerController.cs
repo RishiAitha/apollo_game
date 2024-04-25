@@ -230,6 +230,11 @@ public class PlayerController : MonoBehaviour
             transitionImmunityTimeCounter = transitionImmunityTime;
         }
 
+        if (other.gameObject.tag == "Level End")
+        {
+            other.GetComponent<LevelEnd>().EndLevel();
+        }
+
         if (other.gameObject.tag == "Hazard")
         {
             StartCoroutine("KillPlayer", true);
