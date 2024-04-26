@@ -5,18 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelEnd : MonoBehaviour
 {
+    public string currentLevel;
     public string nextLevel;
-
-    public int worldToUnlock;
 
     public void EndLevel()
     {
-        PlayerPrefs.SetInt(nextLevel, 1);
-
-        if (worldToUnlock != 0)
-        {
-            PlayerPrefs.SetInt(worldToUnlock.ToString(), 1);
-        }
+        PlayerPrefs.SetInt(currentLevel, 0);
+        PlayerPrefs.SetInt(nextLevel, 0);
 
         SceneManager.LoadScene(nextLevel);
     }
