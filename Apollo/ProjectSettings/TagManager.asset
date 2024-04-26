@@ -12,6 +12,7 @@ TagManager:
   - Kill Plane
   - Transition
   - Level End
+  - Zip Point
   layers:
   - Default
   - TransparentFX

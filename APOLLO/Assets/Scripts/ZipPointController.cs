@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DashController : MonoBehaviour
+public class ZipPointController : MonoBehaviour
 {
     public float cooldownTime = 3f;
+
+    public bool cooldown;
 
     public void Cooldown()
     {
@@ -13,7 +15,7 @@ public class DashController : MonoBehaviour
 
     public IEnumerator CooldownAnim()
     {
-        GetComponent<Collider2D>().enabled = false;
+        cooldown = true;
         for (int i = 0; i < 10; i++)
         {
             yield return new WaitForSeconds(cooldownTime / 20f);
@@ -21,6 +23,6 @@ public class DashController : MonoBehaviour
             yield return new WaitForSeconds(cooldownTime / 20f);
             GetComponent<SpriteRenderer>().enabled = true;
         }
-        GetComponent<Collider2D>().enabled = true;
+        cooldown = false;
     }
 }

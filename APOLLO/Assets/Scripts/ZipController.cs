@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
-public class PullController : MonoBehaviour
+public class ZipController : MonoBehaviour
 {
     public bool aligning;
     public bool pulling;
@@ -12,8 +10,7 @@ public class PullController : MonoBehaviour
     public Transform start;
     public Transform end;
     public float alignSpeed = 10f;
-    public float pullSpeed = 7.5f;
-
+    public float zipSpeed = 25f;
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
@@ -22,7 +19,7 @@ public class PullController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 playerPos = new Vector3(player.GetComponent<Rigidbody2D>().position.x, player.GetComponent<Rigidbody2D>().position.y, 0f);
-        player.GetComponent<PlayerController>().pulling = aligning || pulling;
+        player.GetComponent<PlayerController>().zipping = aligning || pulling;
         if (aligning)
         {
             Vector3 newPos = Vector3.MoveTowards(playerPos, start.position, alignSpeed * Time.deltaTime);
@@ -31,13 +28,11 @@ public class PullController : MonoBehaviour
             {
                 pulling = true;
                 aligning = false;
-
-                player.GetComponent<PlayerController>().doubleJump = true;
             }
         }
         if (pulling)
         {
-            Vector3 newPos = Vector3.MoveTowards(playerPos, end.position, pullSpeed * Time.deltaTime);
+            Vector3 newPos = Vector3.MoveTowards(playerPos, end.position, zipSpeed * Time.deltaTime);
             player.GetComponent<Rigidbody2D>().MovePosition(newPos);
 
             if (end.position.x > start.position.x)
@@ -49,26 +44,40 @@ public class PullController : MonoBehaviour
                 player.transform.localScale = new Vector3(-1f, 1f, 1f);
             }
 
-            if (Vector3.Distance(playerPos, end.position) < 0.01f || player.GetComponent<PlayerController>().doubleJump == false)
+            if (Vector3.Distance(playerPos, end.position) < 0.01f)
             {
                 pulling = false;
                 player.GetComponent<Rigidbody2D>().gravityScale = player.GetComponent<PlayerController>().origGravityScale;
-                Vector3 playerVel = player.GetComponent<Rigidbody2D>().velocity;
-                if (player.GetComponent<PlayerController>().doubleJump != false)
-                {
-                    player.GetComponent<Rigidbody2D>().velocity = new Vector3(playerVel.x, 2f, 0f);
-                }
-                player.GetComponent<PlayerController>().doubleJump = false;
+                start.gameObject.GetComponent<ZipPointController>().Cooldown();
+                end.gameObject.GetComponent<ZipPointController>().Cooldown();
             }
         }
     }
 
-    public void Pull()
+
+    public void Zip()
     {
-        if (!pulling)
+        if (!pulling && !start.gameObject.GetComponent<ZipPointController>().cooldown && !end.gameObject.GetComponent<ZipPointController>().cooldown)
         {
             aligning = true;
             player.GetComponent<Rigidbody2D>().gravityScale = 0f;
+        }
+    }
+
+    public void SetStart(GameObject zipPoint)
+    {
+        if (zipPoint.transform != start)
+        {
+            end = start;
+            start = zipPoint.transform;
+            if (pulling)
+            {
+                pulling = false;
+                aligning = false;
+                player.GetComponent<Rigidbody2D>().gravityScale = player.GetComponent<PlayerController>().origGravityScale;
+                start.gameObject.GetComponent<ZipPointController>().Cooldown();
+                end.gameObject.GetComponent<ZipPointController>().Cooldown();
+            }
         }
     }
 }

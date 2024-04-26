@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoostController : MonoBehaviour
 {
-    public float cooldownTime = 5f;
+    public float cooldownTime = 3f;
 
     public void Cooldown()
     {

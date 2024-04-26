@@ -65,6 +65,9 @@ public class PlayerController : MonoBehaviour
     public float transitionImmunityTime;
     private float transitionImmunityTimeCounter;
 
+    public bool zipping;
+    private GameObject currentZip;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -159,9 +162,22 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
+            if (currentZip != null)
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    currentZip.GetComponentInParent<ZipController>().Zip();
+                    doubleJump = false;
+                }
+            }
+
             if (pulling)
             {
                 mySR.material = playerMaterials[3];
+            }
+            else if (zipping)
+            {
+                mySR.material = playerMaterials[4];
             }
             else if (doubleJump)
             {
@@ -170,6 +186,10 @@ public class PlayerController : MonoBehaviour
             else if (dashing)
             {
                 mySR.material = playerMaterials[2];
+            }
+            else if (currentZip != null && !currentZip.GetComponent<ZipPointController>().cooldown)
+            {
+                mySR.material = playerMaterials[5];
             }
             else
             {
@@ -243,6 +263,20 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Kill Plane")
         {
             StartCoroutine("KillPlayer", false);
+        }
+
+        if (other.gameObject.tag == "Zip Point")
+        {
+            currentZip = other.gameObject;
+            currentZip.GetComponentInParent<ZipController>().SetStart(currentZip);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Zip Point")
+        {
+            currentZip = null;
         }
     }
 
