@@ -9,6 +9,6 @@ public class LevelButton : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Button>().interactable = (PlayerPrefs.HasKey(levelName) && PlayerPrefs.GetInt(levelName) == 1);
+        GetComponent<Button>().interactable = (PlayerPrefs.HasKey(levelName) && PlayerPrefs.GetInt(levelName) >= 0);
     }
 }

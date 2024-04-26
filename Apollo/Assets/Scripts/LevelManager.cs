@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     public int currentRoomID;
     public GameObject[] rooms;
+
+    public int currentCheckpointID;
+    public GameObject[] checkpoints;
 
     private Camera mainCamera;
 
@@ -44,7 +48,10 @@ public class LevelManager : MonoBehaviour
         movingCamera = false;
         foundPosition = false;
 
-        currentRoomID = 0;
+        currentCheckpointID = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name);
+        player.respawnPosition = checkpoints[currentCheckpointID].transform.position;
+        player.transform.position = player.respawnPosition;
+        UpdateRoom("None", null);
     }
 
     void Update()
@@ -88,8 +95,7 @@ public class LevelManager : MonoBehaviour
                 {
                     if (Vector3.Distance(player.gameObject.transform.position, currentTransitionObj.transform.position) > 0.5f)
                     {
-                        // it seems like the lerping is instant, but it works so i'll keep it for now
-                        player.gameObject.transform.position = Vector3.Lerp(player.gameObject.transform.position, currentTransitionObj.transform.position, 1f);
+                        player.gameObject.transform.position = Vector3.Lerp(player.gameObject.transform.position, currentTransitionObj.transform.position, 45f * Time.deltaTime);
                     }
                     else
                     {
@@ -123,7 +129,7 @@ public class LevelManager : MonoBehaviour
     {
         transitionDirection = "Reset";
         currentTransitionObj = null;
-        currentRoomID = 0;
+        currentRoomID = checkpoints[currentCheckpointID].GetComponent<CheckpointController>().roomID;
         movingCamera = true;
         foundPosition = false;
     }

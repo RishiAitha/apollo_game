@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D myRB;
 
+    public Transform startPos;
+
     public BoxCollider2D groundCheckBox;
     public LayerMask groundLayer;
 
@@ -54,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
     public bool changingRooms;
 
-    private Vector3 respawnPosition;
+    public Vector3 respawnPosition;
 
     public float deathTime;
 
@@ -74,7 +76,6 @@ public class PlayerController : MonoBehaviour
         level = FindObjectOfType<LevelManager>();
         mySR.material = playerMaterials[0];
         origGravityScale = myRB.gravityScale;
-        respawnPosition = transform.position;
     }
 
     void Update()
