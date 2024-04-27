@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D myRB;
 
-    public Transform startPos;
-
     public BoxCollider2D groundCheckBox;
     public LayerMask groundLayer;
 

@@ -22,7 +22,10 @@ public class MovingObject : MonoBehaviour
     {
         moving = true;
         currentTargetPos1 = pos1.position;
-        currentTargetPos2 = pos3.position;
+        if (movingObject2 != null)
+        {
+            currentTargetPos2 = pos3.position;
+        }
     }
 
     private void Update()
@@ -40,7 +43,7 @@ public class MovingObject : MonoBehaviour
         if (moving)
         {
             movingObject1.transform.position = Vector3.MoveTowards(movingObject1.transform.position, currentTargetPos1, moveSpeed1 * Time.deltaTime);
-            if (Mathf.Abs(Vector3.Distance(movingObject1.transform.position, currentTargetPos1)) < 0.01f)
+            if (Mathf.Abs(Vector3.Distance(movingObject1.transform.position, currentTargetPos1)) < 0.001f)
             {
                 if (pos1.position == currentTargetPos1)
                 {
@@ -55,7 +58,7 @@ public class MovingObject : MonoBehaviour
             if (movingObject2 != null)
             {
                 movingObject2.transform.position = Vector3.MoveTowards(movingObject2.transform.position, currentTargetPos2, moveSpeed2 * Time.deltaTime);
-                if (Mathf.Abs(Vector3.Distance(movingObject2.transform.position, currentTargetPos2)) < 0.01f)
+                if (Mathf.Abs(Vector3.Distance(movingObject2.transform.position, currentTargetPos2)) < 0.001f)
                 {
                     if (pos3.position == currentTargetPos2)
                     {
