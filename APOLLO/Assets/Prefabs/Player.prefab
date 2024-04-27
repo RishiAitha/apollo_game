@@ -68,7 +68,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 67360b7f143e1ef48bebb219967e569d, type: 2}
   - {fileID: 2100000, guid: cf46fdaea30852a4aa49d7f28c18b3d3, type: 2}
   playerSpeed: 5
-  jumpSpeed: 9
+  jumpSpeed: 10
   dashSpeed: 12
   wallSlideSpeed: 2.5
   wallJumpSpeed: {x: 6, y: 6, z: 0}

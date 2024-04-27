@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
                 coyoteTimeCounter -= Time.deltaTime;
             }
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && !changingRooms)
             {
                 jumpBufferCounter = jumpBufferTime;
             }
