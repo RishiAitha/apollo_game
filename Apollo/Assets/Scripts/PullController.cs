@@ -22,7 +22,6 @@ public class PullController : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 playerPos = new Vector3(player.GetComponent<Rigidbody2D>().position.x, player.GetComponent<Rigidbody2D>().position.y, 0f);
-        player.GetComponent<PlayerController>().pulling = aligning || pulling;
         if (aligning)
         {
             Vector3 newPos = Vector3.MoveTowards(playerPos, start.position, alignSpeed * Time.deltaTime);

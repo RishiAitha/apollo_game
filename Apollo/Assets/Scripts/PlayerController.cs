@@ -81,6 +81,24 @@ public class PlayerController : MonoBehaviour
         transitionImmunityTimeCounter -= Time.deltaTime;
         if (!dialogueActive && !respawning)
         {
+            pulling = false;
+            foreach (PullController pull in FindObjectsOfType<PullController>())
+            {
+                if (pull.aligning || pull.pulling)
+                {
+                    pulling = true;
+                }
+            }
+
+            zipping = false;
+            foreach (ZipController zip in FindObjectsOfType<ZipController>())
+            {
+                if (zip.aligning || zip.pulling)
+                {
+                    zipping = true;
+                }
+            }
+
             onWall = OnWall();
             if (IsGrounded())
             {
