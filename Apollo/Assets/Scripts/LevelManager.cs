@@ -38,6 +38,9 @@ public class LevelManager : MonoBehaviour
 
     private GameObject currentTransitionObj;
 
+    public bool paused;
+    public GameObject pauseMenu;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -56,6 +59,28 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            paused = !paused;
+            if (paused)
+            {
+                player.PausePlayer();
+            }
+            else
+            {
+                player.UnPausePlayer();
+            }
+        }
+
+        if (paused)
+        {
+            pauseMenu.SetActive(true);
+        }
+        else
+        {
+            pauseMenu.SetActive(false);
+        }
+
         if (movingCamera && !foundPosition)
         {
             if (transitionDirection != "Down")

@@ -68,6 +68,8 @@ public class PlayerController : MonoBehaviour
     public bool zipping;
     private GameObject currentZip;
 
+    public bool paused;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -79,7 +81,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         transitionImmunityTimeCounter -= Time.deltaTime;
-        if (!dialogueActive && !respawning)
+
+        if (!paused && !dialogueActive && !respawning)
         {
             pulling = false;
             foreach (PullController pull in FindObjectsOfType<PullController>())
@@ -110,7 +113,7 @@ public class PlayerController : MonoBehaviour
                 coyoteTimeCounter -= Time.deltaTime;
             }
 
-            if (Input.GetButtonDown("Jump") && !changingRooms)
+            if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !changingRooms)
             {
                 jumpBufferCounter = jumpBufferTime;
             }
@@ -357,5 +360,17 @@ public class PlayerController : MonoBehaviour
         pulling = false;
         onWall = false;
         playerAnimator.speed = 1f;
+    }
+
+    public void PausePlayer()
+    {
+        myRB.gravityScale = 0f;
+        paused = true;
+    }
+
+    public void UnPausePlayer()
+    {
+        myRB.gravityScale = origGravityScale;
+        paused = false;
     }
 }
