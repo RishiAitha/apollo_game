@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public float coyoteTime;
     private float coyoteTimeCounter;
 
+    public float jumpTime;
+    private float jumpTimeCounter;
+
     public float jumpBufferTime;
     private float jumpBufferCounter;
 
@@ -113,14 +116,24 @@ public class PlayerController : MonoBehaviour
                 coyoteTimeCounter -= Time.deltaTime;
             }
 
-            if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !changingRooms)
+            if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !changingRooms && (coyoteTimeCounter > 0f || doubleJump))
             {
                 jumpBufferCounter = jumpBufferTime;
+                jumpTimeCounter = jumpTime;
             }
-            else
+            
+            if (jumpTimeCounter > 0f && (Input.GetButton("Jump") || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !changingRooms)
             {
-                jumpBufferCounter -= Time.deltaTime;
+                jumpBufferCounter = jumpBufferTime;
+                jumpTimeCounter -= Time.deltaTime;
             }
+
+            if (Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
+            {
+                jumpTimeCounter = 0f;
+            }
+
+            jumpBufferCounter -= Time.deltaTime;
 
             if (!dashing && !pulling)
             {
@@ -173,7 +186,7 @@ public class PlayerController : MonoBehaviour
 
             if (!dashing)
             {
-                if (jumpBufferCounter > 0f && (coyoteTimeCounter > 0f || doubleJump))
+                if (jumpBufferCounter > 0f)
                 {
                     jumpBufferCounter = 0f;
                     myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
