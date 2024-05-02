@@ -73,6 +73,8 @@ public class PlayerController : MonoBehaviour
 
     public bool paused;
 
+    private Vector3 storedVel;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -85,7 +87,7 @@ public class PlayerController : MonoBehaviour
     {
         transitionImmunityTimeCounter -= Time.deltaTime;
 
-        if (!paused && !dialogueActive && !respawning)
+        if (!dialogueActive && !respawning)
         {
             pulling = false;
             foreach (PullController pull in FindObjectsOfType<PullController>())
@@ -377,13 +379,11 @@ public class PlayerController : MonoBehaviour
 
     public void PausePlayer()
     {
-        myRB.gravityScale = 0f;
-        paused = true;
+        storedVel = myRB.velocity;
     }
 
     public void UnPausePlayer()
     {
-        myRB.gravityScale = origGravityScale;
-        paused = false;
+        myRB.velocity = storedVel;
     }
 }

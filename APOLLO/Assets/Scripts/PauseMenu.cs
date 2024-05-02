@@ -27,7 +27,6 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitPause()
     {
-        level.paused = false;
-        player.UnPausePlayer();
+        level.UnPause();
     }
 }

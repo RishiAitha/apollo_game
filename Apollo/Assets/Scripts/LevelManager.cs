@@ -41,8 +41,11 @@ public class LevelManager : MonoBehaviour
     public bool paused;
     public GameObject pauseMenu;
 
+    private float origTimeScale;
+
     void Start()
     {
+        origTimeScale = Time.timeScale;
         player = FindObjectOfType<PlayerController>();
         mainCamera = FindObjectOfType<Camera>();
 
@@ -50,6 +53,9 @@ public class LevelManager : MonoBehaviour
 
         movingCamera = false;
         foundPosition = false;
+
+        paused = false;
+        pauseMenu.SetActive(false);
 
         currentCheckpointID = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name);
         player.respawnPosition = checkpoints[currentCheckpointID].transform.position;
@@ -61,24 +67,14 @@ public class LevelManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            paused = !paused;
             if (paused)
             {
-                player.PausePlayer();
+                UnPause();
             }
             else
             {
-                player.UnPausePlayer();
+                Pause();
             }
-        }
-
-        if (paused)
-        {
-            pauseMenu.SetActive(true);
-        }
-        else
-        {
-            pauseMenu.SetActive(false);
         }
 
         if (movingCamera && !foundPosition)
@@ -157,5 +153,21 @@ public class LevelManager : MonoBehaviour
         currentRoomID = checkpoints[currentCheckpointID].GetComponent<CheckpointController>().roomID;
         movingCamera = true;
         foundPosition = false;
+    }
+
+    public void Pause()
+    {
+        player.PausePlayer();
+        paused = true;
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void UnPause()
+    {
+        paused = false;
+        pauseMenu.SetActive(false);
+        Time.timeScale = origTimeScale;
+        player.UnPausePlayer();
     }
 }
