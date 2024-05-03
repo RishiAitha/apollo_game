@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
 
             jumpBufferCounter -= Time.deltaTime;
 
-            if (!dashing && !pulling)
+            if (!level.paused && !dashing && !pulling)
             {
                 if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
                 {
