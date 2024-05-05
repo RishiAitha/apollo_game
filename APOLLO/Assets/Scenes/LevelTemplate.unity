@@ -2253,7 +2253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232895079805632988, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.54
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 232895079805632988, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2285,18 +2285,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232895079805632988, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 480996503568857063, guid: c96d5bb082044c7459eb318275413045, type: 3}
-      propertyPath: m_Size.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 480996503568857063, guid: c96d5bb082044c7459eb318275413045, type: 3}
-      propertyPath: m_Size.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 480996503568857063, guid: c96d5bb082044c7459eb318275413045, type: 3}
-      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 610954189396465470, guid: c96d5bb082044c7459eb318275413045, type: 3}
@@ -2709,48 +2697,48 @@ Tilemap:
       e33: 7.17e-43
   - m_RefCount: 0
     m_Data:
-      e00: 4.661541e+21
+      e00: 4.7218684e-22
       e01: NaN
-      e02: 8.1228454e+37
+      e02: -1.2473523e+31
       e03: 0
-      e10: 3.24e-43
-      e11: 0
+      e10: 2.2e-43
+      e11: NaN
       e12: 4.5904e-41
       e13: 0
-      e20: NaN
+      e20: 8.0572e-41
       e21: 0
-      e22: 4.6615364e+21
+      e22: 4.7218604e-22
       e23: 0
       e30: 0
       e31: 7.34684e-40
-      e32: 3.24e-43
+      e32: 2.2e-43
       e33: 1
   - m_RefCount: 0
     m_Data:
-      e00: 4.3333002e+27
+      e00: 0
       e01: 0
-      e02: 1.395866e+10
-      e03: 1.395866e+10
-      e10: 6.7e-43
+      e02: 2.9710591e+29
+      e03: 2.9710591e+29
+      e10: 0
       e11: 0
-      e12: 6.67e-43
-      e13: 6.67e-43
-      e20: -0.00000006679352
-      e21: 4.6065918e+26
-      e22: -1.3380292e-28
-      e23: -1.1054483e-19
+      e12: 6.6e-43
+      e13: 6.6e-43
+      e20: -1.2473523e+31
+      e21: 4.555958e+28
+      e22: -0.0000000018985364
+      e23: -1.093508e-19
       e30: 4.5904e-41
-      e31: 6.7e-43
-      e32: 6.67e-43
-      e33: 6.7e-43
+      e31: 6.63e-43
+      e32: 6.6e-43
+      e33: 6.63e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 3.5728e-41, g: 3.5728e-41, b: 3.5728e-41, a: 3.5728e-41}
+    m_Data: {r: 8.0572e-41, g: 8.0572e-41, b: 8.0572e-41, a: 8.0572e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -5, y: -4, z: 0}
-  m_Size: {x: 83, y: 18, z: 1}
+  m_Origin: {x: -8, y: -4, z: 0}
+  m_Size: {x: 86, y: 18, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
