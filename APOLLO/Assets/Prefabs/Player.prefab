@@ -190,8 +190,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   coyoteTime: 0.1
+  coyoteTimeCounter: 0
   jumpTime: 0.125
+  jumpTimeCounter: 0
   jumpBufferTime: 0.1
+  jumpBufferCounter: 0
   doubleJump: 0
   playerAnimator: {fileID: 3856348622408822119}
   mySR: {fileID: 3251684297264740138}
@@ -210,6 +213,8 @@ MonoBehaviour:
   wallJumpDirection: 0
   wallJumpTime: 0.3
   wallJumpCoyoteTime: 0.1
+  wallJumpCoyoteTimeCounter: 0
+  wallJumping: 0
   wallCheckBox: {fileID: 480996503568857063}
   dashTime: 0.2
   dashDelay: 0.05
@@ -1033,7 +1038,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6209034, y: 0.10340369}
+  m_Size: {x: 0.56, y: 0.10340369}
   m_EdgeRadius: 0
 --- !u!1 &5671574971272380349
 GameObject:
@@ -1634,7 +1639,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.0070052445}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1645,7 +1650,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.091376334, y: 0.5940653}
+  m_Size: {x: 0.091376334, y: 0.5800548}
   m_EdgeRadius: 0
 --- !u!1 &8181126287039323624
 GameObject:

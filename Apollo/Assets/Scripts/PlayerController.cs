@@ -11,13 +11,13 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
 
     public float coyoteTime;
-    private float coyoteTimeCounter;
+    public float coyoteTimeCounter;
 
     public float jumpTime;
-    private float jumpTimeCounter;
+    public float jumpTimeCounter;
 
     public float jumpBufferTime;
-    private float jumpBufferCounter;
+    public float jumpBufferCounter;
 
     public bool doubleJump;
 
@@ -37,9 +37,9 @@ public class PlayerController : MonoBehaviour
     public float wallJumpTime;
 
     public float wallJumpCoyoteTime;
-    private float wallJumpCoyoteTimeCounter;
+    public float wallJumpCoyoteTimeCounter;
 
-    private bool wallJumping;
+    public bool wallJumping;
 
     public BoxCollider2D wallCheckBox;
 
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
                 coyoteTimeCounter -= Time.deltaTime;
             }
 
-            if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !changingRooms && (coyoteTimeCounter > 0f || doubleJump))
+            if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !changingRooms && (coyoteTimeCounter > 0f || doubleJump || wallJumpCoyoteTimeCounter > 0f))
             {
                 jumpBufferCounter = jumpBufferTime;
                 jumpTimeCounter = jumpTime;
@@ -142,6 +142,7 @@ public class PlayerController : MonoBehaviour
                 if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
                 {
                     // we are wall sliding
+                    jumpTimeCounter = 0f;
                     myRB.velocity = new Vector3(myRB.velocity.x, -wallSlideSpeed, 0f);
                     wallJumpDirection = -transform.localScale.x;
                     wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
@@ -170,7 +171,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
-                if (jumpBufferCounter > 0f && wallJumpCoyoteTimeCounter > 0f)
+                if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && wallJumpCoyoteTimeCounter > 0f)
                 {
                     jumpBufferCounter = 0f;
                     wallJumping = true;
@@ -188,7 +189,7 @@ public class PlayerController : MonoBehaviour
 
             if (!dashing)
             {
-                if (jumpBufferCounter > 0f)
+                if (jumpBufferCounter > 0f && !wallJumping)
                 {
                     jumpBufferCounter = 0f;
                     myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
