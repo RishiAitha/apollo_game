@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
     private bool respawning;
 
     public float transitionImmunityTime;
-    private float transitionImmunityTimeCounter;
+    public float transitionImmunityTimeCounter;
 
     public bool zipping;
     private GameObject currentZip;

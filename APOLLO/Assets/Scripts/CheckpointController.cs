@@ -37,7 +37,7 @@ public class CheckpointController : MonoBehaviour
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, checkpointID);
             level.currentCheckpointID = checkpointID;
             level.currentRoomID = roomID;
-            player.respawnPosition = transform.position;
+            player.respawnPosition = new Vector3(transform.position.x, transform.position.y + 0.5f, 0f);
         }
     }
 }

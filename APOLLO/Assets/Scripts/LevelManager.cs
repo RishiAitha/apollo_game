@@ -41,11 +41,9 @@ public class LevelManager : MonoBehaviour
     public bool paused;
     public GameObject pauseMenu;
 
-    private float origTimeScale;
-
     void Start()
     {
-        origTimeScale = Time.timeScale;
+        Time.timeScale = 1f;
         player = FindObjectOfType<PlayerController>();
         mainCamera = FindObjectOfType<Camera>();
 
@@ -58,7 +56,8 @@ public class LevelManager : MonoBehaviour
         pauseMenu.SetActive(false);
 
         currentCheckpointID = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name);
-        player.respawnPosition = checkpoints[currentCheckpointID].transform.position;
+        Vector3 firstCPPos = checkpoints[currentCheckpointID].transform.position;
+        player.respawnPosition = new Vector3(firstCPPos.x, firstCPPos.y + 0.5f, 0f);
         player.transform.position = player.respawnPosition;
         UpdateRoom("None", null);
     }
@@ -167,7 +166,7 @@ public class LevelManager : MonoBehaviour
     {
         paused = false;
         pauseMenu.SetActive(false);
-        Time.timeScale = origTimeScale;
+        Time.timeScale = 1f;
         player.UnPausePlayer();
     }
 }
