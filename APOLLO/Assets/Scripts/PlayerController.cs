@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
 
             jumpBufferCounter -= Time.deltaTime;
 
-            if (!level.paused && !dashing && !pulling)
+            if (!dashing && !pulling)
             {
                 if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
                 {
@@ -261,6 +261,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Boost")
         {
             doubleJump = true;
+            jumpTimeCounter = 0f;
+            jumpBufferCounter = 0f;
 
             other.GetComponent<BoostController>().Cooldown();
         }
