@@ -25648,6 +25648,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2053348729}
     - target: {fileID: 6930720535378575046, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: checkpoints.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930720535378575046, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: checkpoints.Array.data[0]
       value: 
       objectReference: {fileID: 1730309308}
@@ -25671,6 +25675,10 @@ PrefabInstance:
       propertyPath: checkpoints.Array.data[5]
       value: 
       objectReference: {fileID: 316605093}
+    - target: {fileID: 6930720535378575046, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: checkpoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1723563077}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32246,6 +32254,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8964363968572040107, guid: 5d5892cc00eed794e88f5a2e4e5ff0cb, type: 3}
   m_PrefabInstance: {fileID: 822321168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1723563077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8064024916484954705, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
+  m_PrefabInstance: {fileID: 2058401854}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1730309307
 PrefabInstance:
