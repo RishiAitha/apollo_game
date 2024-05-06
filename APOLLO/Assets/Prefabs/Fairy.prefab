@@ -331,10 +331,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7715942321330663963}
   - component: {fileID: 8435827699877227080}
-  - component: {fileID: 5912021878583691555}
   - component: {fileID: 3171354700170744558}
   - component: {fileID: 1671326201813935367}
-  - component: {fileID: 7568287751254256752}
+  - component: {fileID: 2666099570448835202}
   m_Layer: 0
   m_Name: Fairy
   m_TagString: Untagged
@@ -384,27 +383,6 @@ MonoBehaviour:
   playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
   NPCSprite: {fileID: 4723107735738678597, guid: c9e50cd8af184570bc4f552b75ec09ad, type: 3}
   dialogueText: {fileID: 0}
---- !u!95 &5912021878583691555
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8440379883629232044}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 065c5fb5e94c4130b013e82a4573a32a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &3171354700170744558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -502,17 +480,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7568287751254256752
-MonoBehaviour:
+--- !u!95 &2666099570448835202
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8440379883629232044}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Library: []
-  m_SpriteLibraryAsset: {fileID: 11400000, guid: 3372de378db147f2b47b2c3e46ea3538, type: 2}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd9556bf7bfd8a541bd4be723e75e79e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
