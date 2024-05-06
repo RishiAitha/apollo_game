@@ -383,6 +383,7 @@ MonoBehaviour:
   playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
   NPCSprite: {fileID: 4723107735738678597, guid: c9e50cd8af184570bc4f552b75ec09ad, type: 3}
   dialogueText: {fileID: 0}
+  NPCType: Fairy
 --- !u!61 &3171354700170744558
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -32,12 +32,17 @@ public class NPCController : MonoBehaviour
 
     public TextMeshProUGUI dialogueText;
 
+    public string NPCType;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
         Animator anim = GetComponent<Animator>();
 
-        anim.Play("FairyIdle", 0, Random.Range(0f, 1f));
+        if (NPCType == "Fairy")
+        {
+            anim.Play("FairyIdle", 0, Random.Range(0f, 1f));
+        }
     }
 
     void Update()
