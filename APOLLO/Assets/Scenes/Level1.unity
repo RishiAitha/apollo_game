@@ -31213,7 +31213,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 2420867765292838666, guid: c9cf22c4880d4e23950a4309d3911cc6, type: 3}
       - {fileID: 7297703292618891886, guid: c9cf22c4880d4e23950a4309d3911cc6, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 123, y: 14, z: 0}
@@ -31393,7 +31393,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: 2420867765292838666, guid: c9cf22c4880d4e23950a4309d3911cc6, type: 3}
       - {fileID: 7297703292618891886, guid: c9cf22c4880d4e23950a4309d3911cc6, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 125, y: 30, z: 0}
