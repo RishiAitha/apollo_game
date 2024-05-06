@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
             if (!dashing && !pulling)
             {
-                if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
+                if (OnWall() && jumpTimeCounter <= 0f && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
                 {
                     // we are wall sliding
                     jumpTimeCounter = 0f;
@@ -333,6 +333,11 @@ public class PlayerController : MonoBehaviour
 
         myRB.gravityScale = origGravityScale;
         dashing = false;
+    }
+
+    public void CallKillPlayer(bool hazard)
+    {
+        StartCoroutine("KillPlayer", hazard);
     }
 
     public IEnumerator KillPlayer(bool hazard)

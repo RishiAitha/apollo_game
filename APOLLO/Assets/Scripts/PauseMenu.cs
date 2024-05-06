@@ -25,6 +25,11 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void RespawnCharacter()
+    {
+        player.CallKillPlayer(false);
+    }
+
     public void ExitPause()
     {
         level.UnPause();
