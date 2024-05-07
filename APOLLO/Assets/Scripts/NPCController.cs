@@ -39,10 +39,7 @@ public class NPCController : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         Animator anim = GetComponent<Animator>();
 
-        if (NPCType == "Fairy")
-        {
-            anim.Play("FairyIdle", 0, Random.Range(0f, 1f));
-        }
+        anim.Play(NPCType + "Idle", 0, Random.Range(0f, 1f));
     }
 
     void Update()
