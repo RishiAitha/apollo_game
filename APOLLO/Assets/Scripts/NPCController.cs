@@ -27,10 +27,10 @@ public class NPCController : MonoBehaviour
 
     public Image dialogueImage;
 
+    public TextMeshProUGUI dialogueText;
+
     public Sprite playerSprite;
     public Sprite NPCSprite;
-
-    public TextMeshProUGUI dialogueText;
 
     public string NPCType;
 
