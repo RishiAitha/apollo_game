@@ -3080,6 +3080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 700924086564631056, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: wallSlideDeceleration
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6930720535378575046, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: rooms.Array.data[0]
       value: 
@@ -3486,43 +3490,43 @@ Tilemap:
       e33: 7.17e-43
   - m_RefCount: 0
     m_Data:
-      e00: 4.7218684e-22
+      e00: 8.048502e+17
       e01: NaN
-      e02: -1.2473523e+31
+      e02: 0.107147455
       e03: 0
-      e10: 2.2e-43
-      e11: NaN
+      e10: 2.05e-43
+      e11: 3e-45
       e12: 4.5904e-41
       e13: 0
-      e20: 8.0572e-41
+      e20: 3.5848e-41
       e21: 0
-      e22: 4.7218604e-22
+      e22: 8.048491e+17
       e23: 0
       e30: 0
       e31: 7.34684e-40
-      e32: 2.2e-43
+      e32: 2.05e-43
       e33: 1
   - m_RefCount: 0
     m_Data:
-      e00: 0
+      e00: -5.145094e+12
       e01: 0
-      e02: 2.9710591e+29
-      e03: 2.9710591e+29
-      e10: 0
+      e02: -1.7618306e-19
+      e03: -1.7618306e-19
+      e10: 8.44e-43
       e11: 0
-      e12: 6.6e-43
-      e13: 6.6e-43
-      e20: -1.2473523e+31
-      e21: 4.555958e+28
-      e22: -0.0000000018985364
-      e23: -1.093508e-19
+      e12: 8.41e-43
+      e13: 8.41e-43
+      e20: 0.107147455
+      e21: -2.0501622e+37
+      e22: 3.4935167e-19
+      e23: 1.0930944e-19
       e30: 4.5904e-41
-      e31: 6.63e-43
-      e32: 6.6e-43
-      e33: 6.63e-43
+      e31: 8.44e-43
+      e32: 8.42e-43
+      e33: 8.45e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 8.0572e-41, g: 8.0572e-41, b: 8.0572e-41, a: 8.0572e-41}
+    m_Data: {r: 3.5848e-41, g: 3.5848e-41, b: 3.5848e-41, a: 3.5848e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}

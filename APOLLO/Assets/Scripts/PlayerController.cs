@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed;
 
     public float wallSlideSpeed;
+    public float wallSlideDeceleration;
 
     public Vector3 wallJumpSpeed;
     public float wallJumpDirection;
@@ -143,7 +144,12 @@ public class PlayerController : MonoBehaviour
                 {
                     // we are wall sliding
                     jumpTimeCounter = 0f;
-                    myRB.velocity = new Vector3(myRB.velocity.x, -wallSlideSpeed, 0f);
+                    float currentWallSlideSpeed = myRB.velocity.y - (wallSlideDeceleration * Time.deltaTime);
+                    if (currentWallSlideSpeed < -wallSlideSpeed)
+                    {
+                        currentWallSlideSpeed = -wallSlideSpeed;
+                    }
+                    myRB.velocity = new Vector3(myRB.velocity.x, currentWallSlideSpeed, 0f);
                     wallJumpDirection = -transform.localScale.x;
                     wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
                     CancelInvoke("StopWallJumping");
