@@ -289,6 +289,12 @@ public class PlayerController : MonoBehaviour
             other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
         }
 
+        if (other.gameObject.tag == "Zip Point")
+        {
+            currentZip = other.gameObject;
+            currentZip.GetComponentInParent<ZipController>().SetStart(currentZip);
+        }
+
         if (other.gameObject.tag == "Transition")
         {
             transitionImmunityTimeCounter = transitionImmunityTime;
@@ -299,20 +305,9 @@ public class PlayerController : MonoBehaviour
             other.GetComponent<LevelEnd>().EndLevel();
         }
 
-        if (other.gameObject.tag == "Hazard")
-        {
-            StartCoroutine("KillPlayer", true);
-        }
-
         if (other.gameObject.tag == "Kill Plane")
         {
             StartCoroutine("KillPlayer", false);
-        }
-
-        if (other.gameObject.tag == "Zip Point")
-        {
-            currentZip = other.gameObject;
-            currentZip.GetComponentInParent<ZipController>().SetStart(currentZip);
         }
     }
 
@@ -321,6 +316,14 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Zip Point")
         {
             currentZip = null;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Hazard")
+        {
+            StartCoroutine("KillPlayer", true);
         }
     }
 
