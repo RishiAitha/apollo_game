@@ -27876,6 +27876,46 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 1927543058}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Welcome, traveler.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: It seems you've landed in our wonderful world.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: 'If you''d like to make your way to our town, remember this:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: 'Use our land''s element, BOOST, to leap in the air '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: and cross the dangerous chasms that await.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
       value: Fairy
