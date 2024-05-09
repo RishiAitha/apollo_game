@@ -13,7 +13,7 @@ public class NPCController : MonoBehaviour
         public bool isPlayer;
     }
 
-    public PlayerController player;
+    private PlayerController player;
 
     public bool NPCActive;
 
