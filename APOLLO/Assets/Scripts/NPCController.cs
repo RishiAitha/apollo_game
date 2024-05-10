@@ -15,7 +15,7 @@ public class NPCController : MonoBehaviour
 
     private PlayerController player;
 
-    public bool NPCActive;
+    private bool NPCActive;
 
     public GameObject controlIndicator;
 
@@ -44,6 +44,15 @@ public class NPCController : MonoBehaviour
 
     void Update()
     {
+        if (NPCActive && player.IsGrounded())
+        {
+            controlIndicator.SetActive(true);
+        }
+        else
+        {
+            controlIndicator.SetActive(false);
+        }
+
         if (NPCActive && Input.GetKeyDown(KeyCode.E) && player.IsGrounded())
         {
             if (currentLine == 0)
@@ -70,7 +79,6 @@ public class NPCController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            controlIndicator.SetActive(true);
             NPCActive = true;
         }
     }
@@ -79,7 +87,6 @@ public class NPCController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            controlIndicator.SetActive(false);
             NPCActive = false;
         }
     }
