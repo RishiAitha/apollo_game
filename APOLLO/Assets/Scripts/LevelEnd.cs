@@ -18,7 +18,6 @@ public class LevelEnd : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        ending = true;
     }
 
     void Update()

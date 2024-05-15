@@ -11,6 +11,8 @@ public class ZipController : MonoBehaviour
     public Transform end;
     public float alignSpeed = 10f;
     public float zipSpeed = 25f;
+    public GameObject line;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
@@ -78,5 +80,30 @@ public class ZipController : MonoBehaviour
                 end.gameObject.GetComponent<ZipPointController>().Cooldown();
             }
         }
+    }
+
+    private void SetLine()
+    {
+        float xPos = ((start.position.x + end.position.x) / 2);
+        float yPos = ((start.position.y + end.position.y) / 2);
+        float xScale = (Mathf.Abs(Vector3.Distance(start.position, end.position)));
+        float angle;
+        if (Mathf.Abs(start.position.x - xPos) != 0f)
+        {
+            angle = Mathf.Rad2Deg * Mathf.Atan(Mathf.Abs(start.position.y - yPos) / Mathf.Abs(start.position.x - xPos));
+        }
+        else
+        {
+            angle = 90;
+        }
+
+        if (start.position.y > yPos)
+        {
+            angle *= -1;
+        }
+
+        line.transform.position = new Vector3(xPos, yPos, 0f);
+        line.transform.localScale = new Vector3(xScale, 0.1f, 1f);
+        line.transform.Rotate(0f, 0f, angle, Space.Self);
     }
 }
