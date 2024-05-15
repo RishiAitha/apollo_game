@@ -13,9 +13,9 @@ public class NPCController : MonoBehaviour
         public bool isPlayer;
     }
 
-    public PlayerController player;
+    private PlayerController player;
 
-    public bool NPCActive;
+    private bool NPCActive;
 
     public GameObject controlIndicator;
 
@@ -27,18 +27,32 @@ public class NPCController : MonoBehaviour
 
     public Image dialogueImage;
 
+    public TextMeshProUGUI dialogueText;
+
     public Sprite playerSprite;
     public Sprite NPCSprite;
 
-    public TextMeshProUGUI dialogueText;
+    public string NPCType;
 
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        Animator anim = GetComponent<Animator>();
+
+        anim.Play(NPCType + "Idle", 0, Random.Range(0f, 1f));
     }
 
     void Update()
     {
+        if (NPCActive && player.IsGrounded())
+        {
+            controlIndicator.SetActive(true);
+        }
+        else
+        {
+            controlIndicator.SetActive(false);
+        }
+
         if (NPCActive && Input.GetKeyDown(KeyCode.E) && player.IsGrounded())
         {
             if (currentLine == 0)
@@ -65,7 +79,6 @@ public class NPCController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            controlIndicator.SetActive(true);
             NPCActive = true;
         }
     }
@@ -74,7 +87,6 @@ public class NPCController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            controlIndicator.SetActive(false);
             NPCActive = false;
         }
     }

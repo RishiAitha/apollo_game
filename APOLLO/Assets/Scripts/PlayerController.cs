@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed;
 
     public float wallSlideSpeed;
+    public float wallSlideDeceleration;
 
     public Vector3 wallJumpSpeed;
     public float wallJumpDirection;
@@ -139,11 +140,16 @@ public class PlayerController : MonoBehaviour
 
             if (!dashing && !pulling)
             {
-                if (OnWall() && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
+                if (OnWall() && jumpTimeCounter <= 0f && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
                 {
                     // we are wall sliding
                     jumpTimeCounter = 0f;
-                    myRB.velocity = new Vector3(myRB.velocity.x, -wallSlideSpeed, 0f);
+                    float currentWallSlideSpeed = myRB.velocity.y - (wallSlideDeceleration * Time.deltaTime);
+                    if (currentWallSlideSpeed < -wallSlideSpeed)
+                    {
+                        currentWallSlideSpeed = -wallSlideSpeed;
+                    }
+                    myRB.velocity = new Vector3(myRB.velocity.x, currentWallSlideSpeed, 0f);
                     wallJumpDirection = -transform.localScale.x;
                     wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
                     CancelInvoke("StopWallJumping");
@@ -283,6 +289,12 @@ public class PlayerController : MonoBehaviour
             other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
         }
 
+        if (other.gameObject.tag == "Zip Point")
+        {
+            currentZip = other.gameObject;
+            currentZip.GetComponentInParent<ZipController>().SetStart(currentZip);
+        }
+
         if (other.gameObject.tag == "Transition")
         {
             transitionImmunityTimeCounter = transitionImmunityTime;
@@ -293,20 +305,9 @@ public class PlayerController : MonoBehaviour
             other.GetComponent<LevelEnd>().EndLevel();
         }
 
-        if (other.gameObject.tag == "Hazard")
-        {
-            StartCoroutine("KillPlayer", true);
-        }
-
         if (other.gameObject.tag == "Kill Plane")
         {
             StartCoroutine("KillPlayer", false);
-        }
-
-        if (other.gameObject.tag == "Zip Point")
-        {
-            currentZip = other.gameObject;
-            currentZip.GetComponentInParent<ZipController>().SetStart(currentZip);
         }
     }
 
@@ -315,6 +316,14 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Zip Point")
         {
             currentZip = null;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Hazard")
+        {
+            StartCoroutine("KillPlayer", true);
         }
     }
 
@@ -333,6 +342,11 @@ public class PlayerController : MonoBehaviour
 
         myRB.gravityScale = origGravityScale;
         dashing = false;
+    }
+
+    public void CallKillPlayer(bool hazard)
+    {
+        StartCoroutine("KillPlayer", hazard);
     }
 
     public IEnumerator KillPlayer(bool hazard)
