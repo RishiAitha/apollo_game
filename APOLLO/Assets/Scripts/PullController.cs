@@ -16,7 +16,6 @@ public class PullController : MonoBehaviour
     public GameObject line;
     public GameObject particle;
     public Transform particlePos;
-    public int particleCount;
 
     void Start()
     {
@@ -101,6 +100,8 @@ public class PullController : MonoBehaviour
         line.transform.Rotate(0f, 0f, angle, Space.Self);
 
         particlePos.position = start.position;
+
+        int particleCount = (int) Mathf.Abs(Vector3.Distance(start.position, end.position));
 
         for (int i = 0; i < particleCount; i++)
         {

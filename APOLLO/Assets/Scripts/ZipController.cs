@@ -12,6 +12,8 @@ public class ZipController : MonoBehaviour
     public float alignSpeed = 10f;
     public float zipSpeed = 25f;
     public GameObject line;
+    public GameObject particle;
+    public Transform particlePos;
 
     void Start()
     {
@@ -105,5 +107,16 @@ public class ZipController : MonoBehaviour
         line.transform.position = new Vector3(xPos, yPos, 0f);
         line.transform.localScale = new Vector3(xScale, 0.1f, 1f);
         line.transform.Rotate(0f, 0f, angle, Space.Self);
+
+        particlePos.position = start.position;
+
+        int particleCount = (int)Mathf.Abs(Vector3.Distance(start.position, end.position));
+
+        for (int i = 0; i < particleCount; i++)
+        {
+            Instantiate(particle, particlePos.position, particlePos.rotation, transform);
+            particlePos.position += ((end.position - start.position) / particleCount);
+        }
+        Instantiate(particle, end.position, particlePos.rotation, transform);
     }
 }
