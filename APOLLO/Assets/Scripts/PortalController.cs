@@ -14,6 +14,12 @@ public class PortalController : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
+        SetParticles();
+    }
+
+    void Update()
+    {
+        SetLine();
     }
 
     public void Teleport(Vector3 initialVelocity)
@@ -28,6 +34,7 @@ public class PortalController : MonoBehaviour
         float yPos = ((start.position.y + end.position.y) / 2);
         float xScale = (Mathf.Abs(Vector3.Distance(start.position, end.position)));
         float angle;
+
         if (Mathf.Abs(start.position.x - xPos) != 0f)
         {
             angle = Mathf.Rad2Deg * Mathf.Atan(Mathf.Abs(start.position.y - yPos) / Mathf.Abs(start.position.x - xPos));
@@ -37,24 +44,33 @@ public class PortalController : MonoBehaviour
             angle = 90;
         }
 
-        if (start.position.y > yPos)
+        if (!(start.position.x > xPos && start.position.y > yPos) && (start.position.x > xPos || start.position.y > yPos))
         {
             angle *= -1;
+        }
+
+        if (start.position.x > xPos)
+        {
+            xScale *= -1;
         }
 
         line.transform.position = new Vector3(xPos, yPos, 0f);
         line.transform.localScale = new Vector3(xScale, 0.1f, 1f);
         line.transform.Rotate(0f, 0f, angle, Space.Self);
+    }
 
-        particlePos.position = start.position;
+    private void SetParticles()
+    {
+        particlePos.localPosition = new Vector3(-line.transform.localScale.x / 2, 0f, 0f);
 
-        int particleCount = (int)Mathf.Abs(Vector3.Distance(start.position, end.position));
+        int particleCount = (int)(1.5 * Mathf.Abs(Vector3.Distance(start.position, end.position)));
 
-        for (int i = 0; i < particleCount; i++)
+        for (int i = 0; i <= particleCount; i++)
         {
-            Instantiate(particle, particlePos.position, particlePos.rotation, transform);
-            particlePos.position += ((end.position - start.position) / particleCount);
+            GameObject newParticle = Instantiate(particle, line.transform, false);
+            newParticle.transform.localPosition = particlePos.localPosition;
+            newParticle.transform.localRotation = particlePos.localRotation;
+            particlePos.localPosition = new Vector3(particlePos.localPosition.x + (line.transform.localScale.x / particleCount), 0f, 0f);
         }
-        Instantiate(particle, end.position, particlePos.rotation, transform);
     }
 }
