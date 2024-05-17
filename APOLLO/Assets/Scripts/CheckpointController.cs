@@ -9,24 +9,26 @@ public class CheckpointController : MonoBehaviour
     public int roomID;
     private LevelManager level;
     private PlayerController player;
-    private bool active;
+    private SpriteRenderer mySR;
+    public Sprite sprite1;
+    public Sprite sprite2;
 
     void Start()
     {
         level = FindObjectOfType<LevelManager>();
         player = FindObjectOfType<PlayerController>();
+        mySR = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         if (level.currentCheckpointID == checkpointID)
         {
-            active = true;
+            mySR.sprite = sprite2;
         }
-
-        if (active)
+        else
         {
-            // change sprite here
+            mySR.sprite = sprite1;
         }
     }
 
