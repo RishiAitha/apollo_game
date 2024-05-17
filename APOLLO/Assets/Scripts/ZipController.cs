@@ -114,7 +114,7 @@ public class ZipController : MonoBehaviour
 
         line.transform.position = new Vector3(xPos, yPos, 0f);
         line.transform.localScale = new Vector3(xScale, 0.1f, 1f);
-        line.transform.Rotate(0f, 0f, angle, Space.Self);
+        line.transform.eulerAngles = new Vector3(0f, 0f, angle);
     }
 
     private void SetParticles()

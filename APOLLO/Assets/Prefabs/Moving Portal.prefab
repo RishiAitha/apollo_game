@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 4367221553955418434}
   - component: {fileID: 4743795075592935941}
   - component: {fileID: 2912750006282515932}
+  - component: {fileID: 1894767091390256426}
   m_Layer: 0
   m_Name: Moving Portal
   m_TagString: Untagged
@@ -194,6 +195,27 @@ MonoBehaviour:
   moving: 0
   moveSpeed1: 3
   moveSpeed2: 3
+--- !u!95 &1894767091390256426
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772010332359100260}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b186364da599b24b80335482e7acd99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2064947318151062740
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1742501299885989887}
   - component: {fileID: 2188953278435025574}
-  - component: {fileID: 6022445160282790877}
+  - component: {fileID: 2438458527892937354}
   m_Layer: 0
   m_Name: Portal Start
   m_TagString: Portal Start
@@ -310,8 +332,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6022445160282790877
-BoxCollider2D:
+--- !u!58 &2438458527892937354
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -343,18 +365,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!1 &2943116122231997322
 GameObject:
   m_ObjectHideFlags: 0
