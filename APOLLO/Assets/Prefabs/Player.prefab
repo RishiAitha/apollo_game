@@ -208,7 +208,7 @@ MonoBehaviour:
   jumpSpeed: 8
   dashSpeed: 12
   wallSlideSpeed: 2.5
-  wallSlideDeceleration: 0
+  wallSlideDeceleration: 2.5
   wallJumpSpeed: {x: 6, y: 6, z: 0}
   wallJumpDirection: 0
   wallJumpTime: 0.3
@@ -1044,26 +1044,8 @@ MonoBehaviour:
   currentRoomID: 0
   rooms:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   currentCheckpointID: 0
   checkpoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   cameraSpeed: 10
   playerAnimator: {fileID: 3856348622408822119}

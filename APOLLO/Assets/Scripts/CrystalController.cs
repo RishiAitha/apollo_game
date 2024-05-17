@@ -12,9 +12,12 @@ public class CrystalController : MonoBehaviour
 
     public GameObject controlIndicator;
 
+    public CrystalDoorController door;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        door = FindObjectOfType<CrystalDoorController>();
 
         if (PlayerPrefs.GetInt("Crystal" + CrystalID) == 1)
         {
@@ -60,9 +63,15 @@ public class CrystalController : MonoBehaviour
 
     void CollectCrystal()
     {
-        // idk what to do here
+        // animate the crystal here
         crystalActive = false;
         PlayerPrefs.SetInt("Crystal" +  CrystalID, 1);
+
+        if (door != null)
+        {
+            door.CheckCrystals();
+        }
+
         gameObject.SetActive(false);
     }
 }

@@ -25606,6 +25606,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6930720535378575046, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: rooms.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930720535378575046, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: rooms.Array.data[0]
       value: 
       objectReference: {fileID: 1470172636}
