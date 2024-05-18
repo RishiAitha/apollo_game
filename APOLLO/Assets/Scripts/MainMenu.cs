@@ -44,26 +44,26 @@ public class MainMenu : MonoBehaviour
         {
             if (currentLevel == 1)
             {
-                leftButton.SetActive(false);
+                leftButton.GetComponent<Button>().interactable = false;
             }
             else
             {
-                leftButton.SetActive(true);
+                leftButton.GetComponent<Button>().interactable = true;
             }
 
             if (currentLevel == 5 || !PlayerPrefs.HasKey("Level" + (currentLevel + 1)) || PlayerPrefs.GetInt("Level" + (currentLevel + 1)) < 0)
             {
-                rightButton.SetActive(false);
+                rightButton.GetComponent<Button>().interactable = false;
             }
             else
             {
-                rightButton.SetActive(true);
+                rightButton.GetComponent<Button>().interactable = true;
             }
         }
         else
         {
-            leftButton.SetActive(false);
-            rightButton.SetActive(false);
+            leftButton.GetComponent<Button>().interactable = false;
+            rightButton.GetComponent<Button>().interactable = false;
         }
 
         if (leftCounter > 0f || rightCounter > 0f)
