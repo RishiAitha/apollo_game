@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerController : MonoBehaviour
 {
@@ -75,6 +76,8 @@ public class PlayerController : MonoBehaviour
     public bool paused;
 
     private Vector3 storedVel;
+
+    public Light2D playerLight;
 
     void Start()
     {
@@ -243,6 +246,7 @@ public class PlayerController : MonoBehaviour
             myRB.velocity = new Vector3(0f, 0f, 0f);
         }
 
+        playerLight.color = mySR.material.color;
         playerAnimator.SetBool("OnGround", IsGrounded());
         playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
     }

@@ -51,7 +51,7 @@ public class MainMenu : MonoBehaviour
                 leftButton.GetComponent<Button>().interactable = true;
             }
 
-            if (currentLevel == 5 || !PlayerPrefs.HasKey("Level" + (currentLevel + 1)) || PlayerPrefs.GetInt("Level" + (currentLevel + 1)) < 0)
+            if (rightButton.GetComponent<Button>().interactable && (currentLevel == 5 || !PlayerPrefs.HasKey("Level" + (currentLevel + 1)) || PlayerPrefs.GetInt("Level" + (currentLevel + 1)) < 0))
             {
                 rightButton.GetComponent<Button>().interactable = false;
             }
