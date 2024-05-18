@@ -141,7 +141,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d8e6c70fe3f041a4ea56f3cd07d4c85f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -206,7 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc713715e5e06f44b4d1fc26f5a009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCActive: 0
   controlIndicator: {fileID: 2234976254123648676}
   dialogue:
   - text: hey!

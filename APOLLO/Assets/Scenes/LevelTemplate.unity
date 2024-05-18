@@ -540,7 +540,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d8e6c70fe3f041a4ea56f3cd07d4c85f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3277,10 +3277,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 700924086564631056, guid: c96d5bb082044c7459eb318275413045, type: 3}
-      propertyPath: wallSlideDeceleration
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6930720535378575046, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: rooms.Array.data[0]
       value: 
@@ -3308,11 +3304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5851072799561224860, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.48
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 5851072799561224860, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5851072799561224860, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3577,7 +3573,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d8e6c70fe3f041a4ea56f3cd07d4c85f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3754,7 +3750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7135139744880746945, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.496
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7135139744880746945, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
       propertyPath: m_LocalPosition.z

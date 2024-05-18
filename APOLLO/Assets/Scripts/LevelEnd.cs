@@ -19,11 +19,14 @@ public class LevelEnd : MonoBehaviour
     public Sprite sprite1;
     public Sprite sprite2;
 
+    public GameObject lightObj;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
         mySR = GetComponent<SpriteRenderer>();
         mySR.sprite = sprite1;
+        lightObj.SetActive(false);
     }
 
     void Update()
@@ -48,6 +51,7 @@ public class LevelEnd : MonoBehaviour
         PlayerPrefs.SetInt(nextLevel, 0);
 
         mySR.sprite = sprite2;
+        lightObj.SetActive(true);
 
         player.respawning = true;
 

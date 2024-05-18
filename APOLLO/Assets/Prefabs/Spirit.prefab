@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d8e6c70fe3f041a4ea56f3cd07d4c85f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,8 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc713715e5e06f44b4d1fc26f5a009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  NPCActive: 0
   controlIndicator: {fileID: 8910672537973391007}
   dialogue:
   - text: hey!
@@ -132,9 +130,9 @@ MonoBehaviour:
   currentLine: 0
   dialogueCanvas: {fileID: 0}
   dialogueImage: {fileID: 0}
+  dialogueText: {fileID: 0}
   playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
   NPCSprite: {fileID: 4723107735738678597, guid: ec081a99c71f4553afaf2dd7a36f48fe, type: 3}
-  dialogueText: {fileID: 0}
   NPCType: Spirit
 --- !u!61 &6552978218456837730
 BoxCollider2D:

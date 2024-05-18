@@ -9,26 +9,27 @@ public class CheckpointController : MonoBehaviour
     public int roomID;
     private LevelManager level;
     private PlayerController player;
+
     private SpriteRenderer mySR;
     public Sprite sprite1;
     public Sprite sprite2;
+
+    public GameObject lightObj;
 
     void Start()
     {
         level = FindObjectOfType<LevelManager>();
         player = FindObjectOfType<PlayerController>();
         mySR = GetComponent<SpriteRenderer>();
+        lightObj.SetActive(false);
     }
 
     void Update()
     {
-        if (level.currentCheckpointID == checkpointID)
-        {
-            mySR.sprite = sprite2;
-        }
-        else
+        if (level.currentCheckpointID != checkpointID)
         {
             mySR.sprite = sprite1;
+            lightObj.SetActive(false);
         }
     }
 
@@ -40,6 +41,8 @@ public class CheckpointController : MonoBehaviour
             level.currentCheckpointID = checkpointID;
             level.currentRoomID = roomID;
             player.respawnPosition = new Vector3(transform.position.x, transform.position.y + 0.5f, 0f);
+            mySR.sprite = sprite2;
+            lightObj.SetActive(true);
         }
     }
 }
