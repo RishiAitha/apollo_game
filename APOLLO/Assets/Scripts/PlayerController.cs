@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private LevelManager level;
 
-    private bool respawning;
+    public bool respawning;
 
     public float transitionImmunityTime;
     public float transitionImmunityTimeCounter;

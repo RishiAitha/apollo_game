@@ -15,9 +15,15 @@ public class LevelEnd : MonoBehaviour
     private float endingCounter;
     private bool ending;
 
+    private SpriteRenderer mySR;
+    public Sprite sprite1;
+    public Sprite sprite2;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        mySR = GetComponent<SpriteRenderer>();
+        mySR.sprite = sprite1;
     }
 
     void Update()
@@ -30,6 +36,8 @@ public class LevelEnd : MonoBehaviour
         }
         else if (ending)
         {
+            player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            player.respawning = false;
             SceneManager.LoadScene(nextLevel);
         }
     }
@@ -39,7 +47,9 @@ public class LevelEnd : MonoBehaviour
         PlayerPrefs.SetInt(currentLevel, 0);
         PlayerPrefs.SetInt(nextLevel, 0);
 
-        // need to stop player from moving from input
+        mySR.sprite = sprite2;
+
+        player.respawning = true;
 
         endingCounter = endingTime;
         ending = true;
