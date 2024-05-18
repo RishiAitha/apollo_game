@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.006000042, y: 0.00089997053, z: 0}
-    m_Extent: {x: 1.5036, y: 1.4969001, z: 0}
+    m_Center: {x: 0.0015999675, y: 0.00045001507, z: 0}
+    m_Extent: {x: 1.5074999, y: 1.49445, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 2082672170669826370}
   - component: {fileID: 4113879622964476687}
   - component: {fileID: 2475649258375083802}
+  - component: {fileID: 7375966148481665060}
   m_Layer: 0
   m_Name: Crystal3
   m_TagString: Untagged
@@ -477,6 +478,27 @@ MonoBehaviour:
   CrystalID: 3
   controlIndicator: {fileID: 5408606760540633820}
   door: {fileID: 0}
+--- !u!95 &7375966148481665060
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361238548396768243}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d7bf4b661369fc46b07c6d883f6dab9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8558754061008850147
 GameObject:
   m_ObjectHideFlags: 0

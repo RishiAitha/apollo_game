@@ -63,9 +63,19 @@ public class CrystalController : MonoBehaviour
 
     void CollectCrystal()
     {
-        // animate the crystal here
+        StartCoroutine("CollectCoroutine");
+    }
+
+    public IEnumerator CollectCoroutine()
+    {
         crystalActive = false;
-        PlayerPrefs.SetInt("Crystal" +  CrystalID, 1);
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        PlayerPrefs.SetInt("Crystal" + CrystalID, 1);
+
+        GetComponent<Animator>().Play("Crystal" + CrystalID + "Collect");
+
+        yield return new WaitForSeconds(3f);
 
         if (door != null)
         {
