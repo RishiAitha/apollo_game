@@ -79,6 +79,11 @@ public class PlayerController : MonoBehaviour
 
     public Light2D playerLight;
 
+    public AudioSource elementEnter;
+    public AudioSource elementExit;
+    public AudioSource crystalCollect;
+    public AudioSource checkpointCollect;
+
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -201,6 +206,12 @@ public class PlayerController : MonoBehaviour
                 if (jumpBufferCounter > 0f && !wallJumping)
                 {
                     jumpBufferCounter = 0f;
+
+                    if (doubleJump)
+                    {
+                        elementExit.Play();
+                    }
+
                     myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
                     coyoteTimeCounter = 0f;
                     doubleJump = false;
@@ -211,6 +222,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    elementExit.Play();
                     currentZip.GetComponentInParent<ZipController>().Zip();
                     doubleJump = false;
                 }
@@ -275,22 +287,26 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter = 0f;
 
             other.GetComponent<BoostController>().Cooldown();
+            elementEnter.Play();
         }
 
         if (other.gameObject.tag == "Dash")
         {
             other.GetComponent<DashController>().Cooldown();
             StartCoroutine("Dash", other);
+            elementExit.Play();
         }
 
         if (other.gameObject.tag == "Pull Start")
         {
             other.GetComponentInParent<PullController>().Pull();
+            elementEnter.Play();
         }
 
         if (other.gameObject.tag == "Portal Start")
         {
             other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
+            elementExit.Play();
         }
 
         if (other.gameObject.tag == "Zip Point")

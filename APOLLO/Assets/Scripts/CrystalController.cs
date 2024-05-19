@@ -73,6 +73,8 @@ public class CrystalController : MonoBehaviour
 
         PlayerPrefs.SetInt("Crystal" + CrystalID, 1);
 
+        player.crystalCollect.Play();
+
         GetComponent<Animator>().Play("Crystal" + CrystalID + "Collect");
 
         yield return new WaitForSeconds(3f);

@@ -37,6 +37,11 @@ public class CheckpointController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            if (level.currentCheckpointID != checkpointID)
+            {
+                player.checkpointCollect.Play();
+            }
+
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, checkpointID);
             level.currentCheckpointID = checkpointID;
             level.currentRoomID = roomID;
