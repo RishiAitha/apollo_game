@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D groundCheckBox;
     public LayerMask groundLayer;
 
+    public bool isGrounded;
+
     public float coyoteTime;
     public float coyoteTimeCounter;
 
@@ -83,6 +85,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource elementExit;
     public AudioSource crystalCollect;
     public AudioSource checkpointCollect;
+    public AudioSource levelEndSound;
+    public AudioSource jumpSound;
+    public AudioSource slideSound;
 
     void Start()
     {
@@ -117,9 +122,18 @@ public class PlayerController : MonoBehaviour
             }
 
             onWall = OnWall();
-            if (IsGrounded())
+            isGrounded = IsGrounded();
+            if (isGrounded)
             {
                 coyoteTimeCounter = coyoteTime;
+                if (elementExit.isPlaying)
+                {
+                    Debug.Log("isplaying");
+                }
+                if (doubleJump && !elementExit.isPlaying)
+                {
+                    elementExit.Play();
+                }
                 doubleJump = false;
             }
             else
@@ -161,9 +175,15 @@ public class PlayerController : MonoBehaviour
                     wallJumpDirection = -transform.localScale.x;
                     wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
                     CancelInvoke("StopWallJumping");
+
+                    if (!slideSound.isPlaying)
+                    {
+                        slideSound.Play();
+                    }
                 }
                 else
                 {
+                    slideSound.Stop();
                     wallJumpCoyoteTimeCounter -= Time.deltaTime;
                 }
 
@@ -192,6 +212,11 @@ public class PlayerController : MonoBehaviour
                     myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
                     wallJumpCoyoteTimeCounter = 0f;
 
+                    if (!jumpSound.isPlaying)
+                    {
+                        jumpSound.Play();
+                    }
+
                     if (transform.localScale.x != wallJumpDirection)
                     {
                         transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
@@ -209,9 +234,18 @@ public class PlayerController : MonoBehaviour
 
                     if (doubleJump)
                     {
-                        elementExit.Play();
+                        if (!elementExit.isPlaying)
+                        {
+                            elementExit.Play();
+                        }
                     }
-
+                    else
+                    {
+                        if (!jumpSound.isPlaying && !elementExit.isPlaying)
+                        {
+                            jumpSound.Play();
+                        }
+                    }
                     myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
                     coyoteTimeCounter = 0f;
                     doubleJump = false;
@@ -222,7 +256,10 @@ public class PlayerController : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    elementExit.Play();
+                    if (!elementExit.isPlaying)
+                    {
+                        elementExit.Play();
+                    }
                     currentZip.GetComponentInParent<ZipController>().Zip();
                     doubleJump = false;
                 }
@@ -287,26 +324,38 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter = 0f;
 
             other.GetComponent<BoostController>().Cooldown();
-            elementEnter.Play();
+            if (!elementEnter.isPlaying)
+            {
+                elementEnter.Play();
+            }
         }
 
         if (other.gameObject.tag == "Dash")
         {
             other.GetComponent<DashController>().Cooldown();
             StartCoroutine("Dash", other);
-            elementExit.Play();
+            if (!elementExit.isPlaying)
+            {
+                elementExit.Play();
+            }
         }
 
         if (other.gameObject.tag == "Pull Start")
         {
             other.GetComponentInParent<PullController>().Pull();
-            elementEnter.Play();
+            if (!elementEnter.isPlaying)
+            {
+                elementEnter.Play();
+            }
         }
 
         if (other.gameObject.tag == "Portal Start")
         {
             other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
-            elementExit.Play();
+            if (!elementExit.isPlaying)
+            {
+                elementExit.Play();
+            }
         }
 
         if (other.gameObject.tag == "Zip Point")
