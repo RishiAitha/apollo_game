@@ -61,10 +61,7 @@ public class PullController : MonoBehaviour
                 if (player.GetComponent<PlayerController>().doubleJump != false)
                 {
                     player.GetComponent<Rigidbody2D>().velocity = new Vector3(playerVel.x, 2f, 0f);
-                    if (!player.GetComponent<PlayerController>().elementExit.isPlaying)
-                    {
-                        player.GetComponent<PlayerController>().elementExit.Play();
-                    }
+                    player.GetComponent<PlayerController>().elementExit.Play();
                 }
                 player.GetComponent<PlayerController>().doubleJump = false;
             }

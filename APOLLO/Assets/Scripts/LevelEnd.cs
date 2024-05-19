@@ -53,10 +53,7 @@ public class LevelEnd : MonoBehaviour
         mySR.sprite = sprite2;
         lightObj.SetActive(true);
 
-        if (!player.levelEndSound.isPlaying)
-        {
-            player.levelEndSound.Play();
-        }
+        player.levelEndSound.Play();
 
         player.respawning = true;
 

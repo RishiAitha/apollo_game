@@ -3579,6 +3579,10 @@ PrefabInstance:
       propertyPath: wallSlideDeceleration
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1569748928076275692, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6cb9ff74a536944baab35afe99fc17ba, type: 3}
     - target: {fileID: 6930720535378575046, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: rooms.Array.data[0]
       value: 

@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             if (isGrounded)
             {
                 coyoteTimeCounter = coyoteTime;
-                if (doubleJump && !elementExit.isPlaying)
+                if (doubleJump)
                 {
                     elementExit.Play();
                 }
@@ -284,10 +284,7 @@ public class PlayerController : MonoBehaviour
 
                     if (doubleJump)
                     {
-                        if (!elementExit.isPlaying)
-                        {
-                            elementExit.Play();
-                        }
+                        elementExit.Play();
                     }
                     else
                     {
@@ -306,10 +303,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    if (!elementExit.isPlaying)
-                    {
-                        elementExit.Play();
-                    }
+                    elementExit.Play();
                     currentZip.GetComponentInParent<ZipController>().Zip();
                     doubleJump = false;
                 }
@@ -374,38 +368,26 @@ public class PlayerController : MonoBehaviour
             jumpBufferCounter = 0f;
 
             other.GetComponent<BoostController>().Cooldown();
-            if (!elementEnter.isPlaying)
-            {
-                elementEnter.Play();
-            }
+            elementEnter.Play();
         }
 
         if (other.gameObject.tag == "Dash")
         {
             other.GetComponent<DashController>().Cooldown();
             StartCoroutine("Dash", other);
-            if (!elementExit.isPlaying)
-            {
-                elementExit.Play();
-            }
+            elementExit.Play();
         }
 
         if (other.gameObject.tag == "Pull Start")
         {
             other.GetComponentInParent<PullController>().Pull();
-            if (!elementEnter.isPlaying)
-            {
-                elementEnter.Play();
-            }
+            elementEnter.Play();
         }
 
         if (other.gameObject.tag == "Portal Start")
         {
             other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
-            if (!elementExit.isPlaying)
-            {
-                elementExit.Play();
-            }
+            elementExit.Play();
         }
 
         if (other.gameObject.tag == "Zip Point")
@@ -476,10 +458,7 @@ public class PlayerController : MonoBehaviour
 
             playerAnimator.SetBool("Hurt", true);
 
-            if (!deathSound.isPlaying)
-            {
-                deathSound.Play();
-            }
+            deathSound.Play();
 
             if (hazard)
             {

@@ -37,7 +37,7 @@ public class CheckpointController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (level.currentCheckpointID != checkpointID && !player.checkpointCollect.isPlaying)
+            if (level.currentCheckpointID != checkpointID)
             {
                 player.checkpointCollect.Play();
             }
