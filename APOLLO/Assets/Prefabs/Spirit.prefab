@@ -131,8 +131,8 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 0}
   dialogueImage: {fileID: 0}
   dialogueText: {fileID: 0}
-  playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
-  NPCSprite: {fileID: 4723107735738678597, guid: ec081a99c71f4553afaf2dd7a36f48fe, type: 3}
+  playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
+  NPCSprite: {fileID: 21300000, guid: bae580f9a14ce524a88da6fb9358f337, type: 3}
   NPCType: Spirit
 --- !u!61 &6552978218456837730
 BoxCollider2D:

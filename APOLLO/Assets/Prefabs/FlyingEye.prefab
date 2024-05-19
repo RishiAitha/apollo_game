@@ -131,8 +131,8 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 0}
   dialogueImage: {fileID: 0}
   dialogueText: {fileID: 0}
-  playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
-  NPCSprite: {fileID: 4723107735738678597, guid: 4c734f645135458dbb988afaf7a41ce1, type: 3}
+  playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
+  NPCSprite: {fileID: 21300000, guid: 2a51f8ca1635a2e418dab853f3f2c652, type: 3}
   NPCType: FlyingEye
 --- !u!61 &6841686855750563432
 BoxCollider2D:

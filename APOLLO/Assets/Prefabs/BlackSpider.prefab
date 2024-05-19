@@ -131,8 +131,8 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 0}
   dialogueImage: {fileID: 0}
   dialogueText: {fileID: 0}
-  playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
-  NPCSprite: {fileID: 4723107735738678597, guid: 394bca9a44594d99965cb76c7055c07f, type: 3}
+  playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
+  NPCSprite: {fileID: 21300000, guid: 4c2284ee4dc1d1840aeef19c0c562fc8, type: 3}
   NPCType: BlackSpider
 --- !u!61 &93212168969172849
 BoxCollider2D:

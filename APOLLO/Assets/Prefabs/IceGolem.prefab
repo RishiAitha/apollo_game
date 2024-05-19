@@ -131,8 +131,8 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 0}
   dialogueImage: {fileID: 0}
   dialogueText: {fileID: 0}
-  playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
-  NPCSprite: {fileID: 4723107735738678597, guid: 7ea8d7510bae4f9a88374d8318a957d0, type: 3}
+  playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
+  NPCSprite: {fileID: 21300000, guid: 8b045682fdf35f4409534f4444e2755f, type: 3}
   NPCType: IceGolem
 --- !u!61 &9063764305296627484
 BoxCollider2D:

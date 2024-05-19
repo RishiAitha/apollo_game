@@ -215,8 +215,8 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 0}
   dialogueImage: {fileID: 0}
   dialogueText: {fileID: 0}
-  playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
-  NPCSprite: {fileID: 4723107735738678597, guid: f33ded1711724dcd86d42be9eae82a85, type: 3}
+  playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
+  NPCSprite: {fileID: 21300000, guid: 54f132a332f7baf4a84138474c8a1c50, type: 3}
   NPCType: EarthGolem
 --- !u!61 &1955247891759275643
 BoxCollider2D:

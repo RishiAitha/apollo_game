@@ -215,8 +215,8 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 0}
   dialogueImage: {fileID: 0}
   dialogueText: {fileID: 0}
-  playerSprite: {fileID: 21300008, guid: 6f5c6e1922389384cb1736af0690439b, type: 3}
-  NPCSprite: {fileID: 4723107735738678597, guid: 83389e1b4807406f9586132dbd430afd, type: 3}
+  playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
+  NPCSprite: {fileID: 21300000, guid: ce813df749673f4469ca74dcf685b754, type: 3}
   NPCType: BrownSpider
 --- !u!61 &7040366597659820692
 BoxCollider2D:
