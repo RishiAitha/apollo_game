@@ -65,9 +65,11 @@ public class NPCController : MonoBehaviour
             {
                 DisplayLine(dialogue[currentLine].text, dialogue[currentLine].isPlayer);
                 currentLine++;
+                player.dialogueSound.Play();
             }
             else
             {
+                player.dialogueCloseSound.Play();
                 player.dialogueActive = false;
                 currentLine = 0;
                 dialogueCanvas.SetActive(false);

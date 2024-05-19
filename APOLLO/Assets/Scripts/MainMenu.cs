@@ -29,6 +29,10 @@ public class MainMenu : MonoBehaviour
     public bool resetLevels;
     public bool unlockAllLevels;
 
+    public AudioSource enterLevelSound;
+    public AudioSource arrowButtonSound;
+    public AudioSource genericButtonSound;
+
     void Start()
     {
         OpenStartMenu();
@@ -146,6 +150,15 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevel(LevelButton button)
     {
+        StartCoroutine("LoadLevelCoroutine", button);
+    }
+
+    public IEnumerator LoadLevelCoroutine(LevelButton button)
+    {
+        enterLevelSound.Play();
+
+        yield return new WaitForSeconds(4f);
+
         SceneManager.LoadScene(button.levelName);
     }
 
@@ -155,5 +168,15 @@ public class MainMenu : MonoBehaviour
         {
             PlayerPrefs.SetInt("Level1", 0);
         }
+    }
+
+    public void PlayArrowButtonSound()
+    {
+        arrowButtonSound.Play();
+    }
+
+    public void PlayGenericButtonSound()
+    {
+        genericButtonSound.Play();
     }
 }

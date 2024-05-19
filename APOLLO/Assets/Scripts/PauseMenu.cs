@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public LevelManager level;
-    public PlayerController player;
+    private LevelManager level;
+    private PlayerController player;
+
+    public AudioSource genericButtonSound;
 
     void Start()
     {
@@ -35,5 +37,10 @@ public class PauseMenu : MonoBehaviour
     public void ExitPause()
     {
         level.UnPause();
+    }
+
+    public void PlayGenericButtonSound()
+    {
+        genericButtonSound.Play();
     }
 }

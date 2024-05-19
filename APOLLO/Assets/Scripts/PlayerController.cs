@@ -88,6 +88,10 @@ public class PlayerController : MonoBehaviour
     public AudioSource levelEndSound;
     public AudioSource jumpSound;
     public AudioSource slideSound;
+    public AudioSource deathSound;
+    public AudioSource walkSound;
+    public AudioSource dialogueSound;
+    public AudioSource dialogueCloseSound;
 
     void Start()
     {
@@ -126,10 +130,6 @@ public class PlayerController : MonoBehaviour
             if (isGrounded)
             {
                 coyoteTimeCounter = coyoteTime;
-                if (elementExit.isPlaying)
-                {
-                    Debug.Log("isplaying");
-                }
                 if (doubleJump && !elementExit.isPlaying)
                 {
                     elementExit.Play();
@@ -193,15 +193,65 @@ public class PlayerController : MonoBehaviour
                     {
                         myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
                         transform.localScale = new Vector3(1f, 1f, 1f);
+                        if (isGrounded)
+                        {
+                            if (!walkSound.isPlaying)
+                            {
+                                walkSound.Play();
+                            }
+                        }
+                        else
+                        {
+                            if (walkSound.isPlaying)
+                            {
+                                walkSound.Stop();
+                            }
+                        }
                     }
                     else if (Input.GetAxisRaw("Horizontal") < 0f)
                     {
                         myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
                         transform.localScale = new Vector3(-1f, 1f, 1f);
+                        if (isGrounded)
+                        {
+                            if (!walkSound.isPlaying)
+                            {
+                                walkSound.Play();
+                            }
+                        }
+                        else
+                        {
+                            if (walkSound.isPlaying)
+                            {
+                                walkSound.Stop();
+                            }
+                        }
                     }
                     else
                     {
                         myRB.velocity = new Vector3(0f, myRB.velocity.y, 0f);
+                        if (walkSound.isPlaying)
+                        {
+                            walkSound.Stop();
+                        }
+                    }
+                }
+
+                if (changingRooms)
+                {
+                    if (isGrounded)
+                    {
+                        if (!walkSound.isPlaying)
+                        {
+                            walkSound.Play();
+                        }
+                    }
+                    else
+                    {
+                        if (walkSound.isPlaying)
+                        {
+                            walkSound.Stop();
+                        }
                     }
                 }
 
@@ -425,6 +475,11 @@ public class PlayerController : MonoBehaviour
             respawning = true;
 
             playerAnimator.SetBool("Hurt", true);
+
+            if (!deathSound.isPlaying)
+            {
+                deathSound.Play();
+            }
 
             if (hazard)
             {

@@ -28228,43 +28228,107 @@ PrefabInstance:
       objectReference: {fileID: 1927543058}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.size
-      value: 6
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[0].text
-      value: Welcome, traveler.
+      value: 7aolylsplkllwlyzljylazvulpulhjoshuk7
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[1].text
-      value: ...
+      value: 4etvsnigxfcvmwlmemxle4
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[2].text
-      value: It seems you've landed in our wonderful world.
+      value: One second, let me fix my translator.
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[3].text
-      value: 'If you''d like to make your way to our town, remember this:'
+      value: Try talking now.
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[4].text
-      value: 'Use our land''s element, BOOST, to leap in the air '
+      value: Welcome, traveler.
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[5].text
+      value: It seems you've landed in our wonderful world.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Well, I'm not too excited to be here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: 'If you''d like to make your way to our town, remember this:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: 'Use our land''s element, BOOST, to leap in the air '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[9].text
       value: and cross the dangerous chasms that await.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[10].text
+      value: I shouldn't even be talking to you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[11].text
+      value: This isn't part of protocol.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[12].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[13].text
+      value: This isn't part of protocol.
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[0].isPlayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
-      propertyPath: dialogue.Array.data[2].isPlayer
+      propertyPath: dialogue.Array.data[1].isPlayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[4].isPlayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[10].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[11].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[12].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[13].isPlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
