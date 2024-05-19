@@ -172,8 +172,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.006000042, y: 0.0013999939, z: 0}
-    m_Extent: {x: 1.5008, y: 1.5073, z: 0}
+    m_Center: {x: 0.0022999644, y: -0.00064998865, z: 0}
+    m_Extent: {x: 1.5033, y: 1.50355, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -377,7 +377,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 07226a3447bbdda4d82d6ed6d2dc6d6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -487,8 +487,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.001249969, y: -0.0020999908, z: 0}
-    m_Extent: {x: 1.4965501, y: 1.4971, z: 0}
+    m_Center: {x: 0.0018000007, y: 0.004450023, z: 0}
+    m_Extent: {x: 1.504, y: 1.50125, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
