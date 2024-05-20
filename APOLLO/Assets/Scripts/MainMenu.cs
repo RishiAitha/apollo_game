@@ -26,6 +26,9 @@ public class MainMenu : MonoBehaviour
     private Vector3 buttonTargetPos;
     private Vector3 tilesTargetPos;
 
+    public Image fadeScreen;
+    public float fadeSpeed;
+
     public bool resetLevels;
     public bool unlockAllLevels;
 
@@ -157,7 +160,16 @@ public class MainMenu : MonoBehaviour
     {
         enterLevelSound.Play();
 
-        yield return new WaitForSeconds(4f);
+        fadeScreen.gameObject.SetActive(true);
+
+        Color currentColor = fadeScreen.color;
+
+        while (currentColor.a < 0.95f)
+        {
+            currentColor.a = Mathf.Lerp(currentColor.a, 1f, fadeSpeed * Time.deltaTime);
+            fadeScreen.color = currentColor;
+            yield return null;
+        }
 
         SceneManager.LoadScene(button.levelName);
     }

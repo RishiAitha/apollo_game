@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public bool isGrounded;
 
+    private KillPlane killPlane;
+
     public float coyoteTime;
     public float coyoteTimeCounter;
 
@@ -97,12 +99,39 @@ public class PlayerController : MonoBehaviour
     {
         myRB = GetComponent<Rigidbody2D>();
         level = FindObjectOfType<LevelManager>();
+        killPlane = FindObjectOfType<KillPlane>();
         mySR.material = playerMaterials[0];
         origGravityScale = myRB.gravityScale;
     }
 
     void Update()
     {
+        bool deactivateKillPlane = false;
+        if (killPlane.overlappingTransitions.Count != 0)
+        {
+            foreach (GameObject transition in killPlane.overlappingTransitions)
+            {
+                if (transition.GetComponent<TransitionController>().vertical)
+                {
+                    float leftBound = transition.transform.position.x - (transition.GetComponent<BoxCollider2D>().size.y / 2);
+                    float rightBound = transition.transform.position.x + (transition.GetComponent<BoxCollider2D>().size.y / 2);
+                    if (leftBound < transform.position.x && rightBound > transform.position.x)
+                    {
+                        deactivateKillPlane = true;
+                    }
+                }
+            }
+        }
+
+        if (deactivateKillPlane)
+        {
+            killPlane.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else
+        {
+            killPlane.GetComponent<BoxCollider2D>().enabled = true;
+        }
+
         transitionImmunityTimeCounter -= Time.deltaTime;
 
         if (!dialogueActive && !respawning)
