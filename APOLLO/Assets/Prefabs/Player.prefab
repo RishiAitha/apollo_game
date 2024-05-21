@@ -369,7 +369,7 @@ MonoBehaviour:
   respawnPosition: {x: 0, y: 0, z: 0}
   deathTime: 0.5
   respawning: 0
-  transitionImmunityTime: 2
+  transitionImmunityTime: 0.5
   transitionImmunityTimeCounter: 0
   zipping: 0
   paused: 0
