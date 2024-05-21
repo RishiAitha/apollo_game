@@ -19,10 +19,9 @@ public class MainMenu : MonoBehaviour
 
     private bool movingButtons;
 
-    public float buttonMoveTime;
-    private float leftCounter;
-    private float rightCounter;
-    private float lerpCounter;
+    public float buttonMoveSpeed;
+    public bool movingLeft;
+    public bool movingRight;
     private Vector3 buttonTargetPos;
     private Vector3 tilesTargetPos;
 
@@ -43,10 +42,12 @@ public class MainMenu : MonoBehaviour
         UnlockFirstLevel();
 
         currentLevel = 1;
+        levelTiles.SetActive(false);
     }
 
     void Update()
     {
+
         if (!movingButtons)
         {
             if (currentLevel == 1)
@@ -58,7 +59,7 @@ public class MainMenu : MonoBehaviour
                 leftButton.GetComponent<Button>().interactable = true;
             }
 
-            if (rightButton.GetComponent<Button>().interactable && (currentLevel == 5 || !PlayerPrefs.HasKey("Level" + (currentLevel + 1)) || PlayerPrefs.GetInt("Level" + (currentLevel + 1)) < 0))
+            if (currentLevel == 5 || !PlayerPrefs.HasKey("Level" + (currentLevel + 1)) || PlayerPrefs.GetInt("Level" + (currentLevel + 1)) < 0)
             {
                 rightButton.GetComponent<Button>().interactable = false;
             }
@@ -73,7 +74,7 @@ public class MainMenu : MonoBehaviour
             rightButton.GetComponent<Button>().interactable = false;
         }
 
-        if (leftCounter > 0f || rightCounter > 0f)
+        if (movingLeft || movingRight)
         {
             movingButtons = true;
         }
@@ -82,20 +83,24 @@ public class MainMenu : MonoBehaviour
             movingButtons = false;
         }
 
-        if (leftCounter > 0f)
+        if (movingLeft)
         {
-            levelButtons.transform.position = Vector3.Lerp(levelButtons.transform.position, buttonTargetPos, lerpCounter / buttonMoveTime);
-            levelTiles.transform.position = Vector3.Lerp(levelTiles.transform.position, tilesTargetPos, lerpCounter / buttonMoveTime);
-            leftCounter -= Time.deltaTime;
-            lerpCounter += Time.deltaTime;
+            levelButtons.transform.position = Vector3.MoveTowards(levelButtons.transform.position, buttonTargetPos, buttonMoveSpeed * (100f * (Screen.currentResolution.width / 1920f)) * Time.deltaTime);
+            levelTiles.transform.position = Vector3.MoveTowards(levelTiles.transform.position, tilesTargetPos, buttonMoveSpeed * Time.deltaTime);
+            if (Mathf.Abs(Vector3.Distance(levelButtons.transform.position, buttonTargetPos)) < 0.01f && Mathf.Abs(Vector3.Distance(levelTiles.transform.position, tilesTargetPos)) < 0.01f)
+            {
+                movingLeft = false;
+            }
         }
 
-        if (rightCounter > 0f)
+        if (movingRight)
         {
-            levelButtons.transform.position = Vector3.Lerp(levelButtons.transform.position, buttonTargetPos, lerpCounter / buttonMoveTime);
-            levelTiles.transform.position = Vector3.Lerp(levelTiles.transform.position, tilesTargetPos, lerpCounter / buttonMoveTime);
-            rightCounter -= Time.deltaTime;
-            lerpCounter += Time.deltaTime;
+            levelButtons.transform.position = Vector3.MoveTowards(levelButtons.transform.position, buttonTargetPos, buttonMoveSpeed * (100f * (Screen.currentResolution.width / 1920f)) * Time.deltaTime);
+            levelTiles.transform.position = Vector3.MoveTowards(levelTiles.transform.position, tilesTargetPos, buttonMoveSpeed * Time.deltaTime);
+            if (Mathf.Abs(Vector3.Distance(levelButtons.transform.position, buttonTargetPos)) < 0.01f && Mathf.Abs(Vector3.Distance(levelTiles.transform.position, tilesTargetPos)) < 0.01f)
+            {
+                movingRight = false;
+            }
         }
 
         if (resetLevels)
@@ -125,30 +130,36 @@ public class MainMenu : MonoBehaviour
     {
         startMenu.SetActive(true);
         levelMenu.SetActive(false);
+        levelTiles.SetActive(false);
     }
 
     public void OpenLevelMenu()
     {
         startMenu.SetActive(false);
         levelMenu.SetActive(true);
+        levelTiles.SetActive(true);
     }
 
     public void Left()
     {
         currentLevel--;
-        buttonTargetPos = new Vector3(levelButtons.transform.position.x + 1200f, levelButtons.transform.position.y, 0f);
+        buttonTargetPos = new Vector3(levelButtons.transform.position.x + (1200f * (Screen.currentResolution.width / 1920f)), levelButtons.transform.position.y, 0f);
         tilesTargetPos = new Vector3(levelTiles.transform.position.x + 12f, levelTiles.transform.position.y, 0f);
-        lerpCounter = 0f;
-        leftCounter = buttonMoveTime;
+        Debug.Log(Screen.currentResolution.width);
+        Debug.Log(levelButtons.transform.position);
+        Debug.Log(buttonTargetPos);
+        movingLeft = true;
     }
 
     public void Right()
     {
         currentLevel++;
-        buttonTargetPos = new Vector3(levelButtons.transform.position.x - 1200f, levelButtons.transform.position.y, 0f);
+        buttonTargetPos = new Vector3(levelButtons.transform.position.x - (1200f * (Screen.currentResolution.width / 1920f)), levelButtons.transform.position.y, 0f);
         tilesTargetPos = new Vector3(levelTiles.transform.position.x - 12f, levelTiles.transform.position.y, 0f);
-        lerpCounter = 0f;
-        rightCounter = buttonMoveTime;
+        Debug.Log(Screen.currentResolution.width);
+        Debug.Log(levelButtons.transform.position);
+        Debug.Log(buttonTargetPos);
+        movingRight = true;
     }
 
     public void LoadLevel(LevelButton button)
@@ -190,5 +201,16 @@ public class MainMenu : MonoBehaviour
     public void PlayGenericButtonSound()
     {
         genericButtonSound.Play();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void ResetSaveData()
+    {
+        PlayerPrefs.DeleteAll();
+        UnlockFirstLevel();
     }
 }
