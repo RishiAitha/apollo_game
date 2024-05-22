@@ -14,12 +14,23 @@ public class PortalController : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
-        SetParticles();
+        if (line != null)
+        {
+            SetParticles();
+        }
+        else
+        {
+            Instantiate(particle, start.position, particlePos.rotation, start);
+            Instantiate(particle, end.position, particlePos.rotation, end);
+        }
     }
 
     void Update()
     {
-        SetLine();
+        if (line != null)
+        {
+            SetLine();
+        }
     }
 
     public void Teleport(Vector3 initialVelocity)
