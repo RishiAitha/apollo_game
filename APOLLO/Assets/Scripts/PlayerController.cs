@@ -524,6 +524,19 @@ public class PlayerController : MonoBehaviour
         pulling = false;
         onWall = false;
         playerAnimator.speed = 1f;
+        currentZip = null;
+
+        foreach (PullController pull in FindObjectsOfType<PullController>())
+        {
+            pull.aligning = false;
+            pull.pulling = false;
+        }
+
+        foreach (ZipController zip in FindObjectsOfType<ZipController>())
+        {
+            zip.aligning = false;
+            zip.pulling = false;
+        }
     }
 
     public void PausePlayer()
