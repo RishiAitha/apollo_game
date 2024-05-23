@@ -145,9 +145,6 @@ public class MainMenu : MonoBehaviour
         currentLevel--;
         buttonTargetPos = new Vector3(levelButtons.transform.position.x + (1200f * (Screen.currentResolution.width / 1920f)), levelButtons.transform.position.y, 0f);
         tilesTargetPos = new Vector3(levelTiles.transform.position.x + 12f, levelTiles.transform.position.y, 0f);
-        Debug.Log(Screen.currentResolution.width);
-        Debug.Log(levelButtons.transform.position);
-        Debug.Log(buttonTargetPos);
         movingLeft = true;
     }
 
@@ -156,9 +153,6 @@ public class MainMenu : MonoBehaviour
         currentLevel++;
         buttonTargetPos = new Vector3(levelButtons.transform.position.x - (1200f * (Screen.currentResolution.width / 1920f)), levelButtons.transform.position.y, 0f);
         tilesTargetPos = new Vector3(levelTiles.transform.position.x - 12f, levelTiles.transform.position.y, 0f);
-        Debug.Log(Screen.currentResolution.width);
-        Debug.Log(levelButtons.transform.position);
-        Debug.Log(buttonTargetPos);
         movingRight = true;
     }
 

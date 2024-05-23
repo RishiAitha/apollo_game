@@ -49,7 +49,7 @@ public class ZipController : MonoBehaviour
                 player.transform.localScale = new Vector3(-1f, 1f, 1f);
             }
 
-            if (Vector3.Distance(playerPos, end.position) < 0.01f)
+            if (Vector3.Distance(playerPos, end.position) < 0.001f)
             {
                 pulling = false;
                 player.GetComponent<Rigidbody2D>().gravityScale = player.GetComponent<PlayerController>().origGravityScale;
