@@ -20,7 +20,7 @@ public class LevelEnd : MonoBehaviour
 
     public GameObject lightObj;
 
-    public Image fadeScreen;
+    private Image fadeScreen;
     public float fadeSpeed;
     public bool fadeInFinished;
     public bool fadeOutFinished;
