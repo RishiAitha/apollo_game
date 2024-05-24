@@ -10223,7 +10223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: creditsTime
-      value: 5
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: currentLevel

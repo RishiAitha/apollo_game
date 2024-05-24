@@ -37,9 +37,12 @@ public class NPCController : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
-        Animator anim = GetComponent<Animator>();
 
-        anim.Play(NPCType + "Idle", 0, Random.Range(0f, 1f));
+        if (NPCType != "Rocket")
+        {
+            Animator anim = GetComponent<Animator>();
+            anim.Play(NPCType + "Idle", 0, Random.Range(0f, 1f));
+        }
     }
 
     void Update()
@@ -69,10 +72,24 @@ public class NPCController : MonoBehaviour
             }
             else
             {
-                player.dialogueCloseSound.Play();
-                player.dialogueActive = false;
                 currentLine = 0;
                 dialogueCanvas.SetActive(false);
+                if (NPCType != "Rocket")
+                {
+                    player.dialogueCloseSound.Play();
+                    player.dialogueActive = false;
+                }
+                else
+                {
+                    NPCActive = false;
+                    player.mySR.enabled = false;
+                    controlIndicator.SetActive(false);
+                    transform.parent.gameObject.GetComponent<Animator>().SetBool("GameFinished", true);
+                    LevelEnd end = FindObjectOfType<LevelEnd>();
+                    end.endingSpeed = 0f;
+                    end.fadeSpeed = 0.5f;
+                    end.EndLevel();
+                }
             }
         }
     }
