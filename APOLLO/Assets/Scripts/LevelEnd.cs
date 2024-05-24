@@ -46,12 +46,11 @@ public class LevelEnd : MonoBehaviour
         if (credits)
         {
             creditsTimeCounter -= Time.deltaTime;
-        }
-
-        if (creditsTimeCounter <= 0f)
-        {
-            fadeScreen.gameObject.SetActive(true);
-            ending = true;
+            if (creditsTimeCounter <= 0f)
+            {
+                fadeScreen.gameObject.SetActive(true);
+                ending = true;
+            }
         }
 
         if (!fadeInFinished)
