@@ -43,11 +43,11 @@ public class MainMenu : MonoBehaviour
 
         currentLevel = 1;
         levelTiles.SetActive(false);
+        fadeScreen.gameObject.SetActive(false);
     }
 
     void Update()
     {
-
         if (!movingButtons)
         {
             if (currentLevel == 1)
@@ -169,7 +169,7 @@ public class MainMenu : MonoBehaviour
 
         Color currentColor = fadeScreen.color;
 
-        while (currentColor.a < 0.95f)
+        while (currentColor.a < 0.99f)
         {
             currentColor.a = Mathf.Lerp(currentColor.a, 1f, fadeSpeed * Time.deltaTime);
             fadeScreen.color = currentColor;

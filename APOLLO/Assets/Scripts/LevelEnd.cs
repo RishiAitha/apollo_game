@@ -36,7 +36,7 @@ public class LevelEnd : MonoBehaviour
         mySR.sprite = sprite1;
         lightObj.SetActive(false);
         fadeScreen = GameObject.FindGameObjectWithTag("Fade Screen").GetComponent<Image>();
-        fadeScreen.color = new Color(0f, 0f, 0f, 0.95f);
+        fadeScreen.color = new Color(0f, 0f, 0f, 1f);
         credits = SceneManager.GetActiveScene().name == "Credits";
         creditsTimeCounter = creditsTime;
     }
@@ -78,7 +78,7 @@ public class LevelEnd : MonoBehaviour
             currentColor.a = Mathf.Lerp(currentColor.a, 1f, fadeSpeed * Time.deltaTime);
             fadeScreen.color = currentColor;
 
-            if (fadeScreen.color.a >= 0.95f)
+            if (fadeScreen.color.a >= 0.99f)
             {
                 fadeOutFinished = true;
             }

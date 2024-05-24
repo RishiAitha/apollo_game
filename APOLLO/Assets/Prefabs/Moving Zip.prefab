@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c54453a08ac97042aef74a7e7714026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 3
+  cooldownTime: 1.5
   cooldown: 0
 --- !u!1 &1422346543341343591
 GameObject:
@@ -327,8 +327,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0026999712, y: -0.0041000247, z: 0}
-    m_Extent: {x: 1.4986, y: 1.4954, z: 0}
+    m_Center: {x: -0.005400002, y: -0.00030004978, z: 0}
+    m_Extent: {x: 1.4986999, y: 1.5007, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -437,8 +437,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0010499954, y: -0.0024999976, z: 0}
-    m_Extent: {x: 1.50735, y: 1.4975, z: 0}
+    m_Center: {x: 0.0027499795, y: 0.0059999824, z: 0}
+    m_Extent: {x: 1.49505, y: 1.4997001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c54453a08ac97042aef74a7e7714026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 3
+  cooldownTime: 1.5
   cooldown: 0
 --- !u!1 &8333698658961939184
 GameObject:
