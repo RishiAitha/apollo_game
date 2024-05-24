@@ -45843,11 +45843,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[0].text
-      value: 7aolylsplkllwlyzljylazvulpulhjoshuk7
+      value: aolylsplkl7lwlyzljylazvulpulhjoshuk
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[1].text
-      value: 4etvsnigxfcvmwlmemxle4
+      value: etvsnigxfcvmwlm4emxle
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[2].text

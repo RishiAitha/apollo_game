@@ -25,6 +25,10 @@ public class LevelEnd : MonoBehaviour
     public bool fadeInFinished;
     public bool fadeOutFinished;
 
+    public bool credits;
+    public float creditsTime;
+    public float creditsTimeCounter;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -33,10 +37,23 @@ public class LevelEnd : MonoBehaviour
         lightObj.SetActive(false);
         fadeScreen = GameObject.FindGameObjectWithTag("Fade Screen").GetComponent<Image>();
         fadeScreen.color = new Color(0f, 0f, 0f, 0.95f);
+        credits = SceneManager.GetActiveScene().name == "Credits";
+        creditsTimeCounter = creditsTime;
     }
 
     void Update()
     {
+        if (credits)
+        {
+            creditsTimeCounter -= Time.deltaTime;
+        }
+
+        if (creditsTimeCounter <= 0f)
+        {
+            fadeScreen.gameObject.SetActive(true);
+            ending = true;
+        }
+
         if (!fadeInFinished)
         {
             Color currentColor = fadeScreen.color;
@@ -52,8 +69,11 @@ public class LevelEnd : MonoBehaviour
 
         if (ending && !fadeOutFinished)
         {
-            Vector3 playerVel = player.gameObject.GetComponent<Rigidbody2D>().velocity;
-            player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(endingSpeed, playerVel.y, 0f);
+            if (!credits)
+            {
+                Vector3 playerVel = player.gameObject.GetComponent<Rigidbody2D>().velocity;
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(endingSpeed, playerVel.y, 0f);
+            }
 
             Color currentColor = fadeScreen.color;
             currentColor.a = Mathf.Lerp(currentColor.a, 1f, fadeSpeed * Time.deltaTime);
@@ -66,8 +86,11 @@ public class LevelEnd : MonoBehaviour
         }
         else if (ending)
         {
-            player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            player.respawning = false;
+            if (!credits)
+            {
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                player.respawning = false;
+            }
             SceneManager.LoadScene(nextLevel);
         }
     }
