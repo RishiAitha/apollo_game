@@ -392,37 +392,52 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Boost")
         {
-            doubleJump = true;
-            jumpTimeCounter = 0f;
-            jumpBufferCounter = 0f;
+            if (!respawning)
+            {
+                doubleJump = true;
+                jumpTimeCounter = 0f;
+                jumpBufferCounter = 0f;
 
-            other.GetComponent<BoostController>().Cooldown();
-            elementEnter.Play();
+                other.GetComponent<BoostController>().Cooldown();
+                elementEnter.Play();
+            }
         }
 
         if (other.gameObject.tag == "Dash")
         {
-            other.GetComponent<DashController>().Cooldown();
-            StartCoroutine("Dash", other);
-            elementExit.Play();
+            if (!respawning)
+            {
+                other.GetComponent<DashController>().Cooldown();
+                StartCoroutine("Dash", other);
+                elementExit.Play();
+            }
         }
 
         if (other.gameObject.tag == "Pull Start")
         {
-            other.GetComponentInParent<PullController>().Pull();
-            elementEnter.Play();
+            if (!respawning)
+            {
+                other.GetComponentInParent<PullController>().Pull();
+                elementEnter.Play();
+            }
         }
 
         if (other.gameObject.tag == "Portal Start")
         {
-            other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
-            elementExit.Play();
+            if (!respawning)
+            {
+                other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
+                elementExit.Play();
+            }
         }
 
         if (other.gameObject.tag == "Zip Point")
         {
-            currentZip = other.gameObject;
-            currentZip.GetComponentInParent<ZipController>().SetStart(currentZip);
+            if (!respawning)
+            {
+                currentZip = other.gameObject;
+                currentZip.GetComponentInParent<ZipController>().SetStart(currentZip);
+            }
         }
 
         if (other.gameObject.tag == "Transition")
