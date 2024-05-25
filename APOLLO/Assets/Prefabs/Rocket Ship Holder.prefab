@@ -166,6 +166,7 @@ MonoBehaviour:
   playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
   NPCSprite: {fileID: 21300000, guid: aaca448f2c4c1ef4eb7cf55cc6ca0022, type: 3}
   NPCType: Rocket
+  displayingText: 0
 --- !u!61 &1894877398631386717
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +196,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 1}

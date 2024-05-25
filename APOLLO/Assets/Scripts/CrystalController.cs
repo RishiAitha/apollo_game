@@ -14,6 +14,8 @@ public class CrystalController : MonoBehaviour
 
     public CrystalDoorController door;
 
+    public float crystalSpeed;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -68,6 +70,7 @@ public class CrystalController : MonoBehaviour
 
     public IEnumerator CollectCoroutine()
     {
+        player.dialogueActive = true;
         crystalActive = false;
         GetComponent<BoxCollider2D>().enabled = false;
 
@@ -80,7 +83,13 @@ public class CrystalController : MonoBehaviour
 
         GetComponent<Animator>().Play("Crystal" + CrystalID + "Collect");
 
-        yield return new WaitForSeconds(3f);
+        while (Mathf.Abs(Vector3.Distance(transform.position, player.transform.position)) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, crystalSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        player.dialogueActive = false;
 
         if (door != null)
         {

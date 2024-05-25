@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0040500164, y: 0.0009499788, z: 0}
-    m_Extent: {x: 1.50055, y: 1.49745, z: 0}
+    m_Center: {x: 0.0036000013, y: 0.003000021, z: 0}
+    m_Extent: {x: 1.5017, y: 1.493, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -326,7 +326,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 3.4}
+  m_Size: {x: 0.5, y: 3.4}
   m_EdgeRadius: 0
 --- !u!114 &2475649258375083802
 MonoBehaviour:
@@ -343,6 +343,7 @@ MonoBehaviour:
   CrystalID: 3
   controlIndicator: {fileID: 5408606760540633820}
   door: {fileID: 0}
+  crystalSpeed: 0.5
 --- !u!95 &7375966148481665060
 Animator:
   serializedVersion: 5

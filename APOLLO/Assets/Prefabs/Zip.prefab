@@ -168,6 +168,8 @@ MonoBehaviour:
   line: {fileID: 3424357628416641525}
   particle: {fileID: 3792877420365296803, guid: 5cee784d911a78646b6b778e6c2ceb4f, type: 3}
   particlePos: {fileID: 1153018276049346723}
+  stuckTime: 1
+  stuckCounter: 0
 --- !u!95 &2352120782753482826
 Animator:
   serializedVersion: 5

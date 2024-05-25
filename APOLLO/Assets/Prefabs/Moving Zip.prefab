@@ -543,6 +543,8 @@ MonoBehaviour:
   line: {fileID: 1513008730680121334}
   particle: {fileID: 3792877420365296803, guid: 5cee784d911a78646b6b778e6c2ceb4f, type: 3}
   particlePos: {fileID: 700346669188251378}
+  stuckTime: 1
+  stuckCounter: 0
 --- !u!114 &1340086443336317408
 MonoBehaviour:
   m_ObjectHideFlags: 0

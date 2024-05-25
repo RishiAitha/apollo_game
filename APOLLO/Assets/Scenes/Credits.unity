@@ -11302,8 +11302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: -2200}
-  m_SizeDelta: {x: 500, y: 3200}
+  m_AnchoredPosition: {x: 270, y: -2400}
+  m_SizeDelta: {x: 550, y: 3200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897035905
 MonoBehaviour:
@@ -11327,12 +11327,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "APOLLO\r\n\r\n\r\n\r\na game by Rishi Aitha\r\n\r\n\r\nGame/Level Design:\r\n\nRishi
     Aitha\r\n\r\n\r\nProgramming:\r\n\r\nRishi Aitha\r\n\r\n\r\nArtwork:\r\n\r\nRishi
-    Aitha\r\n\r\nPixel Heroes Megapack\r\nHippo\r\n\r\nCosmicMan\r\nQuantum Fox Studio\r\n\r\n\r\nSounds:\r\n\r\nClassic
-    Footstep SFX\r\nMatthew Anett\r\n\r\nFree - Sci-Fi and Cyberpunk Music Pack\r\nSLD
-    Audio\r\n\r\nFree UI Click Sound Pack\r\nSwishSwoosh\r\n\r\nNature - Essentials\r\nNox_Sound\r\n\r\nShapeforms
-    Audio Free Sound Effects\r\nShapeforms\r\n\r\n\r\nFonts:\r\n\r\nComfortaa\r\nJohan
-    Aakerlund\r\n\r\nJaro\r\nAgyei Archer, Celine Hurka, Mirko Velimirovi\u0107\r\n\r\n\r\nSpecial
-    Thanks:\r\n\r\nMr. Mirah - CS Teacher"
+    Aitha\r\n\r\nPixel Heroes\nMegapack\r\nHippo\r\n\r\nCosmicMan\r\nQuantum Fox
+    Studio\r\n\r\n\r\nSounds:\r\n\r\nClassic Footstep SFX\r\nMatthew Anett\r\n\r\nFree
+    - Sci-Fi and Cyberpunk Music Pack\r\nSLD Audio\r\n\r\nFree UI Click\nSound Pack\r\nSwishSwoosh\r\n\r\nNature
+    - Essentials\r\nNox_Sound\r\n\r\nShapeforms Audio\nFree Sound Effects\r\nShapeforms\r\n\r\n\r\nFonts:\r\n\r\nComfortaa\r\nJohan
+    Aakerlund\r\n\r\nJaro\r\nAgyei Archer,\nCeline Hurka,\nMirko Velimirovi\u0107\r\n\r\n\r\nSpecial
+    Thanks:\r\n\r\nCS Teacher\nMr. Mirah"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8e94d873b7ffb5b45b50349ebef5f346, type: 2}
   m_sharedMaterial: {fileID: 8975869521848579736, guid: 8e94d873b7ffb5b45b50349ebef5f346, type: 2}
@@ -11366,7 +11366,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

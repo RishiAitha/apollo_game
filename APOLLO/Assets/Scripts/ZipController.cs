@@ -14,6 +14,9 @@ public class ZipController : MonoBehaviour
     public GameObject line;
     public GameObject particle;
     public Transform particlePos;
+    public float stuckTime;
+    public float stuckCounter;
+    private Vector3 previousPosition;
 
     void Start()
     {
@@ -29,10 +32,30 @@ public class ZipController : MonoBehaviour
         {
             Vector3 newPos = Vector3.MoveTowards(playerPos, start.position, alignSpeed * Time.deltaTime);
             player.GetComponent<Rigidbody2D>().MovePosition(newPos);
+
+            if (Mathf.Abs(Vector3.Distance(player.transform.position, previousPosition)) < 0.1f)
+            {
+                stuckCounter += Time.deltaTime;
+            }
+            else
+            {
+                stuckCounter = 0f;
+            }
+
+            previousPosition = player.transform.position;
+
+            if (stuckCounter >= stuckTime)
+            {
+                pulling = false;
+                aligning = false;
+                player.GetComponent<Rigidbody2D>().gravityScale = player.GetComponent<PlayerController>().origGravityScale;
+            }
+
             if (Vector3.Distance(playerPos, start.position) < 0.01f)
             {
                 pulling = true;
                 aligning = false;
+                stuckCounter = 0f;
             }
         }
         if (pulling)
@@ -49,7 +72,18 @@ public class ZipController : MonoBehaviour
                 player.transform.localScale = new Vector3(-1f, 1f, 1f);
             }
 
-            if (Vector3.Distance(playerPos, end.position) < 0.001f)
+            if (Mathf.Abs(Vector3.Distance(player.transform.position, previousPosition)) < 0.01f)
+            {
+                stuckCounter += Time.deltaTime;
+            }
+            else
+            {
+                stuckCounter = 0f;
+            }
+
+            previousPosition = player.transform.position;
+
+            if (Vector3.Distance(playerPos, end.position) < 0.001f || stuckCounter >= stuckTime)
             {
                 pulling = false;
                 player.GetComponent<Rigidbody2D>().gravityScale = player.GetComponent<PlayerController>().origGravityScale;
