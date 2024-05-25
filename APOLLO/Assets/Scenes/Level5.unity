@@ -55547,11 +55547,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 966281482864207068, guid: 66f587415f46fd2418d40fb63f4caa96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.36
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 966281482864207068, guid: 66f587415f46fd2418d40fb63f4caa96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.37
+      value: 2.59
       objectReference: {fileID: 0}
     - target: {fileID: 1097784865571341750, guid: 66f587415f46fd2418d40fb63f4caa96, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
@@ -56069,11 +56069,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3428118574928945382, guid: c7f534691371d4240b478bed48b5594c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.33
+      value: -8.49
       objectReference: {fileID: 0}
     - target: {fileID: 3428118574928945382, guid: c7f534691371d4240b478bed48b5594c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 3506864801100807069, guid: c7f534691371d4240b478bed48b5594c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56081,7 +56081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3506864801100807069, guid: c7f534691371d4240b478bed48b5594c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.28
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 3726028102900002778, guid: c7f534691371d4240b478bed48b5594c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66747,8 +66747,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00060003996, y: 0.0033000112, z: 0}
-    m_Extent: {x: 1.0046, y: 1.0060999, z: 0}
+    m_Center: {x: 0.00485, y: 0.0022000074, z: 0}
+    m_Extent: {x: 1.00225, y: 0.9978, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
