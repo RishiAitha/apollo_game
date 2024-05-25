@@ -34,6 +34,9 @@ public class NPCController : MonoBehaviour
 
     public string NPCType;
 
+    public static float textDelay = 0.01f;
+    public bool displayingText;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -56,7 +59,7 @@ public class NPCController : MonoBehaviour
             controlIndicator.SetActive(false);
         }
 
-        if (NPCActive && Input.GetKeyDown(KeyCode.E) && player.IsGrounded())
+        if (NPCActive && Input.GetKeyDown(KeyCode.E) && player.IsGrounded() && !displayingText)
         {
             if (currentLine == 0)
             {
@@ -121,6 +124,20 @@ public class NPCController : MonoBehaviour
             dialogueImage.sprite = NPCSprite;
         }
 
-        dialogueText.text = text;
+        StartCoroutine("DisplayText", text);
+    }
+
+    public IEnumerator DisplayText(string text)
+    {
+        displayingText = true;
+        dialogueText.text = "";
+        int currentChar = 0;
+        while (dialogueText.text != text)
+        {
+            dialogueText.text = dialogueText.text + text[currentChar];
+            currentChar++;
+            yield return new WaitForSeconds(textDelay);
+        }
+        displayingText = false;
     }
 }
