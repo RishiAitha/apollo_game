@@ -9,6 +9,13 @@ public class LevelButton : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Button>().interactable = (PlayerPrefs.HasKey(levelName) && PlayerPrefs.GetInt(levelName) >= 0);
+        if (levelName != "Credits")
+        {
+            GetComponent<Button>().interactable = (PlayerPrefs.HasKey(levelName) && PlayerPrefs.GetInt(levelName) >= 0);
+        }
+        else
+        {
+            GetComponent<Button>().interactable = true;
+        }
     }
 }
