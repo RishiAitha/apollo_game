@@ -10049,7 +10049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232895079805632988, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.46
+      value: -6.511
       objectReference: {fileID: 0}
     - target: {fileID: 232895079805632988, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10151,6 +10151,22 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5867549038103666716, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: m_LocalBounds.m_Center.x
+      value: -0.0024499893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867549038103666716, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: m_LocalBounds.m_Center.y
+      value: 0.0016000271
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867549038103666716, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.x
+      value: 3.49985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867549038103666716, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.y
+      value: 3.5063
+      objectReference: {fileID: 0}
     - target: {fileID: 6536441015219738234, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_Volume
       value: 0
@@ -10205,6 +10221,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c96d5bb082044c7459eb318275413045, type: 3}
+--- !u!82 &613317385 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1569748928076275692, guid: c96d5bb082044c7459eb318275413045, type: 3}
+  m_PrefabInstance: {fileID: 613317384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &810986585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10218,12 +10239,16 @@ PrefabInstance:
       value: Level End
       objectReference: {fileID: 0}
     - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 613317385}
+    - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: nextLevel
       value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: creditsTime
-      value: 60
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: currentLevel
@@ -11297,7 +11322,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2029039970}
   m_Father: {fileID: 315123564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -11325,7 +11351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "APOLLO\r\n\r\n\r\n\r\na game by Rishi Aitha\r\n\r\n\r\nGame/Level Design:\r\n\nRishi
+  m_text: "\n\r\n\r\n\r\na game by Rishi Aitha\r\n\r\n\r\nGame/Level Design:\r\n\nRishi
     Aitha\r\n\r\n\r\nProgramming:\r\n\r\nRishi Aitha\r\n\r\n\r\nArtwork:\r\n\r\nRishi
     Aitha\r\n\r\nPixel Heroes\nMegapack\r\nHippo\r\n\r\nCosmicMan\r\nQuantum Fox
     Studio\r\n\r\n\r\nSounds:\r\n\r\nClassic Footstep SFX\r\nMatthew Anett\r\n\r\nFree
@@ -11568,6 +11594,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
   m_PrefabInstance: {fileID: 1947798786}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2029039969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029039970}
+  - component: {fileID: 2029039972}
+  - component: {fileID: 2029039971}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2029039970
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029039969}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1897035904}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1550}
+  m_SizeDelta: {x: 400, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2029039971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029039969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: APOLLO
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 7a326cb852cfec64fa38e73843e37978, type: 2}
+  m_sharedMaterial: {fileID: 6604504340130766905, guid: 7a326cb852cfec64fa38e73843e37978, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290227611
+  m_fontColor: {r: 0.60784316, g: 0.6784314, b: 0.7176471, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 120
+  m_fontSizeBase: 120
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2029039972
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029039969}
+  m_CullTransparentMesh: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

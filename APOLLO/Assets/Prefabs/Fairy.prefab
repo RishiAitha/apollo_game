@@ -160,7 +160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 0
   m_Sprite: {fileID: 4723107735738678597, guid: c9e50cd8af184570bc4f552b75ec09ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
   NPCSprite: {fileID: 21300000, guid: 4681a205dcc6267409fe1d658d8b5e4c, type: 3}
   NPCType: Fairy
+  displayingText: 0
 --- !u!61 &3171354700170744558
 BoxCollider2D:
   m_ObjectHideFlags: 0

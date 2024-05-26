@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DashController : MonoBehaviour
 {
-    public float cooldownTime = 3f;
+    public float cooldownTime;
 
     public void Cooldown()
     {
@@ -14,11 +14,11 @@ public class DashController : MonoBehaviour
     public IEnumerator CooldownAnim()
     {
         GetComponent<Collider2D>().enabled = false;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 5; i++)
         {
-            yield return new WaitForSeconds(cooldownTime / 20f);
+            yield return new WaitForSeconds(cooldownTime / 10f);
             GetComponent<SpriteRenderer>().enabled = false;
-            yield return new WaitForSeconds(cooldownTime / 20f);
+            yield return new WaitForSeconds(cooldownTime / 10f);
             GetComponent<SpriteRenderer>().enabled = true;
         }
         GetComponent<Collider2D>().enabled = true;

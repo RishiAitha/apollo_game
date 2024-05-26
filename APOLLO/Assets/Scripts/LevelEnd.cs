@@ -29,6 +29,9 @@ public class LevelEnd : MonoBehaviour
     public float creditsTime;
     public float creditsTimeCounter;
 
+    public AudioSource music;
+    public float volumeFadeSpeed;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -78,6 +81,11 @@ public class LevelEnd : MonoBehaviour
             currentColor.a = Mathf.Lerp(currentColor.a, 1f, fadeSpeed * Time.deltaTime);
             fadeScreen.color = currentColor;
 
+            if (credits)
+            {
+                music.volume -= volumeFadeSpeed * Time.deltaTime;
+            }
+
             if (fadeScreen.color.a >= 0.99f)
             {
                 fadeOutFinished = true;
@@ -97,7 +105,10 @@ public class LevelEnd : MonoBehaviour
     public void EndLevel()
     {
         PlayerPrefs.SetInt(currentLevel, 0);
-        PlayerPrefs.SetInt(nextLevel, 0);
+        if (!credits)
+        {
+            PlayerPrefs.SetInt(nextLevel, 0);
+        }
 
         mySR.sprite = sprite2;
         lightObj.SetActive(true);

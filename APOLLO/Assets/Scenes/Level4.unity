@@ -33151,6 +33151,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9126042627279864280, guid: c96d5bb082044c7459eb318275413045, type: 3}
   m_PrefabInstance: {fileID: 613317384}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &613317388 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1569748928076275692, guid: c96d5bb082044c7459eb318275413045, type: 3}
+  m_PrefabInstance: {fileID: 613317384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &623931737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33470,7 +33475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7135139744880746945, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 115.9
+      value: 121.59
       objectReference: {fileID: 0}
     - target: {fileID: 7135139744880746945, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33589,7 +33594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1742501299885989887, guid: bcd4d4f21b743814ba5bf2dbd8d83443, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.5
+      value: -9.949997
       objectReference: {fileID: 0}
     - target: {fileID: 1772010332359100260, guid: bcd4d4f21b743814ba5bf2dbd8d83443, type: 3}
       propertyPath: m_Name
@@ -33601,7 +33606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4367221553955418434, guid: bcd4d4f21b743814ba5bf2dbd8d83443, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.5
+      value: 30.92
       objectReference: {fileID: 0}
     - target: {fileID: 4367221553955418434, guid: bcd4d4f21b743814ba5bf2dbd8d83443, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33637,7 +33642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7212741417489076864, guid: bcd4d4f21b743814ba5bf2dbd8d83443, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.5
+      value: -9.95
       objectReference: {fileID: 0}
     - target: {fileID: 7212741417489076864, guid: bcd4d4f21b743814ba5bf2dbd8d83443, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33645,7 +33650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7339166809251828593, guid: bcd4d4f21b743814ba5bf2dbd8d83443, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.5
+      value: -9.949997
       objectReference: {fileID: 0}
     - target: {fileID: 7339166809251828593, guid: bcd4d4f21b743814ba5bf2dbd8d83443, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33979,6 +33984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level End
       objectReference: {fileID: 0}
+    - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 613317388}
     - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: nextLevel
       value: Level5
@@ -34887,7 +34896,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 122, y: 22, z: 0}
+  - first: {x: 115, y: 22, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 12
@@ -35227,7 +35236,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 191, y: 29, z: 0}
+  - first: {x: 192, y: 29, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 11
@@ -35583,21 +35592,21 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 2.214715e+32
-      e01: 1.42e-43
-      e02: -1.7190907e+15
+      e00: -3.8126498e+26
+      e01: 2.69e-43
+      e02: -420348930
       e03: 0
-      e10: 2.69e-43
-      e11: 1.8e-44
-      e12: 4.5904e-41
+      e10: 4e-44
+      e11: 4e-44
+      e12: 4.5905e-41
       e13: 0
-      e20: 8.1732e-41
+      e20: 5.88573e-40
       e21: 0
-      e22: 2.2147119e+32
+      e22: -3.812644e+26
       e23: 0
       e30: 0
       e31: 7.34684e-40
-      e32: 2.69e-43
+      e32: 4e-44
       e33: 1
   - m_RefCount: 108
     m_Data:
@@ -36128,7 +36137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7135139744880746945, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 188.946
+      value: 190.53
       objectReference: {fileID: 0}
     - target: {fileID: 7135139744880746945, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
       propertyPath: m_LocalPosition.y

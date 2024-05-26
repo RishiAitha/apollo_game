@@ -256,12 +256,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLevel: Level1
   nextLevel: Level2
-  endingTime: 6
   endingSpeed: 3
   sprite1: {fileID: 21300000, guid: 1508397b4e68b2d429f4e3a3f4649a26, type: 3}
   sprite2: {fileID: 21300000, guid: cfad71c791c5a0748827a13ade31c539, type: 3}
   lightObj: {fileID: 1726719761214534342}
-  fadeScreen: {fileID: 0}
   fadeSpeed: 1
   fadeInFinished: 0
   fadeOutFinished: 0
+  credits: 0
+  creditsTime: 0
+  creditsTimeCounter: 0
+  music: {fileID: 0}
+  volumeFadeSpeed: 0.1

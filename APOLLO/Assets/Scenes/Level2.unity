@@ -52958,11 +52958,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 232895079805632988, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.49
+      value: -5.43
       objectReference: {fileID: 0}
     - target: {fileID: 232895079805632988, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.491
+      value: -4.52
       objectReference: {fileID: 0}
     - target: {fileID: 232895079805632988, guid: c96d5bb082044c7459eb318275413045, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53157,6 +53157,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c96d5bb082044c7459eb318275413045, type: 3}
+--- !u!82 &613317385 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1569748928076275692, guid: c96d5bb082044c7459eb318275413045, type: 3}
+  m_PrefabInstance: {fileID: 613317384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &624798370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54282,6 +54287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level End
       objectReference: {fileID: 0}
+    - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 613317385}
     - target: {fileID: 4948500970998488566, guid: 855beea14421cfc489e0b87d8b4f7fe5, type: 3}
       propertyPath: nextLevel
       value: Level3
@@ -65142,7 +65151,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7135139744880746945, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7135139744880746945, guid: 7094a15ee969922439d9bad6c2877424, type: 3}
       propertyPath: m_LocalPosition.y

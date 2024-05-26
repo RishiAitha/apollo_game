@@ -268,7 +268,7 @@ public class PlayerController : MonoBehaviour
 
                 if (changingRooms)
                 {
-                    if (isGrounded)
+                    if (isGrounded && Mathf.Abs(myRB.velocity.x) > 0.01f)
                     {
                         if (!walkSound.isPlaying)
                         {
