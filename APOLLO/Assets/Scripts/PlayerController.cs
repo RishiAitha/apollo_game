@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour
 
             jumpBufferCounter -= Time.deltaTime;
 
-            if (!dashing && !pulling)
+            if (!dashing && !pulling && !zipping)
             {
                 if (OnWall() && jumpTimeCounter <= 0f && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
                 {
@@ -203,7 +203,6 @@ public class PlayerController : MonoBehaviour
                     myRB.velocity = new Vector3(myRB.velocity.x, currentWallSlideSpeed, 0f);
                     wallJumpDirection = -transform.localScale.x;
                     wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
-                    CancelInvoke("StopWallJumping");
 
                     if (!slideSound.isPlaying)
                     {
@@ -222,7 +221,7 @@ public class PlayerController : MonoBehaviour
                     {
                         myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
                         transform.localScale = new Vector3(1f, 1f, 1f);
-                        if (isGrounded)
+                        if (isGrounded && !pulling && !zipping)
                         {
                             if (!walkSound.isPlaying)
                             {
@@ -241,7 +240,7 @@ public class PlayerController : MonoBehaviour
                     {
                         myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
                         transform.localScale = new Vector3(-1f, 1f, 1f);
-                        if (isGrounded)
+                        if (isGrounded && !pulling && !zipping)
                         {
                             if (!walkSound.isPlaying)
                             {
@@ -303,6 +302,11 @@ public class PlayerController : MonoBehaviour
 
                     Invoke("StopWallJumping", wallJumpTime);
                 }
+            }
+
+            if (!isGrounded && walkSound.isPlaying)
+            {
+                walkSound.Stop();
             }
 
             if (!dashing)
