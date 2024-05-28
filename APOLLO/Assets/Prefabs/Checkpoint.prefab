@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429429018123941524}
   - component: {fileID: 8057841131516501589}
-  - component: {fileID: 8051487155237786591}
+  - component: {fileID: 8493397647223457114}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -111,7 +111,7 @@ MonoBehaviour:
   - {x: 0.4157348, y: -0.27778515, z: 0}
   - {x: 0.46193978, y: -0.19134171, z: 0}
   - {x: 0.49039266, y: -0.09754512, z: 0}
---- !u!114 &8051487155237786591
+--- !u!114 &8493397647223457114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

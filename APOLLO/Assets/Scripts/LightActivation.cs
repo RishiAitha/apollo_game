@@ -5,12 +5,25 @@ using UnityEngine.Rendering.Universal;
 
 public class LightActivation : MonoBehaviour
 {
+    public LevelManager level;
+    public Camera mainCamera;
+
+    void Start()
+    {
+        level = FindObjectOfType<LevelManager>();
+        mainCamera = Camera.main;
+    }
+
     void Update()
     {
-        if (transform.position.x < Camera.main.transform.position.x + (Camera.main.orthographicSize * (Screen.width / Screen.height))
-            && transform.position.x > Camera.main.transform.position.x - (Camera.main.orthographicSize * (Screen.width / Screen.height))
-            && transform.position.y < Camera.main.transform.position.y + Camera.main.orthographicSize
-            && transform.position.y > Camera.main.transform.position.y - Camera.main.orthographicSize)
+        BoxCollider2D roomDimensions = level.rooms[level.currentRoomID].GetComponent<BoxCollider2D>();
+
+        float horizontal = roomDimensions.size.x / 2;
+
+        if (transform.position.x < mainCamera.transform.position.x + horizontal
+            && transform.position.x > mainCamera.transform.position.x - horizontal
+            && transform.position.y < mainCamera.transform.position.y + mainCamera.orthographicSize
+            && transform.position.y > mainCamera.transform.position.y - mainCamera.orthographicSize)
         {
             if (!GetComponent<Light2D>().enabled)
             {
