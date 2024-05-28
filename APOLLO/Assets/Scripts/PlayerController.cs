@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -106,275 +107,278 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        bool deactivateKillPlane = false;
-        if (killPlane.overlappingTransitions.Count != 0)
+        if (SceneManager.GetActiveScene().name != "Credits")
         {
-            foreach (GameObject transition in killPlane.overlappingTransitions)
+            bool deactivateKillPlane = false;
+            if (killPlane.overlappingTransitions.Count != 0)
             {
-                if (transition.GetComponent<TransitionController>().vertical)
+                foreach (GameObject transition in killPlane.overlappingTransitions)
                 {
-                    float leftBound = transition.transform.position.x - (transition.GetComponent<BoxCollider2D>().size.y / 2);
-                    float rightBound = transition.transform.position.x + (transition.GetComponent<BoxCollider2D>().size.y / 2);
-                    if (leftBound < transform.position.x && rightBound > transform.position.x)
+                    if (transition.GetComponent<TransitionController>().vertical)
                     {
-                        deactivateKillPlane = true;
+                        float leftBound = transition.transform.position.x - (transition.GetComponent<BoxCollider2D>().size.y / 2);
+                        float rightBound = transition.transform.position.x + (transition.GetComponent<BoxCollider2D>().size.y / 2);
+                        if (leftBound < transform.position.x && rightBound > transform.position.x)
+                        {
+                            deactivateKillPlane = true;
+                        }
                     }
                 }
             }
-        }
 
-        if (deactivateKillPlane)
-        {
-            killPlane.GetComponent<BoxCollider2D>().enabled = false;
-        }
-        else
-        {
-            killPlane.GetComponent<BoxCollider2D>().enabled = true;
-        }
-
-        transitionImmunityTimeCounter -= Time.deltaTime;
-
-        if (!dialogueActive && !respawning)
-        {
-            pulling = false;
-            foreach (PullController pull in FindObjectsOfType<PullController>())
+            if (deactivateKillPlane)
             {
-                if (pull.aligning || pull.pulling)
-                {
-                    pulling = true;
-                }
-            }
-
-            zipping = false;
-            foreach (ZipController zip in FindObjectsOfType<ZipController>())
-            {
-                if (zip.aligning || zip.pulling)
-                {
-                    zipping = true;
-                }
-            }
-
-            onWall = OnWall();
-            isGrounded = IsGrounded();
-            if (isGrounded)
-            {
-                coyoteTimeCounter = coyoteTime;
-                if (doubleJump)
-                {
-                    elementExit.Play();
-                }
-                doubleJump = false;
+                killPlane.GetComponent<BoxCollider2D>().enabled = false;
             }
             else
             {
-                coyoteTimeCounter -= Time.deltaTime;
+                killPlane.GetComponent<BoxCollider2D>().enabled = true;
             }
 
-            if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !changingRooms && (coyoteTimeCounter > 0f || doubleJump || wallJumpCoyoteTimeCounter > 0f))
-            {
-                jumpBufferCounter = jumpBufferTime;
-                jumpTimeCounter = jumpTime;
-            }
-            
-            if (jumpTimeCounter > 0f && (Input.GetButton("Jump") || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !changingRooms)
-            {
-                jumpBufferCounter = jumpBufferTime;
-                jumpTimeCounter -= Time.deltaTime;
-            }
+            transitionImmunityTimeCounter -= Time.deltaTime;
 
-            if (Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
+            if (!dialogueActive && !respawning)
             {
-                jumpTimeCounter = 0f;
-            }
-
-            jumpBufferCounter -= Time.deltaTime;
-
-            if (!dashing && !pulling && !zipping)
-            {
-                if (OnWall() && jumpTimeCounter <= 0f && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
+                pulling = false;
+                foreach (PullController pull in FindObjectsOfType<PullController>())
                 {
-                    // we are wall sliding
-                    jumpTimeCounter = 0f;
-                    float currentWallSlideSpeed = myRB.velocity.y - (wallSlideDeceleration * Time.deltaTime);
-                    if (currentWallSlideSpeed < -wallSlideSpeed)
+                    if (pull.aligning || pull.pulling)
                     {
-                        currentWallSlideSpeed = -wallSlideSpeed;
-                    }
-                    myRB.velocity = new Vector3(myRB.velocity.x, currentWallSlideSpeed, 0f);
-                    wallJumpDirection = -transform.localScale.x;
-                    wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
-
-                    if (!slideSound.isPlaying)
-                    {
-                        slideSound.Play();
-                    }
-                }
-                else
-                {
-                    slideSound.Stop();
-                    wallJumpCoyoteTimeCounter -= Time.deltaTime;
-                }
-
-                if (!changingRooms && !wallJumping)
-                {
-                    if (Input.GetAxisRaw("Horizontal") > 0f)
-                    {
-                        myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
-                        transform.localScale = new Vector3(1f, 1f, 1f);
-                        if (isGrounded && !pulling && !zipping)
-                        {
-                            if (!walkSound.isPlaying)
-                            {
-                                walkSound.Play();
-                            }
-                        }
-                        else
-                        {
-                            if (walkSound.isPlaying)
-                            {
-                                walkSound.Stop();
-                            }
-                        }
-                    }
-                    else if (Input.GetAxisRaw("Horizontal") < 0f)
-                    {
-                        myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
-                        transform.localScale = new Vector3(-1f, 1f, 1f);
-                        if (isGrounded && !pulling && !zipping)
-                        {
-                            if (!walkSound.isPlaying)
-                            {
-                                walkSound.Play();
-                            }
-                        }
-                        else
-                        {
-                            if (walkSound.isPlaying)
-                            {
-                                walkSound.Stop();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        myRB.velocity = new Vector3(0f, myRB.velocity.y, 0f);
-                        if (walkSound.isPlaying)
-                        {
-                            walkSound.Stop();
-                        }
+                        pulling = true;
                     }
                 }
 
-                if (changingRooms)
+                zipping = false;
+                foreach (ZipController zip in FindObjectsOfType<ZipController>())
                 {
-                    if (isGrounded && Mathf.Abs(myRB.velocity.x) > 0.01f)
+                    if (zip.aligning || zip.pulling)
                     {
-                        if (!walkSound.isPlaying)
-                        {
-                            walkSound.Play();
-                        }
-                    }
-                    else
-                    {
-                        if (walkSound.isPlaying)
-                        {
-                            walkSound.Stop();
-                        }
+                        zipping = true;
                     }
                 }
 
-                if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && wallJumpCoyoteTimeCounter > 0f)
+                onWall = OnWall();
+                isGrounded = IsGrounded();
+                if (isGrounded)
                 {
-                    jumpBufferCounter = 0f;
-                    wallJumping = true;
-                    myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
-                    wallJumpCoyoteTimeCounter = 0f;
-
-                    if (!jumpSound.isPlaying)
-                    {
-                        jumpSound.Play();
-                    }
-
-                    if (transform.localScale.x != wallJumpDirection)
-                    {
-                        transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
-                    }
-
-                    Invoke("StopWallJumping", wallJumpTime);
-                }
-            }
-
-            if (!isGrounded && walkSound.isPlaying)
-            {
-                walkSound.Stop();
-            }
-
-            if (!dashing)
-            {
-                if (jumpBufferCounter > 0f && !wallJumping)
-                {
-                    jumpBufferCounter = 0f;
-
+                    coyoteTimeCounter = coyoteTime;
                     if (doubleJump)
                     {
                         elementExit.Play();
                     }
+                    doubleJump = false;
+                }
+                else
+                {
+                    coyoteTimeCounter -= Time.deltaTime;
+                }
+
+                if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !changingRooms && (coyoteTimeCounter > 0f || doubleJump || wallJumpCoyoteTimeCounter > 0f))
+                {
+                    jumpBufferCounter = jumpBufferTime;
+                    jumpTimeCounter = jumpTime;
+                }
+
+                if (jumpTimeCounter > 0f && (Input.GetButton("Jump") || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !changingRooms)
+                {
+                    jumpBufferCounter = jumpBufferTime;
+                    jumpTimeCounter -= Time.deltaTime;
+                }
+
+                if (Input.GetButtonUp("Jump") || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
+                {
+                    jumpTimeCounter = 0f;
+                }
+
+                jumpBufferCounter -= Time.deltaTime;
+
+                if (!dashing && !pulling && !zipping)
+                {
+                    if (OnWall() && jumpTimeCounter <= 0f && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
+                    {
+                        // we are wall sliding
+                        jumpTimeCounter = 0f;
+                        float currentWallSlideSpeed = myRB.velocity.y - (wallSlideDeceleration * Time.deltaTime);
+                        if (currentWallSlideSpeed < -wallSlideSpeed)
+                        {
+                            currentWallSlideSpeed = -wallSlideSpeed;
+                        }
+                        myRB.velocity = new Vector3(myRB.velocity.x, currentWallSlideSpeed, 0f);
+                        wallJumpDirection = -transform.localScale.x;
+                        wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
+
+                        if (!slideSound.isPlaying)
+                        {
+                            slideSound.Play();
+                        }
+                    }
                     else
                     {
-                        if (!jumpSound.isPlaying && !elementExit.isPlaying)
+                        slideSound.Stop();
+                        wallJumpCoyoteTimeCounter -= Time.deltaTime;
+                    }
+
+                    if (!changingRooms && !wallJumping)
+                    {
+                        if (Input.GetAxisRaw("Horizontal") > 0f)
+                        {
+                            myRB.velocity = new Vector3(playerSpeed, myRB.velocity.y, 0f);
+                            transform.localScale = new Vector3(1f, 1f, 1f);
+                            if (isGrounded && !pulling && !zipping)
+                            {
+                                if (!walkSound.isPlaying)
+                                {
+                                    walkSound.Play();
+                                }
+                            }
+                            else
+                            {
+                                if (walkSound.isPlaying)
+                                {
+                                    walkSound.Stop();
+                                }
+                            }
+                        }
+                        else if (Input.GetAxisRaw("Horizontal") < 0f)
+                        {
+                            myRB.velocity = new Vector3(-playerSpeed, myRB.velocity.y, 0f);
+                            transform.localScale = new Vector3(-1f, 1f, 1f);
+                            if (isGrounded && !pulling && !zipping)
+                            {
+                                if (!walkSound.isPlaying)
+                                {
+                                    walkSound.Play();
+                                }
+                            }
+                            else
+                            {
+                                if (walkSound.isPlaying)
+                                {
+                                    walkSound.Stop();
+                                }
+                            }
+                        }
+                        else
+                        {
+                            myRB.velocity = new Vector3(0f, myRB.velocity.y, 0f);
+                            if (walkSound.isPlaying)
+                            {
+                                walkSound.Stop();
+                            }
+                        }
+                    }
+
+                    if (changingRooms)
+                    {
+                        if (isGrounded && Mathf.Abs(myRB.velocity.x) > 0.01f)
+                        {
+                            if (!walkSound.isPlaying)
+                            {
+                                walkSound.Play();
+                            }
+                        }
+                        else
+                        {
+                            if (walkSound.isPlaying)
+                            {
+                                walkSound.Stop();
+                            }
+                        }
+                    }
+
+                    if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && wallJumpCoyoteTimeCounter > 0f)
+                    {
+                        jumpBufferCounter = 0f;
+                        wallJumping = true;
+                        myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
+                        wallJumpCoyoteTimeCounter = 0f;
+
+                        if (!jumpSound.isPlaying)
                         {
                             jumpSound.Play();
                         }
+
+                        if (transform.localScale.x != wallJumpDirection)
+                        {
+                            transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
+                        }
+
+                        Invoke("StopWallJumping", wallJumpTime);
                     }
-                    myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
-                    coyoteTimeCounter = 0f;
-                    doubleJump = false;
                 }
-            }
 
-            if (currentZip != null)
-            {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (!isGrounded && walkSound.isPlaying)
                 {
-                    elementExit.Play();
-                    currentZip.GetComponentInParent<ZipController>().Zip();
-                    doubleJump = false;
+                    walkSound.Stop();
+                }
+
+                if (!dashing)
+                {
+                    if (jumpBufferCounter > 0f && !wallJumping)
+                    {
+                        jumpBufferCounter = 0f;
+
+                        if (doubleJump)
+                        {
+                            elementExit.Play();
+                        }
+                        else
+                        {
+                            if (!jumpSound.isPlaying && !elementExit.isPlaying)
+                            {
+                                jumpSound.Play();
+                            }
+                        }
+                        myRB.velocity = new Vector3(myRB.velocity.x, jumpSpeed, 0f);
+                        coyoteTimeCounter = 0f;
+                        doubleJump = false;
+                    }
+                }
+
+                if (currentZip != null)
+                {
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        elementExit.Play();
+                        currentZip.GetComponentInParent<ZipController>().Zip();
+                        doubleJump = false;
+                    }
+                }
+
+                if (pulling)
+                {
+                    mySR.material = playerMaterials[3];
+                }
+                else if (zipping)
+                {
+                    mySR.material = playerMaterials[4];
+                }
+                else if (doubleJump)
+                {
+                    mySR.material = playerMaterials[1];
+                }
+                else if (dashing)
+                {
+                    mySR.material = playerMaterials[2];
+                }
+                else if (currentZip != null && !currentZip.GetComponent<ZipPointController>().cooldown)
+                {
+                    mySR.material = playerMaterials[5];
+                }
+                else
+                {
+                    mySR.material = playerMaterials[0];
                 }
             }
+            else if (!respawning)
+            {
+                myRB.velocity = new Vector3(0f, 0f, 0f);
+            }
 
-            if (pulling)
-            {
-                mySR.material = playerMaterials[3];
-            }
-            else if (zipping)
-            {
-                mySR.material = playerMaterials[4];
-            }
-            else if (doubleJump)
-            {
-                mySR.material = playerMaterials[1];
-            }
-            else if (dashing)
-            {
-                mySR.material = playerMaterials[2];
-            }
-            else if (currentZip != null && !currentZip.GetComponent<ZipPointController>().cooldown)
-            {
-                mySR.material = playerMaterials[5];
-            }
-            else
-            {
-                mySR.material = playerMaterials[0];
-            }
+            playerLight.color = mySR.material.color;
+            playerAnimator.SetBool("OnGround", IsGrounded());
+            playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
         }
-        else if (!respawning)
-        {
-            myRB.velocity = new Vector3(0f, 0f, 0f);
-        }
-
-        playerLight.color = mySR.material.color;
-        playerAnimator.SetBool("OnGround", IsGrounded());
-        playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
     }
 
     public bool IsGrounded()
@@ -451,7 +455,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Level End")
         {
-            other.GetComponent<LevelEnd>().EndLevel();
+            other.GetComponent<LevelEnd>().EndLevel(false);
         }
 
         if (other.gameObject.tag == "Kill Plane")

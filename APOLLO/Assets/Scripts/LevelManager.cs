@@ -41,6 +41,8 @@ public class LevelManager : MonoBehaviour
     public bool paused;
     public GameObject pauseMenu;
 
+    public Animator creditsTextAnimator;
+
     void Start()
     {
         Time.timeScale = 1f;
@@ -60,6 +62,11 @@ public class LevelManager : MonoBehaviour
         player.respawnPosition = new Vector3(firstCPPos.x, firstCPPos.y + 0.5f, 0f);
         player.transform.position = player.respawnPosition;
         UpdateRoom("None", null);
+
+        if (creditsTextAnimator != null && SceneManager.GetActiveScene().name == "TrueCredits")
+        {
+            creditsTextAnimator.SetBool("TrueCredits", true);
+        }
     }
 
     void Update()

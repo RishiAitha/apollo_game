@@ -102,8 +102,13 @@ public class LevelEnd : MonoBehaviour
         }
     }
 
-    public void EndLevel()
+    public void EndLevel(bool loadCredits)
     {
+        if (loadCredits)
+        {
+            nextLevel = "Credits";
+        }
+
         PlayerPrefs.SetInt(currentLevel, 0);
         if (!credits)
         {

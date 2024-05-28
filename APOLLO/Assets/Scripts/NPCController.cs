@@ -91,7 +91,7 @@ public class NPCController : MonoBehaviour
                     LevelEnd end = FindObjectOfType<LevelEnd>();
                     end.endingSpeed = 0f;
                     end.fadeSpeed = 0.5f;
-                    end.EndLevel();
+                    end.EndLevel(true);
                 }
             }
         }
