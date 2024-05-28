@@ -12,7 +12,7 @@ public class LevelEnd : MonoBehaviour
     public string nextLevel;
 
     public float endingSpeed;
-    private bool ending;
+    public bool ending;
 
     private SpriteRenderer mySR;
     public Sprite sprite1;
@@ -20,14 +20,12 @@ public class LevelEnd : MonoBehaviour
 
     public GameObject lightObj;
 
-    private Image fadeScreen;
+    public Image fadeScreen;
     public float fadeSpeed;
     public bool fadeInFinished;
     public bool fadeOutFinished;
 
     public bool credits;
-    public float creditsTime;
-    public float creditsTimeCounter;
 
     public AudioSource music;
     public float volumeFadeSpeed;
@@ -41,21 +39,10 @@ public class LevelEnd : MonoBehaviour
         fadeScreen = GameObject.FindGameObjectWithTag("Fade Screen").GetComponent<Image>();
         fadeScreen.color = new Color(0f, 0f, 0f, 1f);
         credits = SceneManager.GetActiveScene().name == "Credits";
-        creditsTimeCounter = creditsTime;
     }
 
     void Update()
     {
-        if (credits)
-        {
-            creditsTimeCounter -= Time.deltaTime;
-            if (creditsTimeCounter <= 0f)
-            {
-                fadeScreen.gameObject.SetActive(true);
-                ending = true;
-            }
-        }
-
         if (!fadeInFinished)
         {
             Color currentColor = fadeScreen.color;

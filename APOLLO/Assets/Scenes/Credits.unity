@@ -137,15 +137,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4239180241912457866, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.b
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 4239180241912457866, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.g
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 4239180241912457866, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.r
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 5171202866781905387, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -205,39 +205,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5711929610156550596, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.b
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 5711929610156550596, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.g
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 5711929610156550596, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.r
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 6281077786166922423, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.b
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 6281077786166922423, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.g
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 6281077786166922423, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.r
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 7479334486445346288, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.b
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 7479334486445346288, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.g
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 7479334486445346288, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: m_Color.r
-      value: 0.15686275
+      value: 0.21568628
       objectReference: {fileID: 0}
     - target: {fileID: 8628323783712727764, guid: 88a28b92c589b464e91902d6adf0a46c, type: 3}
       propertyPath: orthographic size
@@ -397,8 +397,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0074501038, y: -0.0022997856, z: 0}
-    m_Extent: {x: 10.49755, y: 10.496099, z: 0}
+    m_Center: {x: -0.0005502701, y: -0.0002503395, z: 0}
+    m_Extent: {x: 10.49825, y: 10.50205, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1079,6 +1079,7 @@ GameObject:
   - component: {fileID: 1897035906}
   - component: {fileID: 1897035905}
   - component: {fileID: 1897035907}
+  - component: {fileID: 1897035908}
   m_Layer: 5
   m_Name: Credits Text
   m_TagString: Untagged
@@ -1231,6 +1232,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1897035908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897035903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c1b99d36573554b8b132baa401d683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029039969
 GameObject:
   m_ObjectHideFlags: 0

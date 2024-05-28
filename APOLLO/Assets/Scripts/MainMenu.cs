@@ -223,6 +223,7 @@ public class MainMenu : MonoBehaviour
 
     public void StopQueuedSounds()
     {
+        enterLevelSound.Stop();
         arrowButtonSound.Stop();
         genericButtonSound.Stop();
     }
