@@ -1894,6 +1894,7 @@ MonoBehaviour:
   vertTransitionVerticalBoost: 10
   paused: 0
   pauseMenu: {fileID: 8181126287039323624}
+  creditsTextAnimator: {fileID: 0}
 --- !u!1 &5142170171558744096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,8 +2038,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00034999847, y: -0.004900098, z: 0}
-    m_Extent: {x: 3.50795, y: 3.4994001, z: 0}
+    m_Center: {x: 0.006850004, y: 0.0023999214, z: 0}
+    m_Extent: {x: 3.50275, y: 3.5023, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

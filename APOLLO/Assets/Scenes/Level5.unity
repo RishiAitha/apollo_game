@@ -67500,8 +67500,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.001850009, y: -0.005099982, z: 0}
-    m_Extent: {x: 1.00565, y: 1.0033, z: 0}
+    m_Center: {x: -0.0046999753, y: 0, z: 0}
+    m_Extent: {x: 1.0009, y: 0.9952, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -70758,18 +70758,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 974836550205880785, guid: 166055cb31e1ecd489876d86a3506c0d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0fdb5a8f32d6a3942a493b351dc32231, type: 3}
     - target: {fileID: 3593669353754276436, guid: 166055cb31e1ecd489876d86a3506c0d, type: 3}
       propertyPath: m_Name
       value: Rocket Ship Holder
       objectReference: {fileID: 0}
-    - target: {fileID: 5325669176189045726, guid: 166055cb31e1ecd489876d86a3506c0d, type: 3}
-      propertyPath: NPCSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9ba15d5e5dd3f0347bb6baa83f9cdb4e, type: 3}
     - target: {fileID: 5325669176189045726, guid: 166055cb31e1ecd489876d86a3506c0d, type: 3}
       propertyPath: dialogueText
       value: 
@@ -70782,10 +70774,6 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317389}
-    - target: {fileID: 5620468112068195324, guid: 166055cb31e1ecd489876d86a3506c0d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7314661286225250304, guid: 166055cb31e1ecd489876d86a3506c0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 325

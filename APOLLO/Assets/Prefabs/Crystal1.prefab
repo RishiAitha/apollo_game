@@ -265,6 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6116147005626179171}
   - component: {fileID: 5371166337703125932}
+  - component: {fileID: 5859587588294943011}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -321,8 +322,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0062999725, y: -0.0037500262, z: 0}
-    m_Extent: {x: 1.4956, y: 1.49715, z: 0}
+    m_Center: {x: 0.0033500195, y: -0.00025004148, z: 0}
+    m_Extent: {x: 1.49755, y: 1.5071499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -365,3 +366,15 @@ MonoBehaviour:
   - {x: 0.4157348, y: -0.27778515, z: 0}
   - {x: 0.46193978, y: -0.19134171, z: 0}
   - {x: 0.49039266, y: -0.09754512, z: 0}
+--- !u!114 &5859587588294943011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184705947463128483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4a3d7e109371b4f8b5af50bed271d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

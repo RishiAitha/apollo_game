@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225022249842524546}
   - component: {fileID: 1169673590243850590}
+  - component: {fileID: 2512849191807108491}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -97,8 +98,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0034999847, y: -0.0027499795, z: 0}
-    m_Extent: {x: 1.4999, y: 1.50365, z: 0}
+    m_Center: {x: -0.0010499954, y: 0.007250011, z: 0}
+    m_Extent: {x: 1.50185, y: 1.49985, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -141,6 +142,18 @@ MonoBehaviour:
   - {x: 0.4157348, y: -0.27778515, z: 0}
   - {x: 0.46193978, y: -0.19134171, z: 0}
   - {x: 0.49039266, y: -0.09754512, z: 0}
+--- !u!114 &2512849191807108491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805590015431418278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4a3d7e109371b4f8b5af50bed271d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1323293519756101198
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6077427906227742374}
   - component: {fileID: 844256081808956265}
+  - component: {fileID: 7417735440043838385}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -722,8 +736,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00054997206, y: 0.0036500096, z: 0}
-    m_Extent: {x: 1.50505, y: 1.5004499, z: 0}
+    m_Center: {x: 0.00090003014, y: -0.006799996, z: 0}
+    m_Extent: {x: 1.505, y: 1.4993999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -766,3 +780,15 @@ MonoBehaviour:
   - {x: 0.4157348, y: -0.27778515, z: 0}
   - {x: 0.46193978, y: -0.19134171, z: 0}
   - {x: 0.49039266, y: -0.09754512, z: 0}
+--- !u!114 &7417735440043838385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145335533736790129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4a3d7e109371b4f8b5af50bed271d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
