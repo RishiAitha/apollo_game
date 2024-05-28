@@ -33,14 +33,30 @@ public class MainMenu : MonoBehaviour
     public AudioSource arrowButtonSound;
     public AudioSource genericButtonSound;
 
+    public Image muteIcon;
+    public bool muted;
+    public Sprite mutedSprite;
+    public Sprite unMutedSprite;
+
     void Start()
     {
         OpenStartMenu();
 
         UnlockFirstLevel();
 
-        currentLevel = 1;
         fadeScreen.gameObject.SetActive(false);
+
+        muted = PlayerPrefs.GetInt("Muted") == 1;
+        if (muted)
+        {
+            muteIcon.sprite = mutedSprite;
+            AudioListener.pause = true;
+            AudioListener.volume = 0f;
+        }
+        else
+        {
+            muteIcon.sprite = unMutedSprite;
+        }
     }
 
     void Update()
@@ -176,6 +192,39 @@ public class MainMenu : MonoBehaviour
         {
             PlayerPrefs.SetInt("Level1", 0);
         }
+        if (!PlayerPrefs.HasKey("Muted"))
+        {
+            PlayerPrefs.SetInt("Muted", 0);
+        }
+
+        currentLevel = 1;
+    }
+
+    public void ToggleMute()
+    {
+        if (muted)
+        {
+            muted = false;
+            muteIcon.sprite = unMutedSprite;
+            PlayerPrefs.SetInt("Muted", 0);
+            StopQueuedSounds();
+            AudioListener.pause = false;
+            AudioListener.volume = 1f;
+        }
+        else
+        {
+            muted = true;
+            muteIcon.sprite = mutedSprite;
+            PlayerPrefs.SetInt("Muted", 1);
+            AudioListener.pause = true;
+            AudioListener.volume = 0f;
+        }
+    }
+
+    public void StopQueuedSounds()
+    {
+        arrowButtonSound.Stop();
+        genericButtonSound.Stop();
     }
 
     public void PlayArrowButtonSound()
@@ -195,6 +244,7 @@ public class MainMenu : MonoBehaviour
 
     public void ResetSaveData()
     {
+        levelButtons.transform.position = new Vector3(levelButtons.transform.position.x + ((currentLevel - 1) * (1200f * (Screen.currentResolution.width / 1920f))), levelButtons.transform.position.y, 0f);
         PlayerPrefs.DeleteAll();
         UnlockFirstLevel();
     }

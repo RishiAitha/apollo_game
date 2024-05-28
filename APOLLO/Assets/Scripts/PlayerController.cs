@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
                 if (isGrounded)
                 {
                     coyoteTimeCounter = coyoteTime;
-                    if (doubleJump)
+                    if (doubleJump && !Input.GetKey(KeyCode.Escape))
                     {
                         elementExit.Play();
                     }
@@ -194,7 +194,7 @@ public class PlayerController : MonoBehaviour
 
                 if (!dashing && !pulling && !zipping)
                 {
-                    if (OnWall() && jumpTimeCounter <= 0f && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f)
+                    if (OnWall() && jumpTimeCounter <= 0f && coyoteTimeCounter <= 0f && Input.GetAxisRaw("Horizontal") != 0f && !level.paused)
                     {
                         // we are wall sliding
                         jumpTimeCounter = 0f;
@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
                         wallJumpDirection = -transform.localScale.x;
                         wallJumpCoyoteTimeCounter = wallJumpCoyoteTime;
 
-                        if (!slideSound.isPlaying)
+                        if (!slideSound.isPlaying && !Input.GetKey(KeyCode.Escape))
                         {
                             slideSound.Play();
                         }
@@ -218,7 +218,7 @@ public class PlayerController : MonoBehaviour
                         wallJumpCoyoteTimeCounter -= Time.deltaTime;
                     }
 
-                    if (!changingRooms && !wallJumping)
+                    if (!changingRooms && !wallJumping && !level.paused)
                     {
                         if (Input.GetAxisRaw("Horizontal") > 0f)
                         {
@@ -226,7 +226,7 @@ public class PlayerController : MonoBehaviour
                             transform.localScale = new Vector3(1f, 1f, 1f);
                             if (isGrounded && !pulling && !zipping)
                             {
-                                if (!walkSound.isPlaying)
+                                if (!walkSound.isPlaying && !Input.GetKey(KeyCode.Escape))
                                 {
                                     walkSound.Play();
                                 }
@@ -245,7 +245,7 @@ public class PlayerController : MonoBehaviour
                             transform.localScale = new Vector3(-1f, 1f, 1f);
                             if (isGrounded && !pulling && !zipping)
                             {
-                                if (!walkSound.isPlaying)
+                                if (!walkSound.isPlaying && !Input.GetKey(KeyCode.Escape))
                                 {
                                     walkSound.Play();
                                 }
@@ -272,7 +272,7 @@ public class PlayerController : MonoBehaviour
                     {
                         if (isGrounded && Mathf.Abs(myRB.velocity.x) > 0.01f)
                         {
-                            if (!walkSound.isPlaying)
+                            if (!walkSound.isPlaying && !Input.GetKey(KeyCode.Escape))
                             {
                                 walkSound.Play();
                             }
@@ -286,14 +286,14 @@ public class PlayerController : MonoBehaviour
                         }
                     }
 
-                    if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && wallJumpCoyoteTimeCounter > 0f)
+                    if ((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && wallJumpCoyoteTimeCounter > 0f && !level.paused)
                     {
                         jumpBufferCounter = 0f;
                         wallJumping = true;
                         myRB.velocity = new Vector3(wallJumpDirection * wallJumpSpeed.x, wallJumpSpeed.y, 0f);
                         wallJumpCoyoteTimeCounter = 0f;
 
-                        if (!jumpSound.isPlaying)
+                        if (!jumpSound.isPlaying && !Input.GetKey(KeyCode.Escape))
                         {
                             jumpSound.Play();
                         }
@@ -307,24 +307,32 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
-                if (!isGrounded && walkSound.isPlaying)
+                if ((!isGrounded || level.paused) && walkSound.isPlaying)
                 {
                     walkSound.Stop();
                 }
 
+                if (level.paused && slideSound.isPlaying)
+                {
+                    slideSound.Stop();
+                }
+
                 if (!dashing)
                 {
-                    if (jumpBufferCounter > 0f && !wallJumping)
+                    if (jumpBufferCounter > 0f && !wallJumping && !level.paused)
                     {
                         jumpBufferCounter = 0f;
 
                         if (doubleJump)
                         {
-                            elementExit.Play();
+                            if (!Input.GetKey(KeyCode.Escape))
+                            {
+                                elementExit.Play();
+                            }
                         }
                         else
                         {
-                            if (!jumpSound.isPlaying && !elementExit.isPlaying)
+                            if (!jumpSound.isPlaying && !elementExit.isPlaying && !Input.GetKey(KeyCode.Escape))
                             {
                                 jumpSound.Play();
                             }
@@ -339,7 +347,10 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.F))
                     {
-                        elementExit.Play();
+                        if (!Input.GetKey(KeyCode.Escape))
+                        {
+                            elementExit.Play();
+                        }
                         currentZip.GetComponentInParent<ZipController>().Zip();
                         doubleJump = false;
                     }
@@ -407,7 +418,11 @@ public class PlayerController : MonoBehaviour
                 jumpBufferCounter = 0f;
 
                 other.GetComponent<BoostController>().Cooldown();
-                elementEnter.Play();
+
+                if (!Input.GetKey(KeyCode.Escape))
+                {
+                    elementEnter.Play();
+                }
             }
         }
 
@@ -417,7 +432,11 @@ public class PlayerController : MonoBehaviour
             {
                 other.GetComponent<DashController>().Cooldown();
                 StartCoroutine("Dash", other);
-                elementExit.Play();
+
+                if (!Input.GetKey(KeyCode.Escape))
+                {
+                    elementExit.Play();
+                }
             }
         }
 
@@ -426,7 +445,11 @@ public class PlayerController : MonoBehaviour
             if (!respawning)
             {
                 other.GetComponentInParent<PullController>().Pull();
-                elementEnter.Play();
+
+                if (!Input.GetKey(KeyCode.Escape))
+                {
+                    elementEnter.Play();
+                }
             }
         }
 
@@ -435,7 +458,11 @@ public class PlayerController : MonoBehaviour
             if (!respawning)
             {
                 other.GetComponentInParent<PortalController>().Teleport(myRB.velocity);
-                elementExit.Play();
+
+                if (!Input.GetKey(KeyCode.Escape))
+                {
+                    elementExit.Play();
+                }
             }
         }
 
@@ -510,7 +537,10 @@ public class PlayerController : MonoBehaviour
 
             playerAnimator.SetBool("Hurt", true);
 
-            deathSound.Play();
+            if (!Input.GetKey(KeyCode.Escape))
+            {
+                deathSound.Play();
+            }
 
             if (hazard)
             {
