@@ -111,9 +111,16 @@ public class LevelManager : MonoBehaviour
             
             mainCamera.orthographicSize = cameraSize;
 
-            if (transitionDirection == "Right" || transitionDirection == "Left")
+            if (transitionDirection == "Right")
             {
-                player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(playerVelocity.x * 0.5f, player.gameObject.GetComponent<Rigidbody2D>().velocity.y, 0f);
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(Mathf.Abs(playerVelocity.x) * 0.5f, player.gameObject.GetComponent<Rigidbody2D>().velocity.y, 0f);
+                player.transform.localScale = new Vector3(1f, 1f, 1f);
+                playerAnimator.speed = 0.5f;
+            }
+            else if (transitionDirection == "Left")
+            {
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(Mathf.Abs(playerVelocity.x) * -0.5f, player.gameObject.GetComponent<Rigidbody2D>().velocity.y, 0f);
+                player.transform.localScale = new Vector3(-1f, 1f, 1f);
                 playerAnimator.speed = 0.5f;
             }
             else if (transitionDirection == "Up")

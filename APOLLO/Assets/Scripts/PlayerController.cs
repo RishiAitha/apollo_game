@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     public bool dialogueActive;
 
     public bool changingRooms;
+    public bool inTransition;
 
     public Vector3 respawnPosition;
 
@@ -218,7 +219,7 @@ public class PlayerController : MonoBehaviour
                         wallJumpCoyoteTimeCounter -= Time.deltaTime;
                     }
 
-                    if (!changingRooms && !wallJumping && !level.paused)
+                    if (!inTransition && !changingRooms && !wallJumping && !level.paused)
                     {
                         if (Input.GetAxisRaw("Horizontal") > 0f)
                         {
@@ -478,6 +479,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Transition")
         {
             transitionImmunityTimeCounter = transitionImmunityTime;
+            inTransition = true;
         }
 
         if (other.gameObject.tag == "Level End")
@@ -496,6 +498,11 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Zip Point")
         {
             currentZip = null;
+        }
+
+        if (other.gameObject.tag == "Transition")
+        {
+            inTransition = false;
         }
     }
 
