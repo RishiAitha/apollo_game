@@ -1949,17 +1949,23 @@ CompositeCollider2D:
         Y: 21875000
       - X: 3049999872
         Y: 30000000
-      - X: 3068750080
+      - X: 3089999872
         Y: 30000000
-      - X: 3070000128
-        Y: 31875000
-      - X: 3070000128
-        Y: 40000000
       - X: 3089999872
-        Y: 40000000
-      - X: 3089999872
-        Y: -8125000
+        Y: 21875000
       - X: 3091249920
+        Y: 20000000
+      - X: 3100000000
+        Y: 20000000
+      - X: 3100000000
+        Y: 1875000
+      - X: 3101250048
+        Y: 0
+      - X: 3110000128
+        Y: 0
+      - X: 3110000128
+        Y: -8125000
+      - X: 3111249920
         Y: -10000000
       - X: 3160000000
         Y: -10000000
@@ -3154,12 +3160,6 @@ CompositeCollider2D:
       - {x: 191, y: 24.999971}
       - {x: 191, y: 24.187494}
       - {x: 191.12502, y: 24}
-    - - {x: 175.87498, y: 18}
-      - {x: 176, y: 18.18751}
-      - {x: 175.99997, y: 22}
-      - {x: 174, y: 21.999971}
-      - {x: 174, y: 18.187494}
-      - {x: 174.12502, y: 18}
     - - {x: 318.875, y: -8}
       - {x: 319.00003, y: -7.812492}
       - {x: 319, y: 8}
@@ -3207,12 +3207,15 @@ CompositeCollider2D:
       - {x: 304.875, y: 2.000012}
       - {x: 305, y: 2.1875076}
       - {x: 305.00003, y: 3}
-      - {x: 306.875, y: 3.000012}
-      - {x: 307.00003, y: 3.1875079}
-      - {x: 307.00003, y: 4}
-      - {x: 309, y: 3.9999704}
-      - {x: 309, y: -0.81250644}
-      - {x: 309.12503, y: -1}
+      - {x: 309, y: 2.9999707}
+      - {x: 309, y: 2.1874936}
+      - {x: 309.12503, y: 2}
+      - {x: 310, y: 1.9999707}
+      - {x: 310, y: 0.1874936}
+      - {x: 310.12503, y: 0}
+      - {x: 311.00003, y: -0.0000294}
+      - {x: 311.00003, y: -0.8125065}
+      - {x: 311.12503, y: -1}
       - {x: 316, y: -1.0000294}
       - {x: 315.99997, y: -5}
       - {x: 304, y: -4.9999704}
@@ -3251,6 +3254,12 @@ CompositeCollider2D:
       - {x: 167.99997, y: 22}
       - {x: 167, y: 21.999971}
       - {x: 167.00003, y: 15}
+    - - {x: 175.87498, y: 18}
+      - {x: 176, y: 18.18751}
+      - {x: 175.99997, y: 22}
+      - {x: 174, y: 21.999971}
+      - {x: 174, y: 18.187494}
+      - {x: 174.12502, y: 18}
     - - {x: 112, y: 16.000029}
       - {x: 110, y: 16.000029}
       - {x: 110.00003, y: 17}
@@ -3350,6 +3359,12 @@ CompositeCollider2D:
       - {x: 202.99997, y: 13}
       - {x: 202, y: 12.99997}
       - {x: 202.00003, y: 6}
+    - - {x: 175.87498, y: 6}
+      - {x: 176, y: 6.187508}
+      - {x: 175.99997, y: 12}
+      - {x: 174, y: 11.99997}
+      - {x: 174, y: 6.187494}
+      - {x: 174.12502, y: 6}
     - - {x: 144.99997, y: 9}
       - {x: 145.00003, y: 10}
       - {x: 146, y: 10.00003}
@@ -3362,12 +3377,6 @@ CompositeCollider2D:
       - {x: 143.00003, y: 10}
       - {x: 144, y: 9.99997}
       - {x: 144.00003, y: 9}
-    - - {x: 175.87498, y: 6}
-      - {x: 176, y: 6.187508}
-      - {x: 175.99997, y: 12}
-      - {x: 174, y: 11.99997}
-      - {x: 174, y: 6.187494}
-      - {x: 174.12502, y: 6}
     - - {x: 156.99997, y: 9}
       - {x: 157.00003, y: 10}
       - {x: 158, y: 10.00003}
@@ -3396,6 +3405,16 @@ CompositeCollider2D:
       - {x: 195, y: 9.99997}
       - {x: 195, y: 6.187494}
       - {x: 195.12502, y: 6}
+    - - {x: 189.87498, y: 6}
+      - {x: 190, y: 6.187508}
+      - {x: 189.99997, y: 9}
+      - {x: 185, y: 8.99997}
+      - {x: 185, y: 6.187494}
+      - {x: 185.12502, y: 6}
+    - - {x: 182.99997, y: 6}
+      - {x: 182.99997, y: 9}
+      - {x: 182, y: 8.99997}
+      - {x: 182.00003, y: 6}
     - - {x: 167.99997, y: 6}
       - {x: 167.99997, y: 9}
       - {x: 167, y: 8.99997}
@@ -3406,16 +3425,6 @@ CompositeCollider2D:
       - {x: 160, y: 8.99997}
       - {x: 160, y: 5.187494}
       - {x: 160.12502, y: 5}
-    - - {x: 182.99997, y: 6}
-      - {x: 182.99997, y: 9}
-      - {x: 182, y: 8.99997}
-      - {x: 182.00003, y: 6}
-    - - {x: 189.87498, y: 6}
-      - {x: 190, y: 6.187508}
-      - {x: 189.99997, y: 9}
-      - {x: 185, y: 8.99997}
-      - {x: 185, y: 6.187494}
-      - {x: 185.12502, y: 6}
     - - {x: 18.874987, y: -8}
       - {x: 19, y: -7.812492}
       - {x: 18.999971, y: -4}
@@ -3471,12 +3480,6 @@ CompositeCollider2D:
       - {x: 112, y: -0.0000294}
       - {x: 111.99998, y: -4}
       - {x: 111, y: -4.000029}
-    - - {x: 89.87499, y: -8}
-      - {x: 90, y: -7.812492}
-      - {x: 89.99997, y: 0}
-      - {x: 85, y: -0.000029300001}
-      - {x: 85.00001, y: -7.8125067}
-      - {x: 85.125015, y: -8}
     - - {x: 104.87499, y: -8}
       - {x: 105, y: -7.812492}
       - {x: 104.99997, y: -1}
@@ -3487,6 +3490,12 @@ CompositeCollider2D:
       - {x: 101, y: -1.0000293}
       - {x: 101.00001, y: -7.8125067}
       - {x: 101.125015, y: -8}
+    - - {x: 89.87499, y: -8}
+      - {x: 90, y: -7.812492}
+      - {x: 89.99997, y: 0}
+      - {x: 85, y: -0.000029300001}
+      - {x: 85.00001, y: -7.8125067}
+      - {x: 85.125015, y: -8}
     - - {x: 83.99997, y: -2}
       - {x: 83.99997, y: -1}
       - {x: 81, y: -1.0000293}
@@ -3523,30 +3532,20 @@ CompositeCollider2D:
       - {x: 91, y: -3.0000293}
       - {x: 91.00001, y: -7.8125067}
       - {x: 91.125015, y: -8}
-    - - {x: 79.99997, y: -3}
-      - {x: 79.99997, y: -2}
-      - {x: 76, y: -2.0000293}
-      - {x: 76.00003, y: -3}
     - - {x: 74.99997, y: -3}
       - {x: 74.99997, y: -2}
       - {x: 71, y: -2.0000293}
       - {x: 71.00003, y: -3}
+    - - {x: 79.99997, y: -3}
+      - {x: 79.99997, y: -2}
+      - {x: 76, y: -2.0000293}
+      - {x: 76.00003, y: -3}
     - - {x: 51.87499, y: -8}
       - {x: 52, y: -7.812492}
       - {x: 51.999973, y: -2}
       - {x: 48, y: -2.0000293}
       - {x: 48.000004, y: -7.8125067}
       - {x: 48.12501, y: -8}
-    - - {x: 28.874989, y: -8}
-      - {x: 29, y: -7.812492}
-      - {x: 28.999971, y: -4}
-      - {x: 28, y: -3.9999704}
-      - {x: 27.999971, y: -3}
-      - {x: 22, y: -3.0000293}
-      - {x: 21.999971, y: -4}
-      - {x: 21, y: -4.000029}
-      - {x: 21.000006, y: -7.8125067}
-      - {x: 21.125015, y: -8}
     - - {x: 69.99997, y: -4}
       - {x: 69.99997, y: -3}
       - {x: 67, y: -3.0000293}
@@ -3559,6 +3558,16 @@ CompositeCollider2D:
       - {x: 45.999973, y: -3}
       - {x: 43, y: -3.0000293}
       - {x: 43.00003, y: -4}
+    - - {x: 28.874989, y: -8}
+      - {x: 29, y: -7.812492}
+      - {x: 28.999971, y: -4}
+      - {x: 28, y: -3.9999704}
+      - {x: 27.999971, y: -3}
+      - {x: 22, y: -3.0000293}
+      - {x: 21.999971, y: -4}
+      - {x: 21, y: -4.000029}
+      - {x: 21.000006, y: -7.8125067}
+      - {x: 21.125015, y: -8}
     - - {x: 40.87499, y: -8}
       - {x: 41, y: -7.812492}
       - {x: 40.999973, y: -4}
@@ -11506,31 +11515,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
-  - first: {x: 309, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 19
-      m_TileMatrixIndex: 3
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
-  - first: {x: 310, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 18
-      m_TileMatrixIndex: 3
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
   - first: {x: 311, y: -1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 18
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11966,21 +11955,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
-  - first: {x: 309, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 10
-      m_TileMatrixIndex: 3
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
   - first: {x: 310, y: 0, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11990,7 +11969,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12516,21 +12495,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741826
-  - first: {x: 309, y: 1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 10
-      m_TileMatrixIndex: 3
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
   - first: {x: 310, y: 1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12990,7 +12959,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13000,7 +12969,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13490,8 +13459,28 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 19
-      m_TileMatrixIndex: 2
+      m_TileSpriteIndex: 18
+      m_TileMatrixIndex: 3
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: 307, y: 3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 18
+      m_TileMatrixIndex: 3
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
+  - first: {x: 308, y: 3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 18
+      m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -13500,7 +13489,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14020,8 +14009,8 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 12
-      m_TileMatrixIndex: 2
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -14030,7 +14019,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 18
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14040,7 +14029,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 18
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14050,7 +14039,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -39804,7 +39793,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 3608
+  - m_RefCount: 3606
     m_Data: {fileID: 11400000, guid: 801750f6b24e9c8439e664194142e881, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -39827,11 +39816,11 @@ Tilemap:
     m_Data: {fileID: 2185498278340178504, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 2008176328888099268, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
-  - m_RefCount: 607
+  - m_RefCount: 604
     m_Data: {fileID: -3181606171480048652, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
   - m_RefCount: 14
     m_Data: {fileID: -540048619370252142, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
-  - m_RefCount: 134
+  - m_RefCount: 135
     m_Data: {fileID: 5661049957185019681, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
   - m_RefCount: 139
     m_Data: {fileID: 6346318911325233748, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
@@ -39843,9 +39832,9 @@ Tilemap:
     m_Data: {fileID: -761933863725385812, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
   - m_RefCount: 168
     m_Data: {fileID: -5027509340213622084, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
-  - m_RefCount: 425
+  - m_RefCount: 424
     m_Data: {fileID: 4443897450750874535, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
-  - m_RefCount: 162
+  - m_RefCount: 163
     m_Data: {fileID: -5774996654182199871, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
   - m_RefCount: 289
     m_Data: {fileID: -2374222918679686493, guid: 0b94391ed7654b158d8cd286654be50b, type: 3}
@@ -39896,7 +39885,7 @@ Tilemap:
       e31: 4.5904e-41
       e32: 0
       e33: 0
-  - m_RefCount: 624
+  - m_RefCount: 622
     m_Data:
       e00: -1
       e01: 0
@@ -39933,7 +39922,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3608
+  - m_RefCount: 3606
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -40661,6 +40650,22 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 1927543058}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: We're having a great time!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: This place is so pretty!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
       value: Fairy (13)
@@ -41325,6 +41330,74 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 1927543058}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: If you plan to head onwards, I'd be careful.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: There's all kinds of new elements,
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: and the land is even more dangerous.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: I'll manage, thanks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Well, if you ever come back, tell me all about what you saw!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Let's just hope I don't end up back here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: You know, a more positive attitude might help you out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: I can stay positive once I've reached my ship.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: But I suppose you aren't wrong...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
       value: Fairy (11)
@@ -43189,6 +43262,42 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 1927543058}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: I see you've discovered our land's last remaining crystal.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Folktales say that there used to be countless of these.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Apparently they were the source of all BOOST.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: I'm not really sure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: The crystal was dormant here for centuries.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: It could possibly be connected to you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Or maybe to your origin.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
       value: Fairy (10)
@@ -44342,7 +44451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -117.08
+      value: -116.6
       objectReference: {fileID: 0}
     - target: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44392,6 +44501,46 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 1927543058}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: I'm surprised that someone's made it up here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: I'm stationed here as a guard.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: But seeing as you're an alien, I won't stop you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: You might know more.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: I have no idea what you're talking about.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Just take a look at the crystal up ahead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
       value: Fairy (9)
@@ -44562,7 +44711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[4].text
-      value: That's alright, thanks.
+      value: That's great, thanks.
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[5].text
@@ -44701,11 +44850,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.489998
+      value: 42.009
       objectReference: {fileID: 0}
     - target: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.03
+      value: 2.087
       objectReference: {fileID: 0}
     - target: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_LocalPosition.z
@@ -44753,7 +44902,7 @@ PrefabInstance:
       objectReference: {fileID: 1927543058}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[0].text
@@ -44784,6 +44933,10 @@ PrefabInstance:
       value: Nothing much, just a way out of here.
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: Alright...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[1].isPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -44798,6 +44951,10 @@ PrefabInstance:
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[6].isPlayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
@@ -46133,6 +46290,102 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 1927543058}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: I've heard you've been able to light up the nearby torches.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Thanks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Apparently they belonged to a group...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: One that arrived here long ago.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: It's interesting that they respond to you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: I've heard people say that they preserve life?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Whatever that means.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: They seem to be helpful. Is the one ahead similar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: There's only one way to find out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[9].text
+      value: The path beyond this torch takes you deeper underground.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[10].text
+      value: Rumors say it's much colder down there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[11].text
+      value: Good luck.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[12].text
+      value: Thanks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[10].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[11].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[12].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
       value: Fairy (12)
@@ -46405,6 +46658,22 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 1927543058}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: How'd you get up here!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: This area isn't meant for aliens!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8440379883629232044, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_Name
       value: Fairy (14)
@@ -46493,7 +46762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[1].text
-      value: etvsnigxfcvmwlm4emxle
+      value: ekeqifcvmwlm4emxle
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[2].text
@@ -52499,11 +52768,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42
+      value: 53.467
       objectReference: {fileID: 0}
     - target: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.01
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7715942321330663963, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: m_LocalPosition.z
@@ -53287,7 +53556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[3].text
-      value: What's it like in your homeland?
+      value: What about you? What's it like in your homeland?
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[4].text
