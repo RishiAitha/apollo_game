@@ -199,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1745599879698016901, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 122.85
+      value: 122.993
       objectReference: {fileID: 0}
     - target: {fileID: 1745599879698016901, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_LocalPosition.z
@@ -249,6 +249,30 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: It's great having foreigners come by.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Makes things more interesting.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Feel free to hang around for a while!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: We're all happy to talk!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -3101,17 +3125,17 @@ CompositeCollider2D:
         Y: 1160625024
       - X: 1510000000
         Y: 1170000000
-      - X: 1550000000
+      - X: 1530000000
         Y: 1170000000
-      - X: 1550000000
+      - X: 1530000000
         Y: 1170625024
-      - X: 1550625024
+      - X: 1530625024
         Y: 1170000000
-      - X: 1559374976
+      - X: 1539374976
         Y: 1170000000
-      - X: 1560000000
+      - X: 1540000000
         Y: 1170625024
-      - X: 1560000000
+      - X: 1540000000
         Y: 1180000000
       - X: 1580000000
         Y: 1180000000
@@ -5185,12 +5209,12 @@ CompositeCollider2D:
       - {x: 150.93752, y: 116.000015}
       - {x: 151, y: 116.062515}
       - {x: 151.00003, y: 117}
-      - {x: 155, y: 117.00003}
-      - {x: 155.00006, y: 117.06244}
-      - {x: 155.06252, y: 117}
-      - {x: 155.93752, y: 117.000015}
-      - {x: 156, y: 117.062515}
-      - {x: 156.00003, y: 118}
+      - {x: 153, y: 117.00003}
+      - {x: 153.00006, y: 117.06244}
+      - {x: 153.06252, y: 117}
+      - {x: 153.93752, y: 117.000015}
+      - {x: 154, y: 117.062515}
+      - {x: 154.00003, y: 118}
       - {x: 158, y: 117.99998}
       - {x: 158.00002, y: 117.06249}
       - {x: 158.06252, y: 117}
@@ -41827,26 +41851,6 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 41
-      m_TileMatrixIndex: 7
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
-  - first: {x: 154, y: 117, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
-      m_TileSpriteIndex: 41
-      m_TileMatrixIndex: 7
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741826
-  - first: {x: 155, y: 117, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 13
       m_TileSpriteIndex: 42
       m_TileMatrixIndex: 6
       m_TileColorIndex: 0
@@ -42307,8 +42311,8 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 32
-      m_TileMatrixIndex: 7
+      m_TileSpriteIndex: 34
+      m_TileMatrixIndex: 6
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -42317,7 +42321,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 32
+      m_TileSpriteIndex: 41
       m_TileMatrixIndex: 7
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -42327,8 +42331,8 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 34
-      m_TileMatrixIndex: 6
+      m_TileSpriteIndex: 41
+      m_TileMatrixIndex: 7
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -51971,7 +51975,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 72
     m_Data: {fileID: 11400000, guid: 23d5693b585d20643b811d00f22f90c7, type: 2}
-  - m_RefCount: 4534
+  - m_RefCount: 4532
     m_Data: {fileID: 11400000, guid: 04846eee95c995047aca0e6ca0af1253, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -52038,7 +52042,7 @@ Tilemap:
     m_Data: {fileID: 6188951837793779661, guid: e2efe24a7f784fd78204519bb87d90b4, type: 3}
   - m_RefCount: 22
     m_Data: {fileID: 6656769732890290090, guid: e2efe24a7f784fd78204519bb87d90b4, type: 3}
-  - m_RefCount: 1534
+  - m_RefCount: 1532
     m_Data: {fileID: 206222898737509095, guid: e2efe24a7f784fd78204519bb87d90b4, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: -8744028111449747610, guid: e2efe24a7f784fd78204519bb87d90b4, type: 3}
@@ -52187,7 +52191,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 3949
+  - m_RefCount: 3947
     m_Data:
       e00: 1
       e01: 0
@@ -52206,7 +52210,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4606
+  - m_RefCount: 4604
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -53677,6 +53681,58 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Hey! Where are you from?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Not from around here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Have you heard of a rocket ship landing in the east?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: No, I'm really busy right now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: With what?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: I'm having dinner!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: The rocks over here are cool and tasty!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -53862,6 +53918,98 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: You seem pretty tired.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Maybe take a rest.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: There's no time for that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Why are you so rushed to get out of here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: I need to complete my mission.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Well, I guess I dont NEED to, but...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: the economy back home isn't great.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: I need the money.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: I'd also like to finish my trip to Earth-1.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[9].text
+      value: I hope things work out,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[10].text
+      value: how is she now?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[11].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[9].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[11].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -55424,6 +55572,22 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: We love eating rocks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: But it's even more fun in groups!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -55891,6 +56055,10 @@ PrefabInstance:
       propertyPath: checkpoints.Array.data[14]
       value: 
       objectReference: {fileID: 817782026}
+    - target: {fileID: 8181126287039323624, guid: c96d5bb082044c7459eb318275413045, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56458,6 +56626,78 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Welcome to our humble village!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: We've got the best rocks on Torra!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Torra?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: That's the name of our planet!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: That's good to know.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Especially for sending emergency messages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: What kind of rock is your favorite?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: I don't eat rocks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: It's never too late to try!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -56638,6 +56878,14 @@ PrefabInstance:
     - target: {fileID: 483660132959079406, guid: 5cfe54dc7c11d254abb4d479ba05548e, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
       value: 1.4975
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771166863322529706, guid: 5cfe54dc7c11d254abb4d479ba05548e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6771166863322529706, guid: 5cfe54dc7c11d254abb4d479ba05548e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 7681649869238525086, guid: 5cfe54dc7c11d254abb4d479ba05548e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57112,6 +57360,42 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: I love our cave!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: There's always something fun to do.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Isn't this just an empty cave?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: But we've got PULL and rocks all in one place!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Fair enough.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -57675,6 +57959,58 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: The weather here is pretty nice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Reminds me of back home.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Oh, did you stay in caves too?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Okay, it's not that similar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: But it was nice enough.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: At least it wasn't frozen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -58177,6 +58513,46 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Staying near our crystal is nice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: I feel more energized.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: It seems important,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: but I don't know much about it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Could there have been more?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Uh, none that I remember.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -60414,11 +60790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681649869238525086, guid: 5cfe54dc7c11d254abb4d479ba05548e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -1.21
       objectReference: {fileID: 0}
     - target: {fileID: 7681649869238525086, guid: 5cfe54dc7c11d254abb4d479ba05548e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 7775363925580662024, guid: 5cfe54dc7c11d254abb4d479ba05548e, type: 3}
       propertyPath: m_Name
@@ -60514,6 +60890,58 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Does your land have its own element?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Of course! We gain energy from PULL.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: If you are being pulled between points,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: you can always jump out and escape.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: That's good to know.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Yeah! Be careful out here!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -60597,6 +61025,74 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Have you seen a rocket land towards the east?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Why do you need it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Where's the rocket supposed to take you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: I was meant to land in Earth-1.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: What's that place? Does it have good rocks?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: It's the origin planet of my civilization.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: The root of all our people.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: I was taking a cargo ship there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: But things didn't work out.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -60847,6 +61343,38 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Up ahead is a passage farther east.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Will I finally be back on the surface?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: I think so, but I'm not too sure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: I guess all I can do is hope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -61121,6 +61649,78 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: If you keep going this way,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: you'll head eastward.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: I've heard the weather's hot over there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Some people have mentioned a mountain.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: I haven't gone too far though.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: So I don't know much.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Thanks for your help.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: You've all been nice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: Nicer than I expected.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[9].text
+      value: I can't complain.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[9].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -61552,6 +62152,62 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: We mark our village territory with the red banners.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: I mean, we don't get many visitors,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: so they don't really serve much of a purpose.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: But they look cool.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Makes sense.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: It brings you all identity.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Or something like that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: Yeah, I dont like to think too much though.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -61994,6 +62650,46 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: This spot isn't that great.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Why not?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: There aren't enough rocks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: How much do you really care for rocks?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Rocks are delicious! Haven't you tried any?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -66388,6 +67084,34 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: I don't really get what the crystal does,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: but it's super shiny!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: It got even brighter when you showed up.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: It's basically a fancy rock.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: I wonder what it tastes like.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -67020,6 +67744,34 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: You've got to try these.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: They're delicious!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Even if we don't need rocks for energy,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: they still taste great!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -68641,6 +69393,42 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: If you're looking for our town, just keep going!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: We live higher up in the caves,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: near an exit to the surface.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: That's perfect.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Just watch out for the dangerous terrain ahead!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -68821,6 +69609,54 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: You seem to be getting around great!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Especially for someone new to the area.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: We've gotten pretty good at navigating.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: These caves are manageable while using PULL.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: But you're great for a beginner!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Any tips?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Make sure you have good timing,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: especially when working with moving PULL.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -72138,6 +72974,50 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Having two eyes is really something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: What's it like?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Can you see behind your head?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: That's not how this works.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Having two just means I see depth.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: That's confusing. I'm fine with just one.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -72216,6 +73096,82 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: How far away is this town of yours?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Oh, you're about halfway there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: What about yours?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Mine is on a different planet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Ooh, I bet it's really cool over there!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Not really.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: Why not?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: Oh, it doesn't matter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[9].text
+      value: She's staying on another planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[9].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -72294,6 +73250,50 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Our people don't like to think too much.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: We'd much rather just hang out and have fun.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: You seem pretty different.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: It's interesting.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: I hope you find what you're looking for!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: I hope so too. Thanks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -72372,6 +73372,26 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 818918978}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Your species seems pretty nice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Maybe I'll try to visit you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: I can probably build myself a ship.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
       value: 0

@@ -52446,7 +52446,7 @@ PrefabInstance:
       objectReference: {fileID: 1422896535}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[0].text
@@ -52470,15 +52470,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[5].text
-      value: Welcome to our frozen caverns.
+      value: Don't you have any advice?
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[6].text
-      value: I am one of many residents.
+      value: Well, our DASH element is valuable for travel.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[7].text
-      value: How helpful of you.
+      value: Thanks, I guess.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[8].text
@@ -52506,6 +52506,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
