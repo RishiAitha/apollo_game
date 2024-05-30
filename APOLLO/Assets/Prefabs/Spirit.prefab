@@ -134,6 +134,7 @@ MonoBehaviour:
   playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
   NPCSprite: {fileID: 21300000, guid: bae580f9a14ce524a88da6fb9358f337, type: 3}
   NPCType: Spirit
+  displayingText: 0
 --- !u!61 &6552978218456837730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,7 +178,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 2}
+  m_Size: {x: 2.5, y: 2}
   m_EdgeRadius: 0
 --- !u!1 &8910672537973391007
 GameObject:

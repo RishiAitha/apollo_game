@@ -218,6 +218,7 @@ MonoBehaviour:
   playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
   NPCSprite: {fileID: 21300000, guid: b9763027952c5d04c9a84aa4eae87370, type: 3}
   NPCType: FlameGolem
+  displayingText: 0
 --- !u!61 &5103407576161320836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,5 +262,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 3}
+  m_Size: {x: 43, y: 3}
   m_EdgeRadius: 0

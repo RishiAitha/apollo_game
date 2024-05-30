@@ -134,6 +134,7 @@ MonoBehaviour:
   playerSprite: {fileID: 21300000, guid: a9f550bd5954205489167551d3297cb5, type: 3}
   NPCSprite: {fileID: 21300000, guid: 8b045682fdf35f4409534f4444e2755f, type: 3}
   NPCType: IceGolem
+  displayingText: 0
 --- !u!61 &9063764305296627484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,7 +178,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 3}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!1 &2203896992074707672
 GameObject:
