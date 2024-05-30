@@ -308,7 +308,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
-                if ((!isGrounded || level.paused) && walkSound.isPlaying)
+                if ((!isGrounded || level.paused || dialogueActive) && walkSound.isPlaying)
                 {
                     walkSound.Stop();
                 }

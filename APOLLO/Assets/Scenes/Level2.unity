@@ -54407,7 +54407,7 @@ PrefabInstance:
       objectReference: {fileID: 1422896535}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[0].text
@@ -54427,14 +54427,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[4].text
-      value: The folks out there are just living off the energy from DASH.
+      value: The folks out there,
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[5].text
-      value: In town, we've also got each other.
+      value: they've only got the energy from DASH.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[6].text
+      value: In town, we've also got each other.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
+      propertyPath: dialogue.Array.data[7].text
       value: How poetic.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
@@ -54446,7 +54450,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[6].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9102515247031732720, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
@@ -58904,26 +58916,30 @@ PrefabInstance:
       objectReference: {fileID: 1422896535}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[0].text
-      value: Our leader says that the lands up ahead are even more perilous.
+      value: Our leader says that the lands up ahead...
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[1].text
-      value: I'd be careful if I were you.
+      value: He says they're even more perilous.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[2].text
-      value: But if you want a way out, then that's your best bet.
+      value: I'd be careful if I were you.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[3].text
-      value: I wish you the best.
+      value: But if you want a way out, then that's your best bet.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[4].text
+      value: I wish you the best.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
+      propertyPath: dialogue.Array.data[5].text
       value: I appreciate that. Thanks.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
@@ -58932,6 +58948,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9102515247031732720, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
@@ -60963,63 +60983,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[1].text
-      value: Why? My name's Z. I've heard you know more about this planet.
+      value: Why? My name's Z.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[2].text
-      value: Do you know of a cargo rocket that flew by?
+      value: I've heard you know more about this planet.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[3].text
-      value: While I don't know details about your situation,
+      value: Do you know of a cargo rocket that flew by?
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[4].text
-      value: I can be of some help.
+      value: While I don't know details about your situation,
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[5].text
-      value: You see, I've lived in this land for centuries.
+      value: I can be of some help.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[6].text
-      value: I'm the last of my kind.
+      value: You see, I've lived in this land for centuries.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[7].text
-      value: I've seen nations rise and fall.
+      value: I'm the last of my kind.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[8].text
-      value: I was born in a time of peril.
+      value: I've seen nations rise and fall.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[9].text
-      value: Our land was invaded, for the energy we possessed.
+      value: I was born in a time of peril.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[10].text
-      value: Our people were annihilated.
+      value: Our land was invaded, for the energy we possessed.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[11].text
-      value: Some tried to fight, including my people.
+      value: Our people were annihilated.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[12].text
-      value: But we failed.
+      value: Some tried to fight, including my people.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[13].text
-      value: Our liberation came only after another,
+      value: But we failed.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[14].text
-      value: more intelligent civilization saved us.
+      value: I expect you are connected to our past,
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[15].text
-      value: I believe you are connected to one of those groups.
+      value: more than you could ever expect.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[16].text
@@ -61038,6 +61058,10 @@ PrefabInstance:
       value: I recommend you continue down this passage.
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
+      propertyPath: dialogue.Array.data[20].text
+      value: I recommend you continue down this passage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[1].isPlayer
       value: 1
       objectReference: {fileID: 0}
@@ -61047,6 +61071,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
       propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405990267122720335, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
+      propertyPath: dialogue.Array.data[14].isPlayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2843070564559261703, guid: 6bf2bee6c2501ee4fb283b3eae581787, type: 3}
@@ -67529,7 +67557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[6].text
-      value: The crystal was our greatest source of energu.
+      value: The crystal was our greatest source of energy.
       objectReference: {fileID: 0}
     - target: {fileID: 3858485722739339226, guid: e292bfc0a36fbe0479eb17ee22ddc473, type: 3}
       propertyPath: dialogue.Array.data[7].text

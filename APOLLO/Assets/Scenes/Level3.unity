@@ -255,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[0].text
-      value: It's great having foreigners come by.
+      value: It's great having a foreigner come by.
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[1].text
@@ -53711,7 +53711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[6].text
-      value: The rocks over here are cool and tasty!
+      value: The rocks over here are cold and tasty!
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[1].isPlayer
@@ -56055,10 +56055,6 @@ PrefabInstance:
       propertyPath: checkpoints.Array.data[14]
       value: 
       objectReference: {fileID: 817782026}
-    - target: {fileID: 8181126287039323624, guid: c96d5bb082044c7459eb318275413045, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56628,7 +56624,7 @@ PrefabInstance:
       objectReference: {fileID: 818918978}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[0].text
@@ -56652,18 +56648,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[5].text
-      value: Especially for sending emergency messages.
+      value: Especially for sending emergency messages,
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[6].text
-      value: What kind of rock is your favorite?
+      value: once I get to my ship.
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[7].text
-      value: I don't eat rocks.
+      value: What kind of rock is your favorite?
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[8].text
+      value: I don't eat rocks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[9].text
       value: It's never too late to try!
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
@@ -56688,15 +56688,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[6].isPlayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
-      propertyPath: dialogue.Array.data[7].isPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
-      propertyPath: dialogue.Array.data[8].isPlayer
+      propertyPath: dialogue.Array.data[7].isPlayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6463053741876248696, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: m_FlipX
@@ -57973,7 +57973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[2].text
-      value: Oh, did you stay in caves too?
+      value: Oh, did you stay underground too?
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[3].text
@@ -61066,16 +61066,20 @@ PrefabInstance:
       value: But things didn't work out.
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
-      propertyPath: dialogue.Array.data[1].isPlayer
+      propertyPath: dialogue.Array.data[0].isPlayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[2].isPlayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[3].isPlayer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[5].isPlayer
@@ -61667,7 +61671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[3].text
-      value: Some people have mentioned a mountain.
+      value: Some people have mentioned a volcano.
       objectReference: {fileID: 0}
     - target: {fileID: 5822427310030944363, guid: 863719fffc18a6d4f958de752c859124, type: 3}
       propertyPath: dialogue.Array.data[4].text

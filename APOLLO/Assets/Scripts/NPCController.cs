@@ -70,8 +70,15 @@ public class NPCController : MonoBehaviour
             if (currentLine < dialogue.Count)
             {
                 DisplayLine(dialogue[currentLine].text, dialogue[currentLine].isPlayer);
+                
+                if (NPCType == "Rocket" && dialogue[currentLine].text == "PASSENGER LOADED")
+                {
+                    player.mySR.enabled = false;
+                }
+
                 currentLine++;
                 player.dialogueSound.Play();
+
             }
             else
             {
