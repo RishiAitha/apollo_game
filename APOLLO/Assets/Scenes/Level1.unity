@@ -44914,7 +44914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[0].text
-      value: It's wonderful to have visitors.
+      value: It's great to have visitors.
       objectReference: {fileID: 0}
     - target: {fileID: 8435827699877227080, guid: 221bc14cb87699c4b81345de8f381756, type: 3}
       propertyPath: dialogue.Array.data[1].text
