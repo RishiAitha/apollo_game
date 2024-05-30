@@ -222,6 +222,54 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Our people see how strong you are.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: We see your past, and how it shaped you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: You hide yourself, as though you're embarassed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: I mean, there's nothing that special about my life.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: I'm not really sure what you mean.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: The society you come from is broken.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: I can see that much very clearly.bb
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4939445959788210942, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 406.52
@@ -900,6 +948,38 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Our people used to be separated and alienated,
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: based solely on color and location.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: But adversity united us,
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: and we've overcome our differences.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: We can thank our ancestors for those changes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: They held together in a time of devastation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1114,6 +1194,46 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Your journey is that of a hero.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Traveling alone thorugh these lands is quite the task.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: I've never seen someone as ambitious as you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Especially in this desert terrain.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: I just hope things ease up from here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: I wouldn't count on that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4939445959788210942, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 372.59
@@ -1248,6 +1368,74 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Our species sees and understands everything around us.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: We peer beyond the surface.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: It's what holds us together.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: It's also the key to discovering our true history.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: That's the goal I pursue.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: You all seem to think I'm connected to your past.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Why is that?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: I believe your species could have been important,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: regarding the events of 500 years ago.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[9].text
+      value: And they may be related to the devastation that followed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[10].text
+      value: I wouldn't be surprised. We definitely aren't much better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[10].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4939445959788210942, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 430.2
@@ -31867,6 +32055,58 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: I sense strength in you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: You must have had a long journey.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Where did you first land here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: I ended up over to the west.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: But my ticket out of here apparently landed eastward.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Have you seen any rocket ships fly by?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Travel to our village. You may find more guidance there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32115,7 +32355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 566557924224653466, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.01
+      value: 28.992
       objectReference: {fileID: 0}
     - target: {fileID: 566557924224653466, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32169,6 +32409,38 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Our people have controlled this desert for centuries.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: We have faced destruction in the past.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: The rest of Torra,
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: other than the eastern volcano societies,
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: still struggle from their history.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: We have successfully recovered since then.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32314,6 +32586,50 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: I see you've made your way to our village.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: If you have any questions, feel free to ask us.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: We can provide you whatever wisdom we possess.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Have you seen a rocket ship fly by?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: Ah, that's what it was.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: I did, and it traveled towards the eastern volcano.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Our town leads to a passage in that direction.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33215,7 +33531,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 3c08c154bf756184890e3cf21a563ddd, type: 3}
 --- !u!4 &623931738 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7245183291266138962, guid: 3c08c154bf756184890e3cf21a563ddd, type: 3}
+  m_CorrespondingSourceObject: {fileID: 708255079546887606, guid: 3c08c154bf756184890e3cf21a563ddd, type: 3}
   m_PrefabInstance: {fileID: 623931737}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &633416610
@@ -33403,6 +33719,50 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: If you head farther east,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: you'll have to deal with even higher temperatures.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: The eastern volcano is about as hot as it gets on this planet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: That would have been nice to know earlier.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: If you've made it all the way here, though,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: I believe you can manage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: I hope so, I'm not too excited.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[6].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4939445959788210942, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 446.67
@@ -35721,6 +36081,54 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: The heat here is really rough.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: I suppose it must be for a foreign visitor.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: What's worse is the perils of our desert.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Use PORTAL wisely if you want to survive.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: 'And remember, transport over the portals is complex:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Any momentum you possess during entrance is preserved on exit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Be careful, traveler.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: I'll keep that in mind.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[7].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37349,6 +37757,46 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: If I want to reach the volcano,
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: do I just continue eastward on this passage?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: That would be the quickest route.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Be careful, however.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: There is no other place on Torra with more danger.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Traveling in the volcano area is incredibly risky.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Good luck.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37622,6 +38070,50 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: We couldn't manage without the PORTAL element.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: It's both our transport and energy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: The instantaneous transport is...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: well... it's confusing. We've studied it for centuries.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: I've never seen anything like this.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: It's the backbone of our society,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: and yet we can't seem to understand how it works.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4939445959788210942, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49.72
@@ -38085,6 +38577,82 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: I've heard you have multiplanetary connections.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: But you don't seem to have any visitors.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: What's up with that?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: We mostly do business with mining colonies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: However, they are a great distance away.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: Our nation is the largest on Torra.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: Our desert is almost endless.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: You will not meet many other species around this area.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: I'll settle for your nearest town.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[9].text
+      value: Then you can continue along this path.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[10].text
+      value: I'd recommend caution.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[11].text
+      value: Noted.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[9].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[11].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38669,6 +39237,74 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Our crystal responds to you...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: It's quite the phenomenon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: I'm guessing it's pretty important to you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: It's the source of everything we have.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: It's also the second purpose of our town here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: We study and protect this crystal.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: It's believed there were more.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: But 500 years ago, they were lost.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: They were the origin of all PORTAL in this desert.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[9].text
+      value: Which, in turn, brought us energy and life.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[10].text
+      value: Your kind may be closely related to these crystals.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[11].text
+      value: I, for one, don't know much about anything here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914244080018679705, guid: ab03cac61385d1c49ae5cf8c23406fef, type: 3}
+      propertyPath: dialogue.Array.data[11].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41788,12 +42424,12 @@ Transform:
   - {fileID: 1218437542}
   - {fileID: 908623450}
   - {fileID: 1662654330}
+  - {fileID: 1280161245}
   - {fileID: 1981550084}
   - {fileID: 163455134}
   - {fileID: 22486925}
   - {fileID: 176860221}
   - {fileID: 646658764}
-  - {fileID: 1280161245}
   - {fileID: 466777702}
   - {fileID: 431115398}
   - {fileID: 127231754}
@@ -41825,6 +42461,82 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Your ability to perform under pressure is impressive.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: Most other aliens struggle to traverse this terrain.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: Most others? I thought this planet didn't get visitors.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: Ah, you must have spoken to the other tribes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: While they are of good heart,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: most do not possess the intellect that we do.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[6].text
+      value: They are to afraid to explore and expand.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[7].text
+      value: Our desert is vast.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[8].text
+      value: We still possess limited, but helpful connections.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[9].text
+      value: Do you happen to have any ships to leave the planet?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[10].text
+      value: There are none that could support your kind of lifeform.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[11].text
+      value: It was worth a shot, I guess.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[2].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[8].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[9].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[11].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4939445959788210942, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 132.01
@@ -43119,6 +43831,46 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 613317387}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[0].text
+      value: Our town here is small,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].text
+      value: but our society as a whole is enormous.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[2].text
+      value: We stay relatively secluded,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[3].text
+      value: so that we can focus on pursuing wisdom and peace.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].text
+      value: If it weren't for this desert heat, I'd be completely interested.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].text
+      value: It's unfortunate that you aren't acclimated.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[4].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335459966202364179, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
+      propertyPath: dialogue.Array.data[5].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4939445959788210942, guid: 2bb769709da4e454898d2e20a1a7c82f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 359.2
