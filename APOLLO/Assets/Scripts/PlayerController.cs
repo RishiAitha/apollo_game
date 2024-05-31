@@ -308,7 +308,7 @@ public class PlayerController : MonoBehaviour
                     }
                 }
 
-                if ((!isGrounded || level.paused || dialogueActive) && walkSound.isPlaying)
+                if ((!isGrounded || level.paused) && walkSound.isPlaying)
                 {
                     walkSound.Stop();
                 }
@@ -386,6 +386,11 @@ public class PlayerController : MonoBehaviour
             {
                 myRB.velocity = new Vector3(0f, 0f, 0f);
             }
+
+            if (dialogueActive && walkSound.isPlaying)
+            {
+                walkSound.Stop();
+            } 
 
             playerLight.color = mySR.material.color;
             playerAnimator.SetBool("OnGround", IsGrounded());

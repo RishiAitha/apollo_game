@@ -11717,6 +11717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4a3d7e109371b4f8b5af50bed271d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 0}
+  mainCamera: {fileID: 0}
 --- !u!114 &1283970687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11751,8 +11753,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00064992905, y: 0.00024998188, z: 0}
-    m_Extent: {x: 3.50015, y: 3.49935, z: 0}
+    m_Center: {x: 0.0022499561, y: 0.0014998913, z: 0}
+    m_Extent: {x: 3.49385, y: 3.5079, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12499,8 +12501,8 @@ MonoBehaviour:
     Aakerlund\r\n\r\nJaro\r\nAgyei Archer,\nCeline Hurka,\nMirko Velimirovi\u0107\r\n\r\nPlaytesters:\n\nLeo
     Sun\n\nSpecial Thanks:\r\n\r\nCS Teacher\nMr. Mirah"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8e94d873b7ffb5b45b50349ebef5f346, type: 2}
-  m_sharedMaterial: {fileID: 8975869521848579736, guid: 8e94d873b7ffb5b45b50349ebef5f346, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1f23c551d0f69de4d8f5bea44d3f1dc0, type: 2}
+  m_sharedMaterial: {fileID: 8975869521848579736, guid: 1f23c551d0f69de4d8f5bea44d3f1dc0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12530,7 +12532,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
