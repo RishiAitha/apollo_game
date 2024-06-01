@@ -20,6 +20,7 @@ public class TransitionController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Debug.Log("transition entered");
             if (!vertical)
             {
                 if (level.currentRoomID == roomID0)

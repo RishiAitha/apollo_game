@@ -11753,8 +11753,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0022499561, y: 0.0014998913, z: 0}
-    m_Extent: {x: 3.49385, y: 3.5079, z: 0}
+    m_Center: {x: 0.0044499636, y: -0.006950021, z: 0}
+    m_Extent: {x: 3.5023499, y: 3.4976501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12492,7 +12492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\r\n\r\n\r\na game by Rishi Aitha\r\n\r\n\r\nGame/Level Design:\r\n\nRishi
+  m_text: "\n\r\n\r\n\r\na game by\n\nRishi Aitha\r\n\r\n\r\nGame/Level Design:\r\n\nRishi
     Aitha\r\n\r\n\r\nProgramming:\r\n\r\nRishi Aitha\r\n\r\n\r\nArtwork:\r\n\r\nRishi
     Aitha\r\n\r\nPixel Heroes\nMegapack\r\nHippo\r\n\r\nCosmicMan\r\nQuantum Fox
     Studio\r\n\r\n\r\nSounds:\r\n\r\nClassic Footstep SFX\r\nMatthew Anett\r\n\r\nFree

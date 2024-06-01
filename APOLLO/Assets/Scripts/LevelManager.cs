@@ -156,6 +156,7 @@ public class LevelManager : MonoBehaviour
     {
         transitionDirection = direction;
         currentTransitionObj = transitionObj;
+        foundPosition = false;
         movingCamera = true;
     }
 
