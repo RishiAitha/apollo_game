@@ -492,7 +492,7 @@ public class PlayerController : MonoBehaviour
             other.GetComponent<LevelEnd>().EndLevel(false);
         }
 
-        if (other.gameObject.tag == "Kill Plane")
+        if (other.gameObject.tag == "Kill Plane" && !changingRooms)
         {
             StartCoroutine("KillPlayer", false);
         }
@@ -511,7 +511,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.tag == "Hazard")
         {

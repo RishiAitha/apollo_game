@@ -370,7 +370,7 @@ MonoBehaviour:
   respawnPosition: {x: 0, y: 0, z: 0}
   deathTime: 0.5
   respawning: 0
-  transitionImmunityTime: 0.5
+  transitionImmunityTime: 0.25
   transitionImmunityTimeCounter: 0
   zipping: 0
   paused: 0
@@ -2179,7 +2179,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.05}
+  m_Size: {x: 0.15, y: 0.05}
   m_EdgeRadius: 0
 --- !u!1 &5446135122128654880
 GameObject:
