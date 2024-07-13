@@ -393,7 +393,7 @@ public class PlayerController : MonoBehaviour
             } 
 
             playerLight.color = mySR.material.color;
-            playerAnimator.SetBool("OnGround", IsGrounded());
+            playerAnimator.SetBool("OnGround", (IsGrounded() || myRB.velocity.y == 0));
             playerAnimator.SetFloat("PlayerSpeed", Mathf.Abs(myRB.velocity.x));
         }
     }
