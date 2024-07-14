@@ -58,6 +58,7 @@ public class LevelManager : MonoBehaviour
         pauseMenu.SetActive(false);
 
         currentCheckpointID = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name);
+        currentRoomID = checkpoints[currentCheckpointID].GetComponent<CheckpointController>().roomID;
         Vector3 firstCPPos = checkpoints[currentCheckpointID].transform.position;
         player.respawnPosition = new Vector3(firstCPPos.x, firstCPPos.y + 0.5f, 0f);
         player.transform.position = player.respawnPosition;
@@ -71,7 +72,7 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !player.dialogueActive)
+        if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)) && !player.dialogueActive)
         {
             if (paused)
             {
