@@ -39,6 +39,9 @@ Fonts:
 - [Comfortaa](https://fonts.google.com/specimen/Comfortaa) -- Johan Aakerlund
 - [Jaro](https://fonts.google.com/specimen/Jaro) -- Agyei Archer, Celine Hurka, Mirko Velimirović
 
+Other:
+- [Better Minimal WebGL Template](https://seansleblanc.itch.io/better-minimal-webgl-template) -- Sean S. LeBlanc
+
 Playtesters:
 - Leo Sun
 
