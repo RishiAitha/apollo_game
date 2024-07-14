@@ -11753,8 +11753,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002300024, y: 0.0010499954, z: 0}
-    m_Extent: {x: 3.499, y: 3.49845, z: 0}
+    m_Center: {x: -0.005699992, y: -0.0015499592, z: 0}
+    m_Extent: {x: 3.4975, y: 3.49875, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12498,8 +12498,8 @@ MonoBehaviour:
     Studio\r\n\r\n\r\nSounds:\r\n\r\nClassic Footstep SFX\r\nMatthew Anett\r\n\r\nFree
     - Sci-Fi and Cyberpunk Music Pack\r\nSLD Audio\r\n\r\nFree UI Click\nSound Pack\r\nSwishSwoosh\r\n\r\nNature
     - Essentials\r\nNox_Sound\r\n\r\nShapeforms Audio\nFree Sound Effects\r\nShapeforms\r\n\r\n\r\nFonts:\r\n\r\nComfortaa\r\nJohan
-    Aakerlund\r\n\r\nJaro\r\nAgyei Archer,\nCeline Hurka,\nMirko Velimirovi\u0107\r\n\r\nBetter
-    Minimal WebGL Template:\n\nSean S. LeBlanc\n\nPlaytesters:\n\nLeo Sun\n\nSpecial
+    Aakerlund\r\n\r\nJaro\r\nAgyei Archer,\nCeline Hurka,\nMirko Velimirovi\u0107\r\n\r\nOther:\n\nBetter
+    Minimal WebGL Template\nSean S. LeBlanc\n\nPlaytesters:\n\nLeo Sun\n\nSpecial
     Thanks:\r\n\r\nCS Teacher\nMr. Mirah"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1f23c551d0f69de4d8f5bea44d3f1dc0, type: 2}
