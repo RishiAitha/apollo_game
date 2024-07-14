@@ -98,7 +98,7 @@ public class MainMenu : MonoBehaviour
 
         if (movingLeft)
         {
-            levelButtons.transform.position = Vector3.MoveTowards(levelButtons.transform.position, buttonTargetPos, buttonMoveSpeed * (100f * (Screen.currentResolution.width / 1920f)) * Time.deltaTime);
+            levelButtons.transform.position = Vector3.MoveTowards(levelButtons.transform.position, buttonTargetPos, buttonMoveSpeed * (100f * (Display.main.systemWidth / 1920f)) * Time.deltaTime);
             if (Mathf.Abs(Vector3.Distance(levelButtons.transform.position, buttonTargetPos)) < 0.01f)
             {
                 movingLeft = false;
@@ -107,7 +107,7 @@ public class MainMenu : MonoBehaviour
 
         if (movingRight)
         {
-            levelButtons.transform.position = Vector3.MoveTowards(levelButtons.transform.position, buttonTargetPos, buttonMoveSpeed * (100f * (Screen.currentResolution.width / 1920f)) * Time.deltaTime);
+            levelButtons.transform.position = Vector3.MoveTowards(levelButtons.transform.position, buttonTargetPos, buttonMoveSpeed * (100f * (Display.main.systemWidth / 1920f)) * Time.deltaTime);
             if (Mathf.Abs(Vector3.Distance(levelButtons.transform.position, buttonTargetPos)) < 0.01f)
             {
                 movingRight = false;
@@ -152,14 +152,14 @@ public class MainMenu : MonoBehaviour
     public void Left()
     {
         currentLevel--;
-        buttonTargetPos = new Vector3(levelButtons.transform.position.x + (1200f * (Screen.currentResolution.width / 1920f)), levelButtons.transform.position.y, 0f);
+        buttonTargetPos = new Vector3(levelButtons.transform.position.x + (1200f * (Display.main.systemWidth / 1920f)), levelButtons.transform.position.y, 0f);
         movingLeft = true;
     }
 
     public void Right()
     {
         currentLevel++;
-        buttonTargetPos = new Vector3(levelButtons.transform.position.x - (1200f * (Screen.currentResolution.width / 1920f)), levelButtons.transform.position.y, 0f);
+        buttonTargetPos = new Vector3(levelButtons.transform.position.x - (1200f * (Display.main.systemWidth / 1920f)), levelButtons.transform.position.y, 0f);
         movingRight = true;
     }
 
@@ -245,7 +245,7 @@ public class MainMenu : MonoBehaviour
 
     public void ResetSaveData()
     {
-        levelButtons.transform.position = new Vector3(levelButtons.transform.position.x + ((currentLevel - 1) * (1200f * (Screen.currentResolution.width / 1920f))), levelButtons.transform.position.y, 0f);
+        levelButtons.transform.position = new Vector3(levelButtons.transform.position.x + ((currentLevel - 1) * (1200f * (Display.main.systemWidth / 1920f))), levelButtons.transform.position.y, 0f);
         PlayerPrefs.DeleteAll();
         UnlockFirstLevel();
     }
