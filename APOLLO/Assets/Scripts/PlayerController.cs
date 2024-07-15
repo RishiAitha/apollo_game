@@ -507,6 +507,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Transition")
         {
+            wallJumping = false;
+            wallJumpCoyoteTimeCounter = 0f;
             inTransition = false;
         }
     }

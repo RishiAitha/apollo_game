@@ -103,7 +103,7 @@ public class LevelManager : MonoBehaviour
 
             foundPosition = true;
 
-            boostedPlayer = transitionDirection != "Up";
+            boostedPlayer = transitionDirection != "Up" && transitionDirection != "Down";
         }
 
         if (movingCamera && foundPosition)
@@ -128,7 +128,7 @@ public class LevelManager : MonoBehaviour
             {
                 if (!boostedPlayer)
                 {
-                    if (Vector3.Distance(player.gameObject.transform.position, currentTransitionObj.transform.position) > 0.5f)
+                    if (Vector3.Distance(player.gameObject.transform.position, currentTransitionObj.transform.position) > 0.1f)
                     {
                         player.gameObject.transform.position = Vector3.Lerp(player.gameObject.transform.position, currentTransitionObj.transform.position, 45f * Time.deltaTime);
                     }
@@ -137,6 +137,14 @@ public class LevelManager : MonoBehaviour
                         player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(vertTransitionHorizontalBoost * player.gameObject.transform.localScale.x, vertTransitionVerticalBoost, 0f);
                         boostedPlayer = true;
                     }
+                }
+            }
+            else if (transitionDirection == "Down")
+            {
+                if (!boostedPlayer)
+                {
+                    player.gameObject.transform.position = currentTransitionObj.transform.position;
+                    boostedPlayer = true;
                 }
             }
 

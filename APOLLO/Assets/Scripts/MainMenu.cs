@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class MainMenu : MonoBehaviour
 {
@@ -38,8 +39,16 @@ public class MainMenu : MonoBehaviour
     public Sprite mutedSprite;
     public Sprite unMutedSprite;
 
+    private float oldWidth;
+    private float newWidth;
+    private bool pauseAnim;
+    private Vector3 oldButtonPos;
+
     void Start()
     {
+        oldWidth = Display.main.systemWidth;
+        newWidth = Display.main.systemWidth;
+
         OpenStartMenu();
 
         UnlockFirstLevel();
@@ -61,6 +70,20 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
+        newWidth = Display.main.systemWidth;
+
+        if (movingButtons && pauseAnim && newWidth == oldWidth)
+        {
+            movingButtons = false;
+            movingLeft = false;
+            movingRight = false;
+            levelButtons.transform.localPosition = new Vector3(-1200 * (currentLevel - 1), 0f, 0f);
+        }
+
+        pauseAnim = newWidth != oldWidth;
+
+        oldWidth = newWidth;
+
         if (!movingButtons)
         {
             if (currentLevel == 1)
@@ -96,19 +119,19 @@ public class MainMenu : MonoBehaviour
             movingButtons = false;
         }
 
-        if (movingLeft)
+        if (movingLeft && !pauseAnim)
         {
-            levelButtons.transform.position = Vector3.MoveTowards(levelButtons.transform.position, buttonTargetPos, buttonMoveSpeed * (100f * (Display.main.systemWidth / 1920f)) * Time.deltaTime);
-            if (Mathf.Abs(Vector3.Distance(levelButtons.transform.position, buttonTargetPos)) < 0.01f)
+            levelButtons.transform.localPosition = Vector3.MoveTowards(levelButtons.transform.localPosition, buttonTargetPos, buttonMoveSpeed * 100f * Time.deltaTime);
+            if (Mathf.Abs(Vector3.Distance(levelButtons.transform.localPosition, buttonTargetPos)) < 0.01f)
             {
                 movingLeft = false;
             }
         }
 
-        if (movingRight)
+        if (movingRight && !pauseAnim)
         {
-            levelButtons.transform.position = Vector3.MoveTowards(levelButtons.transform.position, buttonTargetPos, buttonMoveSpeed * (100f * (Display.main.systemWidth / 1920f)) * Time.deltaTime);
-            if (Mathf.Abs(Vector3.Distance(levelButtons.transform.position, buttonTargetPos)) < 0.01f)
+            levelButtons.transform.localPosition = Vector3.MoveTowards(levelButtons.transform.localPosition, buttonTargetPos, buttonMoveSpeed * 100f * Time.deltaTime);
+            if (Mathf.Abs(Vector3.Distance(levelButtons.transform.localPosition, buttonTargetPos)) < 0.01f)
             {
                 movingRight = false;
             }
@@ -152,14 +175,16 @@ public class MainMenu : MonoBehaviour
     public void Left()
     {
         currentLevel--;
-        buttonTargetPos = new Vector3(levelButtons.transform.position.x + (1200f * (Display.main.systemWidth / 1920f)), levelButtons.transform.position.y, 0f);
+        oldButtonPos = levelButtons.transform.localPosition;
+        buttonTargetPos = new Vector3(-1200 * (currentLevel - 1), 0f, 0f);
         movingLeft = true;
     }
 
     public void Right()
     {
         currentLevel++;
-        buttonTargetPos = new Vector3(levelButtons.transform.position.x - (1200f * (Display.main.systemWidth / 1920f)), levelButtons.transform.position.y, 0f);
+        oldButtonPos = levelButtons.transform.localPosition;
+        buttonTargetPos = new Vector3(-1200 * (currentLevel - 1), 0f, 0f);
         movingRight = true;
     }
 
@@ -245,7 +270,7 @@ public class MainMenu : MonoBehaviour
 
     public void ResetSaveData()
     {
-        levelButtons.transform.position = new Vector3(levelButtons.transform.position.x + ((currentLevel - 1) * (1200f * (Display.main.systemWidth / 1920f))), levelButtons.transform.position.y, 0f);
+        levelButtons.transform.localPosition = new Vector3(0f, 0f, 0f);
         PlayerPrefs.DeleteAll();
         UnlockFirstLevel();
     }
