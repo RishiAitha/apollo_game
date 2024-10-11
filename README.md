@@ -1,9 +1,10 @@
 # APOLLO
 
-This is a game I've been working on with the hopes of uploading it somewhere eventually. It started as a school project, but I'm planning to do more with it.
+This is a game I've published on itch.io.
 
-The game has several new platforming features and takes great inspiration from games like Celeste.
+The game has several new platforming features and takes inspiration from games like Celeste.
 
+You can play it here: [APOLLO](https://rishiaitha.itch.io/apollo)
 
 ## 🚀 About Me
 Hey! I'm Rishi Aitha, a high-school student who's interested in game and web development. This is one of my first big game projects, and everything is stored in this repo!
